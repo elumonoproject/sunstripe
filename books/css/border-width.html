@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>CSS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="You Ohshima" />
+        <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
+        <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <script type="text/javascript" src="./js/cssdata.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>CSS</h1>
+            <h2>スタイルシートリファレンス</h2>
+            <div id="ad1">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（大） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:280px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="5900513788"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            <h3>border-width･････ボーダーの太さを指定する</h3>
+            <div id="cssProperties">
+                <Internet Explorer4
+                    Internet Explorer5
+                    Internet Explorer5-mac
+                    Internet Explorer5.5
+                    Internet Explorer6
+                    Internet Explorer7
+                    Internet Explorer8
+                    Internet Explorer9
+                    Netscape4
+                    Netscape6
+                    Netscape7
+                    Netscape8
+                    Opera6
+                    Opera7
+                    Opera8
+                    Opera9
+                    Opera10
+                    Firefox1
+                    Firefox2
+                    Firefox3
+                    Firefox4
+                    Google Chrome1
+                    Google Chrome2
+                    Google Chrome3
+                    Google Chrome4
+                    Google Chrome5
+                    Google Chrome6>
+                    <p>
+                    border-widthプロパティは、上下左右のボーダーの太さをまとめて指定する際に使用します。<br />
+                    上下左右を異なった太さにしたい場合には、スペースで区切って複数の値を指定します。
+                    </p>
+                    </div>
+            <!--/ #cssProperties-->
+            <br />
+            <h4>値</h4>
+            <div id="cssElements">
+                <h5>指定値</h5>
+                値を1つ指定した場合：	[上下左右]がその太さになります。<br />
+                値を2つ指定した場合：	記述した順に[上下][左右]の太さになります。<br />
+                値を3つ指定した場合：	記述した順に[上][左右][下]の太さになります。<br />
+                値を4つ指定した場合：	記述した順に[上][右][下][左]の太さになります。<br />
+                尚、ボーダーは太さや色だけを指定しても表示されないので注意してください。<br />
+                これは、border-styleプロパティの初期値がnoneとなっているためです。<br />
+                ボーダーを表示させるには、太さや色だけでなく種類も同時に指定してやる必要があります。<br />
+                <h5>ボーダー太さの値</h5>
+                <h6>数値で指定</h6>
+                数値にpxやemやexなどの単位をつけて指定します。pxとは1ピクセルを1とする単位で、実際に表示されるサイズは72dpiや96dpiといったモニタの解像度により変化します。<br />
+                また、emとはフォントの高さを1とする単位で、exとは小文字の｢x｣の高さを1とする単位です。
+                <h6>キーワードで指定</h6>
+                thin（細い）、medium（普通）、thick（太い）のうち、いずれかを指定します。<br />
+                キーワードで指定する場合、実際に表示される太さはブラウザにより異なります。
+            </div>
+            <!--/ #cssElements-->
+            
+            <div id="ad2">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット（小　モバイル用） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:50px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="9019374983"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <h4>使用例</h4>
+            <h5>外部ファイル（sample.css）</h5>
+            <div id="cssUseExsample">
+                <pre id="styleOutput"></pre>
+                <style id="styleInput">
+                            p.sample1 {
+                                border-style: solid;
+                                border-width: 1px;
+                            }
+                            p.sample2 {
+                                border-style: solid;
+                                border-width: 1em;
+                            }
+                            p.sample3 {
+                                border-style: solid;
+                                border-width: 1ex;
+                            }
+                            p.sample4 {
+                                border-style: solid;
+                                border-width: thin;
+                            }
+                            p.sample5 {
+                                border-style: solid;
+                                border-width: medium;
+                            }
+                            p.sample6 {
+                                border-style: solid;
+                                border-width: thick;
+                            }
+                            p.sample7 {
+                                border-style: solid;
+                                border-width: 5px 10px;
+                            }
+                            p.sample8 {
+                                border-style: solid;
+                                border-width: 5px 10px 15px;
+                            }
+                            p.sample9 {
+                                border-style: solid;
+                                border-width: 5px 10px 15px 20px;
+                            }
+                </style>
+            </div>
+            <!--/ #cssUseExsample-->
+            <h4>HTML</h4>
+            <h5>外部ファイル（sample.html）</h5>
+            <div id="htmlSourceCode">
+                <pre id="htmlOutput">
+                </pre>
+            </div>
+            <!--/ #htmlSourceCode-->
+            <br />
+            <div id="htmlUseExsample">
+                <h4>ブラウザ上の表示</h4>
+                <div id="htmlInput">
+                            <link rel="stylesheet" href="sample.css" type="text/css">
+                        
+                            <p class="sample1">1px</p>
+                            <p class="sample2">1em</p>
+                            <p class="sample3">1ex</p>
+                            <p class="sample4">thin</p>
+                            <p class="sample5">medium</p>
+                            <p class="sample6">thick</p>
+                            <p class="sample7">上下5px、左右10px</p>
+                            <p class="sample8">上5px、左右10px、下15px</p>
+                            <p class="sample9">上5px、右10px、下15px、左20px</p>
+                        
+                </div>
+            </div>
+            <div id="ad3">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（中） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:300px;height:250px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="1714745781"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <!--/ #htmlUseExsample-->
+            <h4>関連</h4>
+            <div id="htmlList">
+            </div>
+            <!--/ #htmlList-->
+            <script>
+            var page = "ボーダー";
+            var htmlList = document.getElementById("htmlList");
+            for(var l = 0; l < htmlData.links.length;l++){
+                var html = "";
+                var title = htmlData.links[l].title;
+                if(page == ""){
+                    html += "<br />";
+                    html += "<h5>" + title + "</h5>";
+                    var items = htmlData.links[l].items;
+                    for(var i = 0;i < items.length;i++){
+                        html += items[i].title.link(items[i].url) + "<br />";
+                    }
+                    htmlList.innerHTML += html;
+                } else if(page != title && page != ""){
+                    
+                } else {
+                    var items = htmlData.links[l].items;
+                    html += "<br />";
+                    for(var i = 0;i < items.length;i++){
+                        html += items[i].title.link(items[i].url) + "<br />";
+                    }
+                    htmlList.innerHTML += html;
+                }
+            }
+            var styleOutput = document.getElementById("styleOutput");
+            var styleInput = document.getElementById("styleInput");
+            styleOutput.innerHTML = styleInput.innerHTML;
+            var htmlOutput = document.getElementById("htmlOutput");
+            var htmlInput = document.getElementById("htmlInput");
+            var input = htmlInput.innerHTML;
+            var re = /</gi;
+            input = input.replace(re, "&#60;");
+            re = />/gi;
+            input = input.replace(re, "&#62;");
+            htmlOutput.innerHTML = input;
+                </script>
+            <div id="ad4">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット縦長(特大) -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:200px;height:90px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="2120848581"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <footer>
+                <address>
+                    &copy; <a href="http://sunstripe.main.jp/books/css/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/css/">CSS リファレンス</a>
+                </address>
+            </footer>
+        </div>
+        <!--/ #wrapper-->
+    </body>
+</html>

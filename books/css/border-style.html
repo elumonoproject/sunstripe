@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>CSS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="You Ohshima" />
+        <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
+        <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <script type="text/javascript" src="./js/cssdata.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>CSS</h1>
+            <h2>スタイルシートリファレンス</h2>
+            <div id="ad1">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（大） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:280px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="5900513788"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            <h3>border-style･････ボーダーのスタイルを指定する</h3>
+            <div id="cssProperties">
+                <Internet Explorer4
+                    Internet Explorer5
+                    Internet Explorer5-mac
+                    Internet Explorer5.5
+                    Internet Explorer6
+                    Internet Explorer7
+                    Internet Explorer8
+                    Internet Explorer9
+                    Netscape6
+                    Netscape7
+                    Netscape8
+                    Opera6
+                    Opera7
+                    Opera8
+                    Opera9
+                    Opera10
+                    Firefox1
+                    Firefox2
+                    Firefox3
+                    Firefox4
+                    Google Chrome1
+                    Google Chrome2
+                    Google Chrome3
+                    Google Chrome4
+                    Google Chrome5
+                    Google Chrome6>
+                    <p>
+                    border-styleプロパティは、上下左右のボーダーのスタイルをまとめて指定する際に使用します。<br />
+                    上下左右を異なったスタイルにしたい場合には、スペースで区切って複数の値を指定します。
+                    </p>
+                    </div>
+            <!--/ #cssProperties-->
+            <br/>
+            <h4>値</h4>
+            <div id="cssElements">
+                <h5>指定値</h5>
+                値を1つ指定した場合：	[上下左右]がそのスタイルになります。<br />
+                値を2つ指定した場合：	記述した順に[上下][左右]のスタイルになります。<br />
+                値を3つ指定した場合：	記述した順に[上][左右][下]のスタイルになります。<br />
+                値を4つ指定した場合：	記述した順に[上][右][下][左]のスタイルになります。<br />
+                <h5>ボーダースタイルの値</h5>
+                <h6>none</h6>
+                <h6>ボーダーは表示されず、太さも0になります。表のセルなどのボーダーが重なり合う場合は他の値が優先されます。これが初期値です。
+                hidden</h6>
+                ボーダーは表示されず、太さも0になります。表のセルなどのボーダーが重なり合う場合はhiddenの値が優先されます。
+                <h6>solid</h6>
+                1本線で表示されます。
+                <h6>double</h6>
+                2本線で表示されます。
+                <h6>groove</h6>
+                立体的に窪んだ線で表示されます。
+                <h6>ridge</h6>
+                立体的に隆起した線で表示されます。
+                <h6>inset</h6>
+                上と左のボーダーが暗く、下と右のボーダーが明るく表示され、ボーダーで囲まれた領域全体が立体的に窪んだように表示されます。上下左右の一部だけに指定しても立体感は出ません。
+                <h6>outset</h6>
+                上と左のボーダーが明るく、下と右のボーダーが暗く表示され、ボーダーで囲まれた領域全体が立体的に隆起したように表示されます。上下左右の一部だけに指定しても立体感は出ません。
+                <h6>dashed</h6>
+                破線で表示されます。
+                <h6>dotted</h6>
+                点線で表示されます。
+
+            </div>
+            <!--/ #cssElements-->
+            
+            <div id="ad2">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット（小　モバイル用） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:50px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="9019374983"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            <br />
+            <h4>使用例</h4>
+            <h5>外部ファイル（sample.css）</h5>
+            <div id="cssUseExsample">
+                <pre id="styleOutput"></pre>
+                <style id="styleInput">
+                            p.sample1 {
+                                border-style: none;
+                            }
+                            p.sample2 {
+                                border-style: hidden;
+                            }
+                            p.sample3 {
+                                border-style: solid;
+                            }
+                            p.sample4 {
+                                border-style: double;
+                            }
+                            p.sample5 {
+                                border-style: groove;
+                            }
+                            p.sample6 {
+                                border-style: ridge;
+                            }
+                            p.sample7 {
+                                border-style: inset;
+                            }
+                            p.sample8 {
+                                border-style: outset;
+                            }
+                            p.sample9 {
+                                border-style: dashed;
+                            }
+                            p.sample10 {
+                                border-style: dotted;
+                            }
+                            p.sample11 {
+                                border-style: solid double;
+                            }
+                            p.sample12 {
+                                border-style: solid double groove;
+                            }
+                            p.sample13 {
+                                border-style: solid double groove ridge;
+                            }
+                </style>
+            </div>
+            <!--/ #cssUseExsample-->
+            <br/>
+            <h4>HTML</h4>
+            <h5>外部ファイル（sample.html）</h5>
+            <div id="htmlSourceCode">
+                <pre id="htmlOutput">
+                </pre>
+            </div>
+            <!--/ #htmlSourceCode-->
+            <br />
+            <div id="htmlUseExsample">
+                <h4>ブラウザ上の表示</h4>
+                <div id="htmlInput">
+
+                            <link rel="stylesheet" href="sample.css" type="text/css">
+                
+                            <p class="sample1">none</p>
+                            <p class="sample2">hidden</p>
+                            <p class="sample3">solid</p>
+                            <p class="sample4">double</p>
+                            <p class="sample5">groove</p>
+                            <p class="sample6">ridge</p>
+                            <p class="sample7">inset</p>
+                            <p class="sample8">outset</p>
+                            <p class="sample9">dashed</p>
+                            <p class="sample10">dotted</p>
+                            <p class="sample11">上下solid、左右double</p>
+                            <p class="sample12">上solid、左右double、下groove</p>
+                            <p class="sample13">上solid、右double、下groove、左ridge</p>
+                </div>
+            </div>
+            <div id="ad3">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（中） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:300px;height:250px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="1714745781"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <!--/ #htmlUseExsample-->
+            <h4>関連</h4>
+            <div id="htmlList">
+            </div>
+            <!--/ #htmlList-->
+            <script>
+            var page = "ボーダー";
+            var htmlList = document.getElementById("htmlList");
+            for(var l = 0; l < htmlData.links.length;l++){
+                var html = "";
+                var title = htmlData.links[l].title;
+                if(page == ""){
+                    html += "<br />";
+                    html += "<h5>" + title + "</h5>";
+                    var items = htmlData.links[l].items;
+                    for(var i = 0;i < items.length;i++){
+                        html += items[i].title.link(items[i].url) + "<br />";
+                    }
+                    htmlList.innerHTML += html;
+                } else if(page != title && page != ""){
+                    
+                } else {
+                    var items = htmlData.links[l].items;
+                    html += "<br />";
+                    for(var i = 0;i < items.length;i++){
+                        html += items[i].title.link(items[i].url) + "<br />";
+                    }
+                    htmlList.innerHTML += html;
+                }
+            }
+            var styleOutput = document.getElementById("styleOutput");
+            var styleInput = document.getElementById("styleInput");
+            styleOutput.innerHTML = styleInput.innerHTML;
+            var htmlOutput = document.getElementById("htmlOutput");
+            var htmlInput = document.getElementById("htmlInput");
+            var input = htmlInput.innerHTML;
+            var re = /</gi;
+            input = input.replace(re, "&#60;");
+            re = />/gi;
+            input = input.replace(re, "&#62;");
+            htmlOutput.innerHTML = input;
+                </script>
+            <div id="ad4">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット縦長(特大) -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:200px;height:90px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="2120848581"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <footer>
+                <address>
+                    &copy; <a href="http://sunstripe.main.jp/books/css/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/css/">CSS リファレンス</a>
+                </address>
+            </footer>
+        </div>
+        <!--/ #wrapper-->
+    </body>
+</html>

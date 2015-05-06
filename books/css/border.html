@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>CSS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="You Ohshima" />
+        <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
+        <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <script type="text/javascript" src="./js/cssdata.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>CSS</h1>
+            <h2>スタイルシートリファレンス</h2>
+            <div id="ad1">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（大） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:280px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="5900513788"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            <h3>border･････ボーダーのスタイル・太さ・色を指定する</h3>
+            <div id="cssProperties">
+                <Internet Explorer4
+                    Internet Explorer5
+                    Internet Explorer5-mac
+                    Internet Explorer5.5
+                    Internet Explorer6
+                    Internet Explorer7
+                    Internet Explorer8
+                    Internet Explorer9
+                    Netscape6
+                    Netscape7
+                    Netscape8
+                    Opera6
+                    Opera7
+                    Opera8
+                    Opera9
+                    Opera10
+                    Firefox1
+                    Firefox2
+                    Firefox3
+                    Firefox4
+                    Google Chrome1
+                    Google Chrome2
+                    Google Chrome3
+                    Google Chrome4
+                    Google Chrome5
+                    Google Chrome6>
+                    <p>
+                    borderプロパティは、ボーダーのスタイル・太さ・色をまとめて指定する際に使用します。<br />
+                    スタイル・太さ・色のうち、指定する値を任意の順序でスペースで区切って記述します。<br />
+                    <br />
+                    borderプロパティでは、ボーダーのスタイル・太さ・色について上下左右バラバラの指定をすることはできません。<br />
+                    上下左右のボーダーを異なったものにする場合には、 border-top、 border-bottom、 border-left、 border-right、 または、 border-style、 border-width、 border-color、 で指定してください。
+                    </p>
+                    </div>
+            <!--/ #cssProperties-->
+            <br />
+            <h4>値</h4>
+            <div id="cssElements">
+                <h5>ボーダースタイルの値</h5>
+                <h6>none</h6>
+                ボーダーは表示されず、太さも0になります。表のセルなどのボーダーが重なり合う場合は他の値が優先されます。これが初期値です。
+                <h6>hidden</h6>
+                ボーダーは表示されず、太さも0になります。表のセルなどのボーダーが重なり合う場合はこの値が優先されます。
+                <h6>solid</h6>
+                1本線で表示されます。
+                <h6>double</h6>
+                2本線で表示されます。
+                <h6>groove</h6>
+                立体的に窪んだ線で表示されます。
+                <h6>ridge</h6>
+                立体的に隆起した線で表示されます。
+                <h6>inset</h6>
+                上と左のボーダーが暗く、下と右のボーダーが明るく表示され、ボーダーで囲まれた領域全体が立体的に窪んだように表示されます。上下左右の一部だけに指定しても立体感は出ません。
+                <h6>outset</h6>
+                上と左のボーダーが明るく、下と右のボーダーが暗く表示され、ボーダーで囲まれた領域全体が立体的に隆起したように表示されます。上下左右の一部だけに指定しても立体感は出ません。
+                <h6>dashed</h6>
+                破線で表示されます。
+                <h6>dotted</h6>
+                点線で表示されます。
+                <h5>ボーダー太さの値</h5>
+                <h6>数値で指定</h6>
+                数値にpxやemやexなどの単位をつけて指定します。pxとは1ピクセルを1とする単位で、実際に表示されるサイズは72dpiや96dpiといったモニタの解像度により変化します。<br />
+                また、emとはフォントの高さを1とする単位で、exとは小文字の｢x｣の高さを1とする単位です。
+                <h6>キーワードで指定</h6>
+                thin（細い）、medium（普通）、thick（太い）のうち、いずれかを指定します。キーワードで指定する場合、実際に表示される太さはブラウザにより異なります。
+                <h5>ボーダー色の値</h5>
+                <h6>色</h6>
+                #000000などの記述やカラーネームで色指定をします。
+                <h6>transparent</h6>
+                ボーダーの色を透明にします。
+            </div>
+            <!--/ #cssElements-->
+            
+            <div id="ad2">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット（小　モバイル用） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:50px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="9019374983"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <h4>使用例</h4>
+            <h5>外部ファイル（sample.css）</h5>
+            <div id="cssUseExsample">
+                <pre id="styleOutput"></pre>
+                <style id="styleInput">
+                    
+                            p.sample1 {
+                                border: double 10px #0000ff;
+                            }
+                            p.sample2 {
+                                border: inset 10px #ff0000;
+                            }
+                            p.sample3 {
+                                margin: 30px 30px;
+                                padding: 10px;
+                                border: medium solid #ff00ff;
+                            }
+                </style>
+            </div>
+            <!--/ #cssUseExsample-->
+            <h4>HTML</h4>
+            <h5>外部ファイル（sample.html）</h5>
+            <div id="htmlSourceCode">
+                <pre id="htmlOutput">
+                </pre>
+            </div>
+            <!--/ #htmlSourceCode-->
+            <br />
+            <div id="htmlUseExsample">
+                <h4>ブラウザ上の表示</h4>
+                <div id="htmlInput">
+                    
+                            <link rel="stylesheet" href="sample.css" type="text/css">
+                    
+                            <p class="sample1">セキュリティ対策は今後ますます重要になるでしょう。</p>
+                            <p class="sample2">セキュリティ対策は今後ますます重要になるでしょう。</p>
+                            <p class="sample3">セキュリティ対策は今後ますます重要になるでしょう。</p>
+                </div>
+            </div>
+            <div id="ad3">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（中） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:300px;height:250px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="1714745781"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <!--/ #htmlUseExsample-->
+            <h4>関連</h4>
+            <div id="htmlList">
+            </div>
+            <!--/ #htmlList-->
+            <script>
+            var page = "ボーダー";
+            var htmlList = document.getElementById("htmlList");
+            for(var l = 0; l < htmlData.links.length;l++){
+                var html = "";
+                var title = htmlData.links[l].title;
+                if(page == ""){
+                    html += "<br />";
+                    html += "<h5>" + title + "</h5>";
+                    var items = htmlData.links[l].items;
+                    for(var i = 0;i < items.length;i++){
+                        html += items[i].title.link(items[i].url) + "<br />";
+                    }
+                    htmlList.innerHTML += html;
+                } else if(page != title && page != ""){
+                    
+                } else {
+                    var items = htmlData.links[l].items;
+                    html += "<br />";
+                    for(var i = 0;i < items.length;i++){
+                        html += items[i].title.link(items[i].url) + "<br />";
+                    }
+                    htmlList.innerHTML += html;
+                }
+            }
+            var styleOutput = document.getElementById("styleOutput");
+            var styleInput = document.getElementById("styleInput");
+            styleOutput.innerHTML = styleInput.innerHTML;
+            var htmlOutput = document.getElementById("htmlOutput");
+            var htmlInput = document.getElementById("htmlInput");
+            var input = htmlInput.innerHTML;
+            var re = /</gi;
+            input = input.replace(re, "&#60;");
+            re = />/gi;
+            input = input.replace(re, "&#62;");
+            htmlOutput.innerHTML = input;
+                </script>
+            <div id="ad4">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット縦長(特大) -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:200px;height:90px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="2120848581"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <footer>
+                <address>
+                    &copy; <a href="http://sunstripe.main.jp/books/css/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/css/">CSS リファレンス</a>
+                </address>
+            </footer>
+        </div>
+        <!--/ #wrapper-->
+    </body>
+</html>

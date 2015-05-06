@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>CSS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="You Ohshima" />
+        <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
+        <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <script type="text/javascript" src="./js/cssdata.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>CSS</h1>
+            <h2>スタイルシートリファレンス</h2>
+            <div id="ad1">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（大） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:280px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="5900513788"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            <h3>position･････ボックスの配置方法（基準位置）を指定する</h3>
+            <div id="cssProperties">
+                <Internet Explorer4Internet
+                    Explorer5Internet
+                    Explorer5-macInternet
+                    Explorer5.5Internet
+                    Explorer6Internet
+                    Explorer7Internet
+                    Explorer8Internet
+                    Explorer9
+                    Netscape4
+                    Netscape6
+                    Netscape7
+                    Netscape8
+                    Opera6
+                    Opera7
+                    Opera8
+                    Opera9
+                    Opera10
+                    Firefox1
+                    Firefox2
+                    Firefox3
+                    Firefox4
+                    Google Chrome1
+                    Google Chrome2
+                    Google Chrome3
+                    Google Chrome4
+                    Google Chrome5
+                    Google Chrome6>
+                    <p>
+                    positionプロパティは、ボックスの配置方法（基準位置）が、相対位置か絶対位置かを指定する際に使用します。<br/>
+                    
+                    positionプロパティで指定するのは、配置方法（基準位置）のみです。 実際の表示位置の指定には、 top、 bottom、 left、 rightを併用して、基準位置からの距離を設定する必要があります。
+                    </p>
+                    </div>
+            <!--/ #cssProperties-->
+            <br />
+            <h4>値</h4>
+            <div id="cssElements">
+                <h5>static</h5>
+                特に配置方法を指定しません。この値のときには、top、bottom、left、rightは適用されません。これが初期値です。
+                <h5>relative</h5>
+                相対位置への配置となります。positionプロパティでstaticを指定した場合に表示される位置が基準位置となります。
+                <h5>absolute</h5>
+                絶対位置への配置となります。親ボックスにpositionプロパティのstatic以外の値が指定されている場合には、親ボックスの左上が基準位置となります。親ボックスにpositionプロパティのstatic以外の値が指定されていない場合には、ウィンドウ全体の左上が基準位置となります。
+                <h5>fixed</h5>
+                絶対位置への配置となるのはabsoluteと同じですが、スクロールしても位置が固定されたままとなります。
+            </div>
+            <!--/ #cssElements-->
+            
+            <div id="ad2">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット（小　モバイル用） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:50px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="9019374983"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <h4>使用例</h4>
+            <h5>外部ファイル（sample.css）</h5>
+            <div id="cssUseExsample">
+                <pre id="styleOutput"></pre>
+                <style id="styleInput">
+                    p.sample {
+                        height:50px;
+                        background-color:#ffffff;
+                        font-weight:bold;
+                        position:relative;
+                    }
+                    span.static {
+                        color:#0000ff;
+                        position:static;
+                        top:10px;
+                        left:10px;
+                    }
+                    span.relative {
+                        color:#0000ff;
+                        position:relative;
+                        top:10px;
+                        left:10px;
+                    }
+                    span.absolute {
+                        color:#0000ff;
+                        position:absolute;
+                        top:10px; left:10px;
+                    }
+                    span.fixed {
+                        color:#0000ff;
+                        position:fixed;
+                        top:10px;
+                        left:10px;
+                    }
+                </style>
+            </div>
+            <!--/ #cssUseExsample-->
+            <h4>HTML</h4>
+            <h5>外部ファイル（sample.html）</h5>
+            <div id="htmlSourceCode">
+                <pre id="htmlOutput">
+                </pre>
+            </div>
+            <!--/ #htmlSourceCode-->
+            <br />
+            <div id="htmlUseExsample">
+                <h4>ブラウザ上の表示</h4>
+                <div id="htmlInput">
+                    <link rel="stylesheet" href="sample.css" type="text/css" />
+
+                    <p class="sample">position:static<span class="static">staticの場合の表示</span></p>
+                    <p class="sample">position:relative<span class="relative">relativeの場合の表示</span></p>
+                    <p class="sample">position:absolute<span class="absolute">absoluteの場合の表示</span></p>
+                    <p class="sample">position:fixed<span class="fixed">fixedの場合の表示</span></p>
+                </div>
+            </div>
+            <div id="ad3">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（中） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:300px;height:250px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="1714745781"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <!--/ #htmlUseExsample-->
+            <h4>関連</h4>
+            <div id="htmlList">
+            </div>
+            <!--/ #htmlList-->
+            <script>
+            var page = "表示・配置";
+            var htmlList = document.getElementById("htmlList");
+            for(var l = 0; l < htmlData.links.length;l++){
+                var html = "";
+                var title = htmlData.links[l].title;
+                if(page == ""){
+                    html += "<br />";
+                    html += "<h5>" + title + "</h5>";
+                    var items = htmlData.links[l].items;
+                    for(var i = 0;i < items.length;i++){
+                        html += items[i].title.link(items[i].url) + "<br />";
+                    }
+                    htmlList.innerHTML += html;
+                } else if(page != title && page != ""){
+                    
+                } else {
+                    var items = htmlData.links[l].items;
+                    html += "<br />";
+                    for(var i = 0;i < items.length;i++){
+                        html += items[i].title.link(items[i].url) + "<br />";
+                    }
+                    htmlList.innerHTML += html;
+                }
+            }
+            var styleOutput = document.getElementById("styleOutput");
+            var styleInput = document.getElementById("styleInput");
+            styleOutput.innerHTML = styleInput.innerHTML;
+            var htmlOutput = document.getElementById("htmlOutput");
+            var htmlInput = document.getElementById("htmlInput");
+            var input = htmlInput.innerHTML;
+            var re = /</gi;
+            input = input.replace(re, "&#60;");
+            re = />/gi;
+            input = input.replace(re, "&#62;");
+            htmlOutput.innerHTML = input;
+                </script>
+            <div id="ad4">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット縦長(特大) -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:200px;height:90px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="2120848581"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <footer>
+                <address>
+                    &copy; <a href="http://sunstripe.main.jp/books/css/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/css/">CSS リファレンス</a>
+                </address>
+            </footer>
+        </div>
+        <!--/ #wrapper-->
+    </body>
+</html>
