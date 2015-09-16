@@ -10,6 +10,11 @@ Team.Sunstripe サイト作成の練習のためのサンドボックス的な�
 
 ## Demo
 
+[Backlog](http://www.backlog.jp/)
+
+
+[Workflowy](https://workflowy.com/)
+
 ## VS. 
 
 ## Requirement
@@ -22,8 +27,11 @@ Team.Sunstripe サイト作成の練習のためのサンドボックス的な�
 Team.Sunstripeはプログラミングを学びたい人、Web制作を学びたい人、作りたいという気持ちを応援しています！
 
 [@sunstripe2011](http://twitter.com/sunstripe2011/) ← こちらまでDMしていただき、本文に「GitHub」についてと書いてお送りください。
+
 [slack](https://sunstripe2011.slack.com/)
 
+
+[github](https://github.com/elumonoproject/sunstripe)
 
 ## Licence
 ライセンス許可もらったもののみを使用しています。
@@ -164,6 +172,7 @@ homebrew-cask/CONTRIBUTING.md
 著作権をもつ作者として準備するべき．LICENCEを明示することは，ツールを使う側に安心感を与える．以下が参考になる．
 
 “ライセンスの選択を恐れる必要はありません”
+
 社内プロジェクトの場合
 
 社内プロジェクトであってもREADMEを書くようにしている．上述したインストール方法や使い方はもちろんのこと，以下のような項目を書くようにしている．
