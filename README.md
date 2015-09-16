@@ -20,7 +20,10 @@ Team.Sunstripe サイト作成の練習のためのサンドボックス的な�
 
 ## Contribution
 Team.Sunstripeはプログラミングを学びたい人、Web制作を学びたい人、作りたいという気持ちを応援しています！
-http://twitter.com/sunstripe2011/ ← こちらまでDMしていただき、本文に「GitHub」についてと書いてお送りください。
+
+[@sunstripe2011](http://twitter.com/sunstripe2011/) ← こちらまでDMしていただき、本文に「GitHub」についてと書いてお送りください。
+[slack](https://sunstripe2011.slack.com/)
+
 
 ## Licence
 ライセンス許可もらったもののみを使用しています。
