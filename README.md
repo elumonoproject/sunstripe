@@ -6,7 +6,7 @@ Team.Sunstripe
 Overview
 
 ## Description
-Team.Sunstripe サイト作成の練習のためのサンドボックス的なところ
+Team.Sunstripe サイト作成の練習場のようなところ
 
 ## Demo
 
