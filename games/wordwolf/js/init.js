@@ -1,6 +1,5 @@
 //var jsonData = "";
 //var htmlData = JSON.parse(decodeURIComponent(jsonData));
-//alert("OK");
 
 function Point(){
     this.x = 0;
@@ -12,7 +11,6 @@ var screenCanvas, info;
 var gameView;
 var run = true;
 var fps = 1000 / 30;
-var mouse = new Point();
 var gameMouse = new Point();
 
 var data = {
@@ -49,6 +47,9 @@ function action(element,setAction) {
 function create(id) {
     var elm = document.createElement("div"); // 要素を生成
     elm.id = id;
+    elm.style.width = '100%';
+    elm.style.textAlign = 'center';
+
     gameView.appendChild(elm);
     elm.innerHTML = id;
     return elm;
@@ -57,6 +58,8 @@ function create(id) {
 function createButton(element,title){
     var elm = document.createElement("button"); // 要素を生成
     elm.id = element.id + title;
+    elm.style.height = '44px';
+    elm.style.textAlign = 'center';
     element.appendChild(elm);
     elm.innerHTML = title;
     return elm;
@@ -64,6 +67,8 @@ function createButton(element,title){
 
 function alertView(message){
     var elm = document.createElement("div"); // 要素を生成
+    elm.style.width = '100%';
+    elm.style.textAlign = 'center';
     clearView();
     gameView.appendChild(elm);
     elm.innerHTML = message;
@@ -339,7 +344,6 @@ window.onload = function(){
                });
     }
     
-    
     firstView();
     
     
@@ -347,14 +351,9 @@ window.onload = function(){
     
     // スクリーンの初期化
     screenCanvas = document.getElementById('screen');
-    screenCanvas.width = 256;
-    screenCanvas.height = 256;
     
     // イベントの登録
-    screenCanvas.addEventListener('mousemove', mouseMove, true);
     window.addEventListener('keydown', keyDown, true);
-
-    // イベントの登録
     gameView.addEventListener('mousemove', gameMouseMove, true);
     // エレメント関連
     info = document.getElementById('info');
@@ -362,7 +361,7 @@ window.onload = function(){
     // ループ処理を呼び出す
     (function(){
      // HTMLを更新
-     info.innerHTML = mouse.x + ' : ' + mouse.y + ' / ' + gameMouse.x + ' : ' + gameMouse.y;
+     info.innerHTML = gameMouse.x + ' : ' + gameMouse.y;
      
      // フラグにより再帰呼び出し
      if(run){setTimeout(arguments.callee, fps);}
@@ -370,11 +369,6 @@ window.onload = function(){
 };
 
 // - event --------------------------------------------------------------------
-function mouseMove(event){
-    // マウスカーソル座標の更新
-    mouse.x = event.clientX - screenCanvas.offsetLeft;
-    mouse.y = event.clientY - screenCanvas.offsetTop;
-}
 
 function gameMouseMove(event){
     // マウスカーソル座標の更新
