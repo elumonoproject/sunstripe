@@ -1,0 +1,80 @@
+@charset "UTF-8";
+html{
+    width:100%;
+}
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    text-align: center;
+}
+div#wrapper {
+    width: 800px;
+    margin: 0 auto;
+    background-color:rgba(255,200,255,0.5);
+    border: 1px solid rgba(255,200,255,1.0);
+}
+div#cssProperties{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+}
+div#cssElements{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+}
+div#cssUseExsample{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+    overflow:scroll;
+}
+div#cssSourceCode{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+    overflow:scroll;
+}
+div#htmlUseExsample{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+    overflow:scroll;
+}
+div#htmlSourceCode{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+    overflow:scroll;
+}
+div#htmlList{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+}
+div#ad1{
+    background-color:rgba(255,255,255,1.0);
+    text-align:center;
+    margin: 0 10px;
+}
+div#ad2{
+    background-color:rgba(255,255,255,1.0);
+    text-align:center;
+    margin: 0 10px;
+}
+div#ad3{
+    background-color:rgba(255,255,255,1.0);
+    text-align:center;
+    margin: 0 10px;
+}
+div#ad4{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+}
+footer{
+    position:static;
+    bottom:0px;
+}
