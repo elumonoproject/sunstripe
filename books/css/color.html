@@ -24,7 +24,7 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
             </div>
-            <h3>position･････ボックスの配置方法（基準位置）を指定する</h3>
+            <h3>color･････文字色（前景色）を指定する</h3>
             <div id="cssProperties">
                 <Internet Explorer4Internet
                     Explorer5Internet
@@ -53,24 +53,19 @@
                     Google Chrome4
                     Google Chrome5
                     Google Chrome6>
-                    <p>
-                    positionプロパティは、ボックスの配置方法（基準位置）が、相対位置か絶対位置かを指定する際に使用します。<br/>
+                    <p>colorプロパティは、文字色を指定する際に使用します。<br />
                     
-                    positionプロパティで指定するのは、配置方法（基準位置）のみです。 実際の表示位置の指定には、 top、 bottom、 left、 rightを併用して、基準位置からの距離を設定する必要があります。
-                    </p>
+                    文字色を指定する際には、同時に背景色も指定するようにしてください。 ユーザーの環境で背景色が指定されている場合には、背景色と文字色の関係により、文字が読みにくくなってしまうことがあるからです。</p>
                     </div>
             <!--/ #cssProperties-->
             <br />
             <h4>値</h4>
             <div id="cssElements">
-                <h5>static</h5>
-                特に配置方法を指定しません。この値のときには、top、bottom、left、rightは適用されません。これが初期値です。
-                <h5>relative</h5>
-                相対位置への配置となります。positionプロパティでstaticを指定した場合に表示される位置が基準位置となります。
-                <h5>absolute</h5>
-                絶対位置への配置となります。親ボックスにpositionプロパティのstatic以外の値が指定されている場合には、親ボックスの左上が基準位置となります。親ボックスにpositionプロパティのstatic以外の値が指定されていない場合には、ウィンドウ全体の左上が基準位置となります。
-                <h5>fixed</h5>
-                絶対位置への配置となるのはabsoluteと同じですが、スクロールしても位置が固定されたままとなります。
+                <h5>色</h5>
+                #000000などの記述やカラーネームで色指定をします。
+                <br />ほかにもorange,rgb(255,255,255),rgba(255,255,255,1.0)と指定することができます<br />
+                
+                
             </div>
             <!--/ #cssElements-->
             
@@ -91,34 +86,21 @@
             <div id="cssUseExsample">
                 <pre id="styleOutput"></pre>
                 <style id="styleInput">
-                    p.sample {
-                        height:50px;
-                        background-color:#ffffff;
-                        font-weight:bold;
-                        position:relative;
+                    p.sample1 {
+                        color: #000000;
+                        background-color: #FFcc00;
                     }
-                    span.static {
-                        color:#0000ff;
-                        position:static;
-                        top:10px;
-                        left:10px;
+                    p.sample2 {
+                        color: orange;
+                        background-color: red;
                     }
-                    span.relative {
-                        color:#0000ff;
-                        position:relative;
-                        top:10px;
-                        left:10px;
+                    p.sample3 {
+                        color: rgb(200,200,255);
+                        background-color: rgb(0,0,255);
                     }
-                    span.absolute {
-                        color:#0000ff;
-                        position:absolute;
-                        top:10px; left:10px;
-                    }
-                    span.fixed {
-                        color:#0000ff;
-                        position:fixed;
-                        top:10px;
-                        left:10px;
+                    p.sample4 {
+                        color: rgba(200,100,100,0.5);
+                        background-color: rgba(255,200,200,0.5);
                     }
                 </style>
             </div>
@@ -136,10 +118,10 @@
                 <div id="htmlInput">
                     <link rel="stylesheet" href="sample.css" type="text/css" />
 
-                    <p class="sample">position:static<span class="static">staticの場合の表示</span></p>
-                    <p class="sample">position:relative<span class="relative">relativeの場合の表示</span></p>
-                    <p class="sample">position:absolute<span class="absolute">absoluteの場合の表示</span></p>
-                    <p class="sample">position:fixed<span class="fixed">fixedの場合の表示</span></p>
+                    <p class="sample1">同じ色でも他の色との組み合わせや使用面積によって、イメージが大きく変わります。背景色を決める際のポイントの1つは、そのページ内の他の色との関係を考えてみることです。また、見た目の美しさだけではなく、サイト全体の配色計画と矛盾していないか、文字が読みにくくなっていないか、といった機能面からの考察も大切です。</p>
+                    <p class="sample2">同じ色でも他の色との組み合わせや使用面積によって、イメージが大きく変わります。背景色を決める際のポイントの1つは、そのページ内の他の色との関係を考えてみることです。また、見た目の美しさだけではなく、サイト全体の配色計画と矛盾していないか、文字が読みにくくなっていないか、といった機能面からの考察も大切です。</p>
+                    <p class="sample3">同じ色でも他の色との組み合わせや使用面積によって、イメージが大きく変わります。背景色を決める際のポイントの1つは、そのページ内の他の色との関係を考えてみることです。また、見た目の美しさだけではなく、サイト全体の配色計画と矛盾していないか、文字が読みにくくなっていないか、といった機能面からの考察も大切です。</p>
+                    <p class="sample4">同じ色でも他の色との組み合わせや使用面積によって、イメージが大きく変わります。背景色を決める際のポイントの1つは、そのページ内の他の色との関係を考えてみることです。また、見た目の美しさだけではなく、サイト全体の配色計画と矛盾していないか、文字が読みにくくなっていないか、といった機能面からの考察も大切です。</p>
                 </div>
             </div>
             <div id="ad3">
@@ -210,7 +192,7 @@
             
             <footer>
                 <address>
-                    &copy; <a href="http://sunstripe.main.jp/books/css/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/css/">CSS リファレンス</a>
+                    &copy; <a href="http://sunstripe.main.jp/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/css/">CSS リファレンス</a>
                 </address>
             </footer>
         </div>
