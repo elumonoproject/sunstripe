@@ -13,20 +13,61 @@
         
         <link rel="alternate" type="application/rss+xml" title="RSS" href="http://sunstripe.main.jp/rss.xml" />
         <link rel="alternate" media="handheld" href="http://sunstripe.main.jp/" />
+        
     </head>
+    <style>
+        .iconsize {
+            position:absolute;
+            width:44px;
+            height:44px;
+            border-radius: 6px;
+            margin:0px 0px;
+            display:block;
+        }
+    a.display-block {
+        float:left;
+        width:46px;
+        height:46px;
+        margin:10px 10px;
+        display:block;
+    }
+    </style>
     <body>
         <div>
             <h2>制作チーム - Sun Stripe</h2>
             <p>クリエーターの可能性を引き出すサンストライプ-オフィシャルサイト。</p>
-            <h3>Github - iOS</h3>
-            <p><a href="https://github.com/youbinoyou/">学習中</a></p>
-            <p><a href="./ios/index.html">配布中</a></p>
-            <h3>CSS</h3>
-            <p><a href="./books/css/">学習中</a></p>
-            <h3>ゲーム制作</h3>
-            <p><a href="./games/">ゲーム集</a></p>
-        </div>
-        
+            <div style="margin:10px 10px;">
+                <h3>Github - iOS</h3>
+                <a class="display-block" href="https://github.com/youbinoyou/">
+                    <div class="iconsize" style="background-color:rgba(255,55,55,1.0);border:solid 1px red;
+                    overflow: hidden;">学習中</div>
+                </a>
+                <a class="display-block" href="./ios/index.html">
+                    <div class="iconsize" style="background-color:rgba(55,55,255,1.0);border:solid 1px blue; overflow: hidden;">配布中</div>
+                </a>
+                <h3>学習中</h3>
+                <a class="display-block" href="./books/css/">
+                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray; overflow: hidden;">CSS</div>
+                </a>
+                <a class="display-block" href="./books/css/custom-icon.html">
+                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray; overflow: hidden;">CSS-アイコン</div>
+                </a>
+                <a class="display-block" href="./books/javascript/">
+                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray;">JavaScript</div>
+                </a>
+                <a class="display-block" href="./books/xcode/objectivec">
+                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray; overflow: hidden;">Objective-C</div>
+                </a>
+                <a class="display-block" href="./books/xcode/swift">
+                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray;overflow: hidden;">Swift</div>
+                </a>
+                </p>
+                <h3>ゲーム制作</h3>
+                <a class="display-block" href="./games/">
+                    <div class="iconsize" style="background-color:rgba(255,255,155,1.0);border:solid 1px orange; overflow: hidden;">ゲーム集</div>
+                </a>
+            </div>
+    
         <div id="footlink"><div id="headertext">クリエーターの可能性を引き出すサンストライプ-オフィシャルサイト。
             Team sunsripe, Share your dreams and thoughts with me.</div></div>
         <div id="footer">Copyright (C) 2015 <a href="./">制作チーム - Team. Sun Stripe</a> All Rights Reserved.</div>

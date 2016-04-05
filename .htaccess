@@ -1,0 +1,4 @@
+AddType image/xicon .ico
+＜Files favicon.ico＞
+ErrorDocument 404 /images/home.ico
+＜/Files＞

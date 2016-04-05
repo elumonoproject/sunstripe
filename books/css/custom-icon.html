@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>CSS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="You Ohshima" />
+        <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
+        <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <script type="text/javascript" src="./js/cssdata.js"></script>
+        <link rel="shortcut icon" href="/images/home.ico">
+        <link rel="apple-touch-icon" href="/images/iphone_icon.png"/>
+    </head>
+    
+    <style>
+        body {
+            font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+    a.button-type {
+        /* サイズ指定 */
+        width: 200px;
+        height: 50px;
+        display: block;
+        box-sizing: border-box;
+        margin: 20px;
+        
+        /* 縦横中央揃え */
+        text-align: center;
+        line-height: 50px;
+        
+        /* 色指定 */
+        background-image: -webkit-linear-gradient(top, #FC0, #F60);
+        border: 2px solid #F33;
+        color: #FFF;
+        
+        /* 角丸 */
+        border-radius: 25px;
+        
+        /* シャドウ / ベベル */
+        box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(255, 255, 255, 0.9) inset, 0 -1px 3px rgba(0, 0, 0, 0.1) inset;
+        
+        /* その他 */
+        text-decoration: none;
+        font-size: 24px;
+        
+    }
+    
+    a.button-type:hover {
+        /* 反転 */
+        background-image: -webkit-linear-gradient(top, #F60, #FC0);
+    }
+
+    /* social-icon 四角アイコン */
+    /*
+     #social-icon a {
+     display: block;
+     float: left;
+     margin: 0 5px 5px 0;
+     padding: 0;
+     color: #fff;
+     }
+     #social-icon i {
+     width: 50px;
+     height: 50px;
+     margin: 0;
+     line-height: 50px;
+     text-align: center;
+     }
+     #social-icon i:before { padding 0; line-height: 50px; }
+     #social-icon .fa-twitter { background: #00a1e9; }
+     #social-icon .fa-facebook { background: #3b5998; }
+     #social-icon .fa-google-plus { background: #c53727; }
+     #social-icon .fa-rss { background: #ff8c00; }
+     */
+    
+    
+    /* social-icon 四角アイコン（hover） */
+    /*
+     #social-icon a {
+     display: block;
+     float: left;
+     margin: 0 5px 5px 0;
+     padding: 0;
+     color: #fff;
+     }
+     #social-icon i {
+     width: 50px;
+     height: 50px;
+     margin: 0;
+     background: #c6bb80;
+     line-height: 50px;
+     text-align: center;
+     }
+     #social-icon i:before { padding 0; line-height: 50px; }
+     #social-icon a:hover .fa-twitter { background: #00a1e9; }
+     #social-icon a:hover .fa-facebook { background: #3b5998; }
+     #social-icon a:hover .fa-google-plus { background: #c53727; }
+     #social-icon a:hover .fa-rss { background: #ff8c00; }
+     */
+    
+    /* social-icon 丸アイコン */
+    /*
+     #social-icon a {
+     display: block;
+     float: left;
+     margin: 0 5px 5px 0;
+     padding: 0;
+     color: #fff;
+     }
+     #social-icon i {
+     width: 50px;
+     height: 50px;
+     margin: 0;
+     border-radius: 50%;
+     background: #c6bb80;
+     line-height: 50px;
+     text-align: center;
+     }
+     #social-icon i:before { padding 0; line-height: 50px; }
+     #social-icon a:hover i { background: #bcaf68; }
+     */
+    
+    /* social-icon 丸アイコン(hover)*/
+    /*
+    #social-icon a {
+        display: block;
+        float: left;
+        margin: 0 5px 5px 0;
+        padding: 0;
+        color: #c6bb80;
+    }
+    #social-icon i {
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        border: 1px solid #c6bb80;
+        border-radius: 50%;
+        line-height: 50px;
+        text-align: center;
+    }
+    #social-icon i:before { padding 0; line-height: 50px; }
+    #social-icon a:hover i { background: #e1daba; }
+    */
+    
+    /* scial-icon 正方形 */
+    /*
+    #social-icon a {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+    #social-icon a:nth-of-type(3) { clear:both; }
+    #social-icon i {
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        background: #777;
+        line-height: 50px;
+        text-align: center;
+    }
+    #social-icon i:before { padding 0; line-height: 50px; }
+    #social-icon .fa-twitter { background: #00a1e9; }
+    #social-icon .fa-facebook { background: #3b5998; }
+    #social-icon .fa-google-plus { background: #c53727; }
+    #social-icon .fa-rss { background: #ff8c00; }
+     */
+    /* scial-icon テキストあり */
+    /*
+    #social-icon a {
+        position: relative;
+        display: block;
+        float: left;
+        width:100px;
+        margin: 0 10px 10px 0;
+        padding: 0 0 0 40px;
+        background: #c6bb80;
+        color: #fff;
+        text-decoration: none;
+        text-align:center;
+        line-height: 40px;
+    }
+    #social-icon i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        background: #bcaf68;
+        line-height: 40px;
+        text-align: center;
+    }
+    #social-icon i:before { padding 0; line-height: 40px; }
+    #social-icon a:hover i { background: #b2a251; }
+     */
+    /* scial-icon テキストあり(下からのアニメーション) */
+    /*
+    #social-icon a {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        float: left;
+        width:100px;
+        margin: 0 10px 10px 0;
+        padding: 0;
+        background: #c6bb80;
+        color: #fff;
+        text-decoration: none;
+        text-align:center;
+        line-height: 40px;
+    }
+    #social-icon i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 40px;
+        margin: 0;
+        background: #bcaf68;
+        line-height: 40px;
+        text-align: center;
+        transition: .2s;
+    }
+    #social-icon i:before { padding 0; line-height: 40px; }
+    #social-icon a:hover i { top: 100%; background: #b2a251; }
+     */
+    #social-icon a {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        float: left;
+        width:100px;
+        height: 40px;
+        margin: 0 10px 10px 0;
+        padding: 0;
+        color: #fff;
+        text-decoration: none;
+        text-align:center;
+        line-height: 40px;
+    }
+    #social-icon i,#social-icon span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 40px;
+        margin: 0;
+        background: #bcaf68;
+        line-height: 40px;
+        text-align: center;
+        transition: .3s;
+    }
+    #social-icon i {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+    #social-icon a:hover i {
+        z-index: 1;
+        transform: rotateY(180deg);
+    }
+    #social-icon span {
+        z-index: 1;
+        transform: rotateY(-180deg);
+    }
+    #social-icon a:hover span {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+    /*#social-icon i:before { padding 0; line-height: 50px; }*/
+    #social-icon .fa-twitter-span { background: #00a1e9; }
+    #social-icon .fa-facebook-span { background: #3b5998; }
+    #social-icon .fa-google-plus-span { background: #c53727; }
+    #social-icon .fa-rss-span { background: #ff8c00; }
+
+        </style>
+    
+    <body>
+        <div id="wrapper">
+            <h1>CSS</h1>
+            <h2>スタイルシートリファレンス</h2>
+            <div id="ad1">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（大） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:280px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="5900513788"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+
+            <h3>要素型セレクタ（タイプセレクタ）･････特定の要素にスタイルを適用する</h3>
+            <div id="cssProperties">
+                <Internet Explorer5
+                    Internet Explorer5-mac
+                    Internet Explorer5.5
+                    Internet Explorer6
+                    Internet Explorer7
+                    Internet Explorer8
+                    Internet Explorer9
+                    Netscape6
+                    Netscape7
+                    Netscape8
+                    Netscape8
+                    Opera6
+                    Opera7
+                    Opera8
+                    Opera9
+                    Firefox1
+                    Firefox2
+                    Firefox3>
+                    <p>
+                    要素型セレクタ（タイプセレクタ）は、要素名で対象を指定してスタイルを適用する基本的なセレクタです。<br />
+                    以下の使用例では、文書内のすべてのp要素に対してスタイルを指定しています。
+                    </p>
+                    </div>
+            <!--/ #cssProperties-->
+            <br />
+            <h4>セレクタの書式・スタイルを適用する対象</h4>
+            <div id="cssElements">
+                <h5>書式</h5>
+                要素名 {プロパティ名:値;}
+                <h5>適用対象</h5>
+                要素名で指定した要素
+            </div>
+            <!--/ #cssElements-->
+            
+            <div id="ad2">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット（小　モバイル用） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:50px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="9019374983"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <h4>使用例</h4>
+            <h5>外部ファイル（sample.css）</h5>
+            <div id="cssUseExsample">
+                <pre id="styleOutput"></pre>
+                <style id="styleInput">
+                    .display-block {
+                        /*                background-color: rgba(100,100,100,0.3);*/
+                    }
+                .iconsize {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 6px;
+                    margin: 10px 10px;
+                    display: inline-block;
+                }
+                *::selection    {
+                    background: #EE0079;
+                    color:#fff;
+                }
+                /*Firefoxに対応*/
+                *::-moz-selection   {
+                    background: #EE0079;
+                    color:#fff;
+                }
+                
+                
+                .css-file{
+                    display: inline-block;
+                    position: relative;
+                    top: 50%;
+                    width: 16px;
+                    height: 20px;
+                    margin: 0 10px 0 0;
+                    padding: 0;
+                    background: #000;
+                }
+                .css-file:before, .css-file:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+                .css-file:before{
+                    width: 7px;
+                    height: 7px;
+                    background: #eee;
+                }
+                .css-file:after{
+                    width: 0;
+                    height: 0;
+                    border: 3px solid #eee;
+                    border-bottom-color: #000;
+                    border-left-color: #000;
+                }
+                .css-file:hover{
+                    display: inline-block;
+                    position: relative;
+                    top: 50%;
+                    width: 16px;
+                    height: 20px;
+                    margin: 0 10px 0 0;
+                    padding: 0;
+                    background: #F50;
+                }
+                .css-file:hover:before, .css-file:hover:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+                .css-file:hover:before{
+                    width: 7px;
+                    height: 7px;
+                    background: #eee;
+                }
+                .css-file:hover:after{
+                    width: 0;
+                    height: 0;
+                    border: 3px solid #eee;
+                    border-bottom-color: #F50;
+                    border-left-color: #F50;
+                }
+                
+                .css-bar{
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 10px 3px 0;
+                    padding: 0;
+                    background: #000;
+                }
+                .css-bar, .css-bar:before, .css-bar:after{
+                    width: 18px;
+                    height: 3px;
+                }
+                .css-bar:before, .css-bar:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    background: #000;
+                }
+                .css-bar:before{
+                    margin-top: -8px;
+                }
+                .css-bar:after{
+                    margin-top: 4px;
+                }
+                
+                .css-bar:hover{
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 10px 3px 0;
+                    padding: 0;
+                    background: #f50;
+                }
+                .css-bar:hover, .css-bar:hover:before, .css-bar:after{
+                    width: 18px;
+                    height: 3px;
+                }
+                .css-bar:hover:before, .css-bar:hover:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    background: #f50;
+                }
+                .css-bar:hover:before{
+                    margin-top: -8px;
+                }
+                .css-bar:hover:after{
+                    margin-top: 4px;
+                }
+                
+                
+                .css-mail{
+                    display: inline-block;
+                    position: relative;
+                    width: 20px;
+                    height: 16px;
+                    margin: 0 10px 0 0;
+                    padding: 0;
+                    background: #000;
+                }
+                .css-mail:before, .css-mail:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                }
+                .css-mail:before{
+                    border: 10px solid transparent;
+                    border-top-color: #fff;
+                }
+                .css-mail:after{
+                    left: 2px;
+                    border: 8px solid transparent;
+                    border-top-color: #000;
+                }
+                
+                .css-mail:hover{
+                    display: inline-block;
+                    position: relative;
+                    width: 20px;
+                    height: 16px;
+                    margin: 0 10px 0 0;
+                    padding: 0;
+                    background: #F50;
+                }
+                .css-mail:hover:before, .css-mail:hover:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                }
+                .css-mail:hover:before{
+                    border: 10px solid transparent;
+                    border-top-color: #fff;
+                }
+                .css-mail:hover:after{
+                    left: 2px;
+                    border: 8px solid transparent;
+                    border-top-color: #F50;
+                }
+                
+                
+                .css-cancel{
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 20px 0 7px;
+                    padding: 0;
+                    width: 4px;
+                    height: 20px;
+                    background: #000;
+                    transform: rotate(45deg);
+                }
+                .css-cancel:before{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: -8px;
+                    width: 20px;
+                    height: 4px;
+                    margin-top: -2px;
+                    background: #000;
+                }
+                
+                .css-cancel:hover{
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 20px 0 7px;
+                    padding: 0;
+                    width: 4px;
+                    height: 20px;
+                    background: #999;
+                    transform: rotate(45deg);
+                }
+                .css-cancel:hover:before{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: -8px;
+                    width: 20px;
+                    height: 4px;
+                    margin-top: -2px;
+                    background: #999;
+                }
+                
+                .css-tag{
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 15px 0 0;
+                    padding: 0;
+                    width: 18px;
+                    height: 16px;
+                    background: #000;
+                }
+                .css-tag:before{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 4px;
+                    height: 4px;
+                    margin-top: -2px;
+                    border-radius: 50%;
+                    background: #fff;
+                }
+                .css-tag:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    width: 0;
+                    height: 0;
+                    border: 8px solid transparent;
+                    border-left-color: #000;
+                }
+                
+                
+                .css-tag:hover{
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 15px 0 0;
+                    padding: 0;
+                    width: 18px;
+                    height: 16px;
+                    background: #F50;
+                }
+                .css-tag:hover:before{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 4px;
+                    height: 4px;
+                    margin-top: -2px;
+                    border-radius: 50%;
+                    background: #fff;
+                }
+                .css-tag:hover:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    width: 0;
+                    height: 0;
+                    border: 8px solid transparent;
+                    border-left-color: #F50;
+                }
+                
+                .css-arrow{
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 0 0 8px;
+                    padding: 0;
+                    width: 0;
+                    height: 0;
+                    border: 10px solid transparent;
+                    border-left-color: #000;
+                }
+                .css-arrow:before, .css-arrow:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    width: 0;
+                    height: 0;
+                }
+                .css-arrow:before{
+                    left: -30px;
+                    margin-top: -10px;
+                    border: 10px solid transparent;
+                    border-right-color: #000;
+                }
+                .css-arrow:after{
+                    left: -20px;
+                    margin-top: -14px;
+                    border: 14px solid transparent;
+                    border-left-color: #FFFFFF;
+                }
+                
+                
+                .css-arrow:hover{
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 0 0 8px;
+                    padding: 0;
+                    width: 0;
+                    height: 0;
+                    border: 10px solid transparent;
+                    border-left-color: #F50;
+                }
+                .css-arrow:hover:before, .css-arrow:hover:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    width: 0;
+                    height: 0;
+                }
+                .css-arrow:hover:before{
+                    left: -30px;
+                    margin-top: -10px;
+                    border: 10px solid transparent;
+                    border-right-color: #F50;
+                }
+                .css-arrow:hover:after{
+                    left: -20px;
+                    margin-top: -14px;
+                    border: 14px solid transparent;
+                    border-left-color: #FFF;
+                }
+                </style>
+            </div>
+            <!--/ #cssUseExsample-->
+            <h4>HTML</h4>
+            <h5>外部ファイル（sample.html）</h5>
+            <div id="htmlSourceCode">
+                <pre id="htmlOutput">
+                </pre>
+            </div>
+            <!--/ #htmlSourceCode-->
+            <br />
+            <div id="htmlUseExsample">
+                <h4>ブラウザ上の表示</h4>
+                <div id="htmlInput">
+                    <link rel="stylesheet" type="text/css" href="sample.css" />
+                    <br />
+                    <span class="css-bar"></span><br />
+                    <span class="css-file"></span><br />
+                    <span class="css-mail"></span><br />
+                    <span class="css-cancel"></span><br />
+                    <span class="css-tag"></span><br />
+                    <span class="css-arrow"></span><br />
+                    <br />
+                    
+                </div>
+            </div>
+            <div id="ad3">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（中） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:300px;height:250px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="1714745781"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            <br />
+            <h4>ソーシャル</h4>
+            <div style="margin:20px 20px;height:100px;">
+                <div id="social-icon">
+                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-rss fa-2x"></i></a>
+                </div>
+
+                </div>
+            
+            <div style="margin:20px 20px;height:100px;">
+            
+            <div id="social-icon" class="clear">
+                <a href="#"><i class="fa fa-facebook fa-lg"></i>Facebook</a>
+                <a href="#"><i class="fa fa-twitter fa-lg"></i>twitter</a>
+                <a href="#"><i class="fa fa-google-plus fa-lg"></i>Google+</a>
+                <a href="#"><i class="fa fa-rss fa-lg"></i>RSS</a>
+            </div>
+            
+            </div>
+            
+            <div style="margin:20px 20px;height:100px;">
+
+            <div id="social-icon" class="clear">
+                <a href="#"><i class="fa fa-facebook fa-lg"></i><span class="fa-facebook-span">Facebook</span></a>
+                <a href="#"><i class="fa fa-twitter fa-lg"></i><span class="fa-twitter-span">twitter</span></a>
+                <a href="#"><i class="fa fa-google-plus fa-lg"></i><span class="fa-google-plus-span">Google+</span></a>
+                <a href="#"><i class="fa fa-rss fa-lg"></i><span class="fa-rss-span">RSS</span></a>
+            </div>
+            
+            </div>
+
+
+            
+            <br />
+            <!--/ #htmlUseExsample-->
+            <h4>関連</h4>
+            <div id="htmlList">
+            </div>
+            <!--/ #htmlList-->
+            <script>
+                var page = "セレクタ";
+                var htmlList = document.getElementById("htmlList");
+                for(var l = 0; l < htmlData.links.length;l++){
+                    var html = "";
+                    var title = htmlData.links[l].title;
+                    if(page == ""){
+                        html += "<br />";
+                        html += "<h5>" + title + "</h5>";
+                        var items = htmlData.links[l].items;
+                        for(var i = 0;i < items.length;i++){
+                            html += items[i].title.link(items[i].url) + "<br />";
+                        }
+                        htmlList.innerHTML += html;
+                    } else if(page != title && page != ""){
+                        
+                    } else {
+                        var items = htmlData.links[l].items;
+                        html += "<br />";
+                        for(var i = 0;i < items.length;i++){
+                            html += items[i].title.link(items[i].url) + "<br />";
+                        }
+                        htmlList.innerHTML += html;
+                    }
+                }
+            var styleOutput = document.getElementById("styleOutput");
+            var styleInput = document.getElementById("styleInput");
+            styleOutput.innerHTML = styleInput.innerHTML;
+            var htmlOutput = document.getElementById("htmlOutput");
+            var htmlInput = document.getElementById("htmlInput");
+            var input = htmlInput.innerHTML;
+            var re = /</gi;
+            input = input.replace(re, "&#60;");
+            re = />/gi;
+            input = input.replace(re, "&#62;");
+            htmlOutput.innerHTML = input;
+                </script>
+            <div id="ad4">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット縦長(特大) -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:200px;height:90px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="2120848581"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <footer>
+                <address>
+                    &copy; <a href="http://sunstripe.main.jp/books/css/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/css/">CSS リファレンス</a>
+                </address>
+            </footer>
+        </div>
+        <!--/ #wrapper-->
+    </body>
+</html>
