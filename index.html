@@ -9,25 +9,69 @@
         <meta name="description" content="クリエーターの可能性を引き出すサンストライプ - オフィシャルサイト。 すべての友達を笑顔に - すべての友達を可能性の光に変えて - http://sunstripe.main.jp/ - 掴まないといけないのは時代の流れなのかもしれない。" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
-        
+
         <link rel="alternate" type="application/rss+xml" title="RSS" href="http://sunstripe.main.jp/rss.xml" />
         <link rel="alternate" media="handheld" href="http://sunstripe.main.jp/" />
         
     </head>
     <style>
+        
         .iconsize {
             position:absolute;
-            width:44px;
-            height:44px;
+        display: block;
+        border-radius: 15%;
+        /*color: #fff;*/
+        box-shadow: 0 3px 6px rgba(0,0,0,0.4), 5px 5px 10px rgba(255,255,255,0.3) inset, -5px -5px 10px rgba(255,255,255,0.3) inset;
+        width: 88px;
+        height: 88px;
+        font: 12px/16px serif;
+        text-align: center;
+        text-decoration: none;
+        }
+        .iconsize2 {
+            position:absolute;
+            width:88px;
+            height:88px;
             border-radius: 6px;
             margin:0px 0px;
             display:block;
+            font-size:0.8em;
+            text-align:center;
+            
+            display: block;
+            /*height: 89px;*/
+            /*width: 89px;*/
+            
+            /*background: transparent url('1.png') no-repeat;*/
+            
+            -webkit-border-radius: 10px; /* Safari, Chrome */
+            -moz-border-radius: 10px; /* Firefox */
+            border-radius: 10px; /* CSS3 */
+            
+            -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+            -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
         }
+    .gray_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(155,155,155,1.0), rgba(155,155,155,1.0) 50%, rgba(100,100,100,1.0));
+    }
+    .orange_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(#ffc877, #f90 50%, #ffd000);
+    }
+    .red_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(255,100,100,1.0), rgba(255,0,0,1.0) 50%, rgba(255,55,55,1.0));
+    }
+    .green_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(100,255,100,1.0), rgba(0,255,0,1.0) 50%, rgba(55,255,55,1.0));
+    }
+    .blue_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(100,100,255,1.0), rgba(0,0,255,1.0) 50%, rgba(55,55,255,1.0));
+    }
     a.display-block {
         float:left;
-        width:46px;
-        height:46px;
+        width:90px;
+        height:90px;
         margin:10px 10px;
         display:block;
     }
@@ -36,35 +80,35 @@
         <div>
             <h2>制作チーム - Sun Stripe</h2>
             <p>クリエーターの可能性を引き出すサンストライプ-オフィシャルサイト。</p>
-            <div style="margin:10px 10px;">
+            <div style="margin:10px 10px; height:400px;">
                 <h3>Github - iOS</h3>
                 <a class="display-block" href="https://github.com/youbinoyou/">
-                    <div class="iconsize" style="background-color:rgba(255,55,55,1.0);border:solid 1px red;
+                    <div class="iconsize gray_icon_button" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray;
                     overflow: hidden;">学習中</div>
                 </a>
                 <a class="display-block" href="./ios/index.html">
-                    <div class="iconsize" style="background-color:rgba(55,55,255,1.0);border:solid 1px blue; overflow: hidden;">配布中</div>
+                    <div class="iconsize blue_icon_button" style="background-color:rgba(55,55,255,1.0);border:solid 1px blue; overflow: hidden;">配布中</div>
                 </a>
                 <h3>学習中</h3>
                 <a class="display-block" href="./books/css/">
-                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray; overflow: hidden;">CSS</div>
+                    <div class="iconsize gray_icon_button" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray; overflow: hidden;">CSS</div>
                 </a>
                 <a class="display-block" href="./books/css/custom-icon.html">
-                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray; overflow: hidden;">CSS-アイコン</div>
+                    <div class="iconsize red_icon_button" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray; overflow: hidden;">CSS-アイコン</div>
                 </a>
                 <a class="display-block" href="./books/javascript/">
-                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray;">JavaScript</div>
+                    <div class="iconsize gray_icon_button" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray;">JavaScript</div>
                 </a>
                 <a class="display-block" href="./books/xcode/objectivec">
-                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray; overflow: hidden;">Objective-C</div>
+                    <div class="iconsize gray_icon_button" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray; overflow: hidden;">Objective-C</div>
                 </a>
                 <a class="display-block" href="./books/xcode/swift">
-                    <div class="iconsize" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray;overflow: hidden;">Swift</div>
+                    <div class="iconsize gray_icon_button" style="background-color:rgba(155,155,155,1.0);border:solid 1px gray;overflow: hidden;">Swift</div>
                 </a>
                 </p>
                 <h3>ゲーム制作</h3>
                 <a class="display-block" href="./games/">
-                    <div class="iconsize" style="background-color:rgba(255,255,155,1.0);border:solid 1px orange; overflow: hidden;">ゲーム集</div>
+                    <div class="iconsize orange_icon_button" style="background-color:rgba(255,255,155,1.0);border:solid 1px orange; overflow: hidden;">ゲーム集</div>
                 </a>
             </div>
     
