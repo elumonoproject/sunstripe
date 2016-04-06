@@ -84,7 +84,38 @@
         margin:10px 10px;
         display:block;
     }
+    .popup {
+        border-top-width : 10px;
+        border-top-color : orange;
+        width:300px;
+        height:100px;
+        background-color:rgba(100,100,100,0.3);
+        padding:20px;
+    }
+    .popupWidth {
+        width:300px;
+    }
+    .widthMax
+    {
+        width:100%;
+    }
+    .nav {
+        padding: 0 20px;
+        margin: 0 auto 60px;
+        width: 760px;
+    }
+    .fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
     </style>
+    <script>
+        window.onload = function () {
+            var popupView = document.getElementById("popup");
+            //popupView.style.width = "300px";
+        }
+    </script>
     <body>
         <div>
             <h2>制作チーム - Sun Stripe</h2>
@@ -138,5 +169,28 @@
         <div id="footlink"><div id="headertext">クリエーターの可能性を引き出すサンストライプ-オフィシャルサイト。
             Team sunsripe, Share your dreams and thoughts with me.</div></div>
         <div id="footer">Copyright (C) 2015 <a href="./">制作チーム - Team. Sun Stripe</a> All Rights Reserved.</div>
+        <div id="popup" class="fixed popup">
+            <div id="logo" style="float:left;"><img src="./" /></div>
+            <div id="logo-right" style="float:left;">
+                <h3>プログラミングの勉強を始めました</h3>
+                <p>
+                一緒にiOS開発してみませんか？
+                </p>
+            </div>
+            <div id="email" style="float:both;" class="popupWidth">
+                <label>Eメール：
+                    <input type="text" class="popupWidth"/><br/>
+                </label>
+                <input type="button" value="登録する（無料）" class="popupWidth" style="text-align:center;" />
+            </div>
+            <!--div class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">LINK</a></li>
+                </ul>
+                <!-- /#nav --><!--/div-->
+        </div>
     </body>
 </html>
