@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <title>colorPalet - Team SunStripe</title>
+        <meta name="keywords" content="ワードウルフ,制作" />
+        <meta name="description" content="" />
+        <style>
+        </style>
+        <link rel="stylesheet" href="./css/game.css" type="text/css" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://sunstripe.main.jp/rss.xml" />
+        <link rel="alternate" media="handheld" href="http://sunstripe.main.jp/" />
+    </head>
+    <script>
+        var bgColor;
+        var elColored;
+        var elColorDisplay;
+        window.onload = function () {
+            var elColored = document.getElementById('colored');
+            var elColorChange = document.getElementById('colorChange');
+            elColorDisplay = document.getElementById('colordisplay');
+            var elColorDisplayColor = document.getElementById('colordisplay.color');
+            var elColorDisplayBackgroundColor = document.getElementById('colordisplay.backgroundColor');
+            
+            elColorChange.addEventListener("input",
+                                           function(e) {
+                                           if(e) {
+                                                elColored.innerHTML = elColorChange.value;
+                                                elColored.style.color = elColorChange.value;
+                                                elementColorDisplay("input color : ",elColorDisplay,elColored);
+                                           }
+                                           }, false);
+            
+            document.onmouseover = function (e) {
+                // IE用
+                if(!e){
+                    e = window.event;
+                    bgColor = e.target.currentStyle.backgroundColor;
+                }else{
+                    // 色情報取得
+                    bgColor = window.getComputedStyle(e.target, '').backgroundColor;
+                }
+                // RGB(A)からHexへ変換
+                var rgb = rgbToHex(bgColor);
+                
+                // 透明度を取得
+                var alpha = /\d+\.\d+/.exec(bgColor);
+                if(typeof(alpha) == "undefined" || alpha == null) {
+                    alpha = 1;
+                }
+                elColorDisplayBackgroundColor.innerHTML = "backgroundColor : " + colorText(bgColor,rgb,alpha);
+                // IE用
+                if(!e){
+                    e = window.event;
+                    bgColor = e.target.currentStyle.color;
+                }else{
+                    // 色情報取得
+                    bgColor = window.getComputedStyle(e.target, '').color;
+                }
+                // RGB(A)からHexへ変換
+                var rgb = rgbToHex(bgColor);
+                // 透明度を取得
+                var alpha = /\d+\.\d+/.exec(bgColor);
+                if(typeof(alpha) == "undefined" || alpha == null) {
+                    alpha = 1;
+                }
+                elColorDisplayColor.innerHTML = "color : " + colorText(bgColor,rgb,alpha);
+                //elColored.textContent = bgColor.replace(/\d+\.\d+/, Number(alpha).toFixed(1))+', #'+rgb;
+            }
+            
+        }
+    
+    function elementColorDisplay (text ,element, colorElement) {
+        // IE用
+        if(!window.getComputedStyle(element, '')){
+            bgColor = colorElement.currentStyle.color;
+        } else {
+            // 色情報取得
+            bgColor = window.getComputedStyle(colorElement, '').color;
+        }
+        // RGB(A)からHexへ変換
+        var rgb = rgbToHex(bgColor);
+        
+        // 透明度を取得
+        var alpha = /\d+\.\d+/.exec(bgColor);
+        if(typeof(alpha) == "undefined" || alpha == null) {
+            alpha = 1;
+        }
+        element.innerHTML = text + colorText(bgColor,rgb,alpha);
+    }
+    
+    function colorText (color ,rgb, alpha) {
+        return bgColor.replace(/\d+\.\d+/, Number(alpha).toFixed(1))+', #'+rgb;
+    }
+    // RGB(A)からHexへ変換
+    function rgbToHex (color) {
+        var ret = /rgba?\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3}),?\s*([.\d]+)?\)/.exec(color);
+        var rgbHex = '';
+        for(var i=1;i<=3;i++){
+            var hex = Number(ret[i]).toString(16);
+            rgbHex += (hex.length === 1)? '0' + hex : hex;
+        }
+        return rgbHex;
+    }
+    </script>
+    <body>
+        <div>
+            <h2>ColorPalet - Team.Sun Stripe</h2>
+            <button onclick="colorAlert();">colorAlert</button>
+            <div id="colored" style="color:rgba(200,200,0,0.5);">COLORED</div>
+            <div id="colordisplay.color">[]</div>
+            <div id="colordisplay.backgroundColor">[]</div>
+            <label>色（type="color"）:<input type="color" name="colorChange" id="colorChange" onchange="colorChange();"></label>
+            <div id="colordisplay">[]</div>
+        </div>
+        <div id="footlink"><div id="headertext">クリエーターの可能性を引き出すサンストライプ-オフィシャルサイト。
+            Team sunsripe, Share your dreams and thoughts with me.</div></div>
+        <div id="footer">Copyright (C) 2015 <a href="../">制作チーム - Team. Sun Stripe</a> All Rights Reserved.</div>
+    </body>
+</html>
