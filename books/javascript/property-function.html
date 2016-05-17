@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>JavaScript スタイルシートリファレンス</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="You Ohshima" />
+        <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
+        <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <link rel="stylesheet" href="./css/tableList.css" type="text/css" />
+        <script type="text/javascript" src="./js/cssdata.js"></script>
+        <script type="text/javascript" src="./js/tableList.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>JavaScript - Function クラスのプロパティについて</h1>
+            <h2>スタイルシートリファレンス</h2>
+            <div id="ad1">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（大） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:280px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="5900513788"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <div id="scriptProperties">
+            </div>
+            <!--/ #scriptProperties-->
+            <br />
+            <h4>Function クラスのプロパティについて</h4>
+            <div id="scriptElements">
+                
+                <h3>Arguments オブジェクトについて･････</h3>
+                <h4>関数を宣言する</h4>
+                <pre>
+                    任意の関数内では、<span class="color-red">Arguments</span> オブジェクトにアクセスする事ができます。
+                    　
+                    Arguments オブジェクトを取得するには、<span class="color-red">任意の関数内</span>で、<span class="color-red">Arguments</span> 変数を使用します。
+                </pre>
+                <h5><a href="#MyFunction1">関数内で、Arguments オブジェクトを取得する</a>･････</h5>
+                <h4>Arguments オブジェクトのプロパティ一覧</h4>
+                <pre>
+                    Arguments オブジェクトには、以下のプロパティがあります。
+                </pre>
+                
+                <script>
+                    var table1 = {
+                        //"title":"new Function ( ... , \"関数内の文\" ) :Function",
+                        "list":[
+                                {
+                                "title":"length",
+                                "type":"Number",
+                                "description":"引数から渡されたデータの総数を取得",
+                                },
+                                {
+                                "title":"callee",
+                                "type":"Function",
+                                "description":"自身の関数オブジェクトを取得",
+                                },
+                                {
+                                "title":"<span class='lineThrough'>caller</span>",
+                                "type":"Arguments",
+                                "description":"自身の関数の実行主となる Arguments オブジェクトを取得する。(IE8 以下で動作)\
+                                廃止済みです。かわりに Function.caller プロパティを使用します。",
+                                },
+                                ],
+                    };
+                    tableList(table1);
+                
+                    </script>
+                <h4>Arguments オブジェクトから、引数から渡されたデータを取得する</h4>
+                <pre>
+                    Arguments オブジェクトは、配列のように中身を取り出せます。
+                    　
+                    Arguments オブジェクトの中には、<span class="color-red">引数から渡されたデータ</span>が格納されています。
+                </pre>
+                <pre>
+                    引数から渡されたデータの総数を取得するには、<span class="color-red">length</span> プロパティを使用します。
+                </pre>
+                <pre>
+                    <span class="color-red">可変引数に対応したい場合に利用します。</span>
+                </pre>
+                <h5><a href="#MyFunction2">Arguments オブジェクトを使って、引数から渡されたすべてのデータを順番に取得する</a>･････</h5>
+
+                <h4>callee プロパティ</h4>
+                <pre>
+                    関数内から、自身の関数オブジェクトを取得するには、<span class="color-red">callee</span> プロパティを使用します。
+                </pre>
+                <pre>
+                    callee プロパティは、<span class="color-red">strict モードでは、利用できません</span>
+                </pre>
+                <h5><a href="#MyFunction3">自身の関数オブジェクトを取得する（関数宣言内）</a>･････</h5>
+                <h5><a href="#MyFunction4">自身の関数オブジェクトを取得する（関数リテラル内）</a>･････</h5>
+                <h3>Function クラスのプロパティについて･････</h3>
+                <h4>Function クラスのプロパティ一覧</h4>
+                <pre>
+                    Function クラスには、以下のプロパティがあります。
+                    　
+                    すべてのブラウザで利用できるとは限りません。
+                </pre>
+                <script>
+                    var table3 = {
+                        //"title":"Function クラスのプロパティ一覧",
+                        "list":[
+                                {
+                                "title":"prototype",
+                                "type":"Object",
+                                "description":"「新しく生成するオブジェクト」のプロトタイプを設定する。",
+                                },
+                                {
+                                "title":"name",
+                                "type":"String",
+                                "description":"関数名を取得する。",
+                                },
+                                {
+                                "title":"length",
+                                "type":"Number",
+                                "description":"サポートしている引数の数を取得する。",
+                                },
+                                ],
+                    };
+                tableList(table3);
+                
+                    </script>
+                <pre>
+                    任意の関数の実行途中に、取得できるプロパティです。
+                </pre>
+                <h5>関数リテラルの構文</h5>
+                <script>
+                    var table4 = {
+                        //"title":"Function クラスのプロパティ一覧",
+                        "list":[
+                                {
+                                "title":"caller",
+                                "type":"Function",
+                                "description":"自身の関数の実行主となる Function オブジェクトを取得する。",
+                                },
+                                {
+                                "title":"arguments",
+                                "type":"Arguments",
+                                "description":"Arguments オブジェクトを取得する。（arguments 変数と同等）",
+                                },
+                                ],
+                    };
+                tableList(table4);
+                
+                    </script>
+                <h4>name プロパティ</h4>
+                <pre>
+                    関数名を取得するには、<span class="color-red">name</span> プロパティを使用します。
+                    　
+                    匿名関数である場合、空文字 "" や、undefined 値が得られます。
+                </pre>
+                <pre>
+                    InternetExplorer 11 の時点では、対応していません。<br />
+                </pre>
+                <h5><a href="#MyFunction5">関数名を取得する</a>･････</h5>
+                <h4>length プロパティ</h4>
+                <pre>
+                    関数名を取得するには、<span class="color-red">length</span> プロパティを使用します。
+                </pre>
+                <h5><a href="#MyFunction6">サポートしている引数の数を取得する</a>･････</h5>
+                <h4>caller プロパティ</h4>
+                <pre>
+                    実行主である関数オブジェクトを取得するには、<span class="color-red">caller</span> プロパティを使用します。
+                    　
+                    実行主となる関数が存在しない場合は、null 値が得られます。
+                </pre>
+                <pre>
+                    caller プロパティは、任意の関数の実行途中でアクセスします。
+                </pre>
+                <pre>
+                    caller プロパティは、<span class="color-red">strict モードでは、利用できません。</span>
+                </pre>
+                <h5><a href="#MyFunction7">実行主である、関数オブジェクトを取得する</a>･････</h5>
+                
+                <h4>arguments プロパティ</h4>
+                <pre>
+                    Arguments オブジェクトを取得するには、<span class="color-red">arguments</span> プロパティを使用します。
+                </pre>
+                <pre>
+                    arguments プロパティは、任意の関数の実行途中でアクセスします。
+                </pre>
+                <pre>
+                    arguments 変数から、Arguments オブジェクトを取得する事もできます。
+                    　
+                    基本的には、<span class="color-red">arguments</span> 変数を使用した方がいいでしょう。
+                </pre>
+                <h5><a href="#MyFunction8">Arguments オブジェクトを取得する</a>･････</h5>
+                
+                <h4>関数リテラルの評価タイミングについて</h4>
+                <pre>
+                    関数宣言と違って、<span class="color-red">関数リテラルが、先に評価される事はありません</span>。
+                </pre>
+                <pre>
+                    プログラムが上から順番に実行され、<span class="color-red">関数リテラルまで到達した時点で、初めて関数オブジェクトが生成されます</span>。
+                </pre>
+                <pre>
+                    すべての関数リテラルは、<span class="color-red">動的な関数</span>として機能します。
+                </pre>
+                
+                <h4>匿名関数を即時実行する</h4>
+                <pre>
+                    匿名関数は、<span class="color-red">即時実行</span>する事ができます。
+                    　
+                    匿名関数の即時実行は、<span class="color-red">スコープ</span>として機能するため重要です。
+                </pre>
+                <pre>
+                    クロージャについては、<a href="http://hakuhin.jp/js/function.html#FUNCTION_04">こちら</a>で解説しています。<br />
+                </pre>
+                <h5><a href="#MyFunction7">匿名関数を即時実行する</a>･････</h5>
+                <h3>Function コンストラクタを使用する･････</h3>
+                <h4>動的に関数を作成する</h4>
+                <pre>
+                    <span class="color-red">Function</span> コンストラクタを使って、関数オブジェクトを作成することができます。
+                </pre>
+                <pre>
+                    これはマイナーな生成方法です。
+                    　
+                    かわりに、<span class="color-red">function</span> 演算子を使用した方がいいでしょう。
+                </pre>
+                
+                
+                <h5><a href="#MyFunction8">Function コンストラクタを使って、関数オブジェクトを作成</a>･････</h5>
+            </div>
+            <!--/ #scriptElements-->
+            
+            <div id="ad2">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット（小　モバイル用） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:50px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="9019374983"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <h4>使用例</h4>
+            <h5>外部ファイル（CreateFunction.js）</h5>
+            <div id="scriptUseExsample">
+                <pre id="scriptOutput"></pre>
+                <script id="scriptInput">
+                    
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction1">関数内で、Arguments オブジェクトを取得する</a>');
+                    document.writeln ('<hr />');
+                    
+                    // ------------------------------------------------------------
+                    // 関数内で、Arguments オブジェクトを取得する
+                    // ------------------------------------------------------------
+                    
+                    // 匿名関数を即時実行する
+                    (function (){
+                     
+                        // 出力テスト
+                        console.log(arguments);
+                        document.write ('arguments : ' + arguments);
+                     
+                    })();
+                
+                    document.writeln ('<hr />');
+                document.write ('<a name="MyFunction2">Arguments オブジェクトを使って、引数から渡されたすべてのデータを順番に取得する</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction2 という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction2 () {
+                    
+                    // ------------------------------------------------------------
+                    // 引数の総数を取得する
+                    // ------------------------------------------------------------
+                    var num = arguments.length;
+                    
+                    // ------------------------------------------------------------
+                    // 引数から渡されたすべてのデータを順番に取得する
+                    // ------------------------------------------------------------
+                    var i;
+                    for(i = 0;i < num;i++) {
+                        // 引数から渡されたデータを取得する
+                        var data = arguments[i];
+                        
+                        console.log('id : ' + i + ', data : ' + data);
+                        document.write ('id : ' + i + ', data : ' + data);
+                        document.write ('<br />');
+                    }
+                }
+                
+                
+                // ------------------------------------------------------------
+                // MyFunction2 という関数を実行する
+                // ------------------------------------------------------------
+                MyFunction2( false , 123 , "abc" , [0,1,2] , {a:0,b:1,c:2} );
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction3">自身の関数オブジェクトを取得する（関数宣言内）</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction3 という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction3 () {
+                    
+                    // 自身の関数オブジェクトを取得する
+                    var function3_object = arguments.callee;
+                    
+                    // 一致するか調べる
+                    console.log(function3_object == MyFunction3); // true
+                    document.write ('(function3_object == MyFunction3) : ' + (function3_object == MyFunction3));
+                }
+                
+                // ------------------------------------------------------------
+                // MyFunction3 という関数を実行する
+                // ------------------------------------------------------------
+                MyFunction3();
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction4">MyFunction(4)</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // 関数を動的に作成し、変数に格納する
+                // ------------------------------------------------------------
+                var my_function4 = function (){
+                    
+                    // 自身の関数オブジェクトを取得する
+                    var function4_object = arguments.callee;
+                    
+                    // 一致するか調べる
+                    console.log(function4_object == my_function4); // true
+                    document.write ('(function4_object == my_function4) : ' + (function4_object == my_function4));
+
+                };
+                
+                
+                // ------------------------------------------------------------
+                // 関数を実行する
+                // ------------------------------------------------------------
+                my_function4();
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction5">関数名を取得する</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunc という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction5 (argument1,argument2,argument3) {
+                    
+                }
+                
+                // ------------------------------------------------------------
+                // 関数名を取得する
+                // ------------------------------------------------------------
+                console.log(MyFunction5.name); // "MyFunction5"
+                document.write ('MyFunction5.name : ' + MyFunction5.name);
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction6">サポートしている引数の数を取得する</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction6 という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction6 ( argument1 , argument2 , argument3 ){
+                    
+                }
+                
+                // ------------------------------------------------------------
+                // サポートしている引数の数を取得する
+                // ------------------------------------------------------------
+                console.log(MyFunction6.length); // 3
+                document.write ('MyFunction6.length : ' + MyFunction6.length);
+
+
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction7">実行主である、関数オブジェクトを取得する</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction7_A という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction7_A (){
+                    // 自身の関数オブジェクト
+                    var callee = arguments.callee;
+                    // 実行主の関数オブジェクト
+                    var caller = callee.caller;
+                    
+                    // 出力テスト
+                    console.log('callee : ' + callee.name + ', caller : ' + caller);
+                    document.write ('callee : ' + callee.name + ', caller : ' + caller);
+                    document.writeln ('<br />');
+                }
+                
+                // ------------------------------------------------------------
+                // MyFunction7_B という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction7_B (){
+                    // 自身の関数オブジェクト
+                    var callee = arguments.callee;
+                    // 実行主の関数オブジェクト
+                    var caller = callee.caller;
+                    
+                    // 出力テスト
+                    console.log('callee : ' + callee.name + ', caller : ' + caller);
+                    document.write ('callee : ' + callee.name + ', caller : ' + caller);
+                    document.writeln ('<br />');
+
+                    // MyFunction7_A 関数を実行する
+                    MyFunction7_A();
+                }
+                
+                // ------------------------------------------------------------
+                // MyFunction7_C という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction7_C (){
+                    // 自身の関数オブジェクト
+                    var callee = arguments.callee;
+                    // 実行主の関数オブジェクト
+                    var caller = callee.caller;
+                    
+                    // 出力テスト
+                    console.log('callee : ' + callee.name + ', caller : ' + caller);
+                    document.write ('callee : ' + callee.name + ', caller : ' + caller);
+                    document.writeln ('<br />');
+
+                    // yFunction7_B 関数を実行する
+                    MyFunction7_B();
+                }
+                
+                
+                // ------------------------------------------------------------
+                // yFunction7_C 関数を実行する
+                // ------------------------------------------------------------
+                MyFunction7_C();
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction8">Arguments オブジェクトを取得する</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction8 という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction8 ( argument1 , argument2 , argument3 ) {
+                    
+                    // arguments 変数から自身の関数オブジェクトを取得
+                    var callee = arguments.callee;
+                    
+                    // 関数オブジェクトから Arguments オブジェクトを取得する
+                    var arguments_object = callee.arguments;
+                    
+                    // arguments 変数と同等である
+                    console.log(arguments_object == arguments); // true
+                    document.write ('(arguments_object == arguments) : ' + (arguments_object == arguments));
+                }
+                
+                // ------------------------------------------------------------
+                // MyFunction8 関数を実行する
+                // ------------------------------------------------------------
+                MyFunction8( "a" , "b" , "c" );
+                
+                
+                    </script>
+            </div>
+            <!--/ #cssUseExsample-->
+            <h4>HTML</h4>
+            <h5>外部ファイル（sample.html）</h5>
+            <div id="htmlSourceCode">
+                <pre id="htmlOutput">
+                </pre>
+            </div>
+            <!--/ #htmlSourceCode-->
+            <br />
+            <div id="htmlUseExsample">
+                <h4>ブラウザ上の表示</h4>
+                <div id="htmlInput">
+                    <script type="text/javascript" src="./js/CreateFunction.js"></script>
+                </div>
+            </div>
+            <div id="ad3">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（中） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:300px;height:250px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="1714745781"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <!--/ #htmlUseExsample-->
+            <h4>関連</h4>
+            <div id="htmlList">
+            </div>
+            <!--/ #htmlList-->
+            <script>
+                var page = "";
+                var htmlList = document.getElementById("htmlList");
+                for(var l = 0; l < htmlData.links.length;l++){
+                    var html = "";
+                    var title = htmlData.links[l].title;
+                    if(page == ""){
+                        html += "<br />";
+                        html += "<h5>" + title + "</h5>";
+                        var items = htmlData.links[l].items;
+                        for(var i = 0;i < items.length;i++){
+                            html += items[i].title.link(items[i].url) + "<br />";
+                        }
+                        htmlList.innerHTML += html;
+                    } else if(page != title && page != ""){
+                        
+                    } else {
+                        var items = htmlData.links[l].items;
+                        html += "<br />";
+                        for(var i = 0;i < items.length;i++){
+                            html += items[i].title.link(items[i].url) + "<br />";
+                        }
+                        htmlList.innerHTML += html;
+                    }
+                }
+            var scriptOutput = document.getElementById("scriptOutput");
+            var scriptInput = document.getElementById("scriptInput");
+            scriptOutput.innerHTML = scriptInput.innerHTML;
+            var htmlOutput = document.getElementById("htmlOutput");
+            var htmlInput = document.getElementById("htmlInput");
+            var input = htmlInput.innerHTML;
+            var re = /</gi;
+            input = input.replace(re, "&#60;");
+            re = />/gi;
+            input = input.replace(re, "&#62;");
+            htmlOutput.innerHTML = input;
+                </script>
+            <div id="ad4">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット縦長(特大) -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:200px;height:90px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="2120848581"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <footer>
+                <address>
+                    &copy; <a href="http://sunstripe.main.jp/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/javascript/">JavaScript リファレンス</a>
+                </address>
+            </footer>
+        </div>
+        <!--/ #wrapper-->
+    </body>
+</html>

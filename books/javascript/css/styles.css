@@ -1,80 +1,106 @@
 @charset "UTF-8";
-html{
+
+html {
     width:100%;
 }
+
 *{
     margin:0;
     padding:0;
 }
+
 body {
     text-align: center;
+    color:rgba(100,100,100,1.0);
+    font-family: Quicksand, 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
+
 div#wrapper {
     width: 800px;
     margin: 0 auto;
-    background-color:rgba(255,200,255,0.5);
-    border: 1px solid rgba(255,200,255,1.0);
+    background-color:rgba(255,200,200,0.5);
+    border: 1px solid rgba(255,200,200,1.0);
 }
-div#cssProperties{
+
+div#scriptProperties {
     background-color:rgba(255,255,255,1.0);
     text-align:left;
     margin: 0 10px;
 }
-div#cssElements{
+
+div#scriptElements {
     background-color:rgba(255,255,255,1.0);
     text-align:left;
     margin: 0 10px;
 }
-div#cssUseExsample{
-    background-color:rgba(255,255,255,1.0);
-    text-align:left;
-    margin: 0 10px;
-    overflow:scroll;
-}
-div#cssSourceCode{
-    background-color:rgba(255,255,255,1.0);
-    text-align:left;
-    margin: 0 10px;
-    overflow:scroll;
-}
-div#htmlUseExsample{
+
+div#scriptUseExsample {
     background-color:rgba(255,255,255,1.0);
     text-align:left;
     margin: 0 10px;
     overflow:scroll;
 }
-div#htmlSourceCode{
+
+div#scriptSourceCode {
     background-color:rgba(255,255,255,1.0);
     text-align:left;
     margin: 0 10px;
     overflow:scroll;
 }
-div#htmlList{
+
+div#htmlUseExsample {
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+    overflow:scroll;
+}
+
+div#htmlSourceCode {
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+    overflow:scroll;
+}
+
+div#htmlList {
     background-color:rgba(255,255,255,1.0);
     text-align:left;
     margin: 0 10px;
 }
-div#ad1{
+
+div#ad1 {
     background-color:rgba(255,255,255,1.0);
     text-align:center;
     margin: 0 10px;
 }
-div#ad2{
+
+div#ad2 {
     background-color:rgba(255,255,255,1.0);
     text-align:center;
     margin: 0 10px;
 }
-div#ad3{
+
+div#ad3 {
     background-color:rgba(255,255,255,1.0);
     text-align:center;
     margin: 0 10px;
 }
-div#ad4{
+
+div#ad4 {
     background-color:rgba(255,255,255,1.0);
     text-align:left;
     margin: 0 10px;
 }
-footer{
+
+.color-red {
+    color:rgba(255,0,0,1.0);
+}
+
+.lineThrough {
+     text-decoration:line-through;
+}
+
+footer {
     position:static;
     bottom:0px;
 }

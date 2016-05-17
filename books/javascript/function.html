@@ -7,9 +7,7 @@
         <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
         <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
         <link rel="stylesheet" href="./css/styles.css" type="text/css" />
-        <link rel="stylesheet" href="./css/tableList.css" type="text/css" />
         <script type="text/javascript" src="./js/cssdata.js"></script>
-        <script type="text/javascript" src="./js/tableList.js"></script>
     </head>
     <body>
         <div id="wrapper">
@@ -26,15 +24,57 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
             </div>
-            <h3>タイトル･････簡単な説明</h3>
-            <div id="cssProperties">
+            
+            <div id="scriptProperties">
             </div>
-            <!--/ #cssProperties-->
+            <!--/ #scriptProperties-->
             <br />
-            <h4>値</h4>
-            <div id="cssElements">
+            <h4>Function クラスについて</h4>
+            <div id="scriptElements">
+                
+                <h3>Function クラスについて･････</h3>
+                <pre>
+                    Function クラスは、関数用のクラスです。
+                </pre>
+                <h3>関数とは？･････</h3>
+                <pre>
+                    関数は、汎用的に利用できる処理を、１つのモジュールとしてまとめたものです。<br />
+                    任意の式や文で構成された、命令群です。<br />
+                </pre>
+                <h3>関数の構文･････</h3>
+                <pre>
+                    引数と呼ばれる、複数のデータを受け取る事ができます。<br />
+                    関数の中の命令群が最後まで実行されると、戻り値と呼ばれる１つの結果を返す事ができます。<br />
+                </pre>
+                <h4>関数の構文･････</h4>
+                <pre>
+                    function 関数名 ( 引数 ) {
+                    
+                      命令文;
+                      命令文;
+                      命令文;
+                    
+                      return 戻り値;
+                    }
+                </pre>
+                <h3>任意の関数を実行する･････</h3>
+                <pre>
+                    
+                    任意の関数を実行するには、関数呼び出し演算子 ( ) を使用します。<br />
+                
+                </pre>
+                <h4>関数呼び出しの構文･････</h4>
+                <pre>
+                    戻り値 = 関数名 ( 引数 );
+                </pre>
+                <pre>
+                    丸括弧 ( ) の中には、引数を指定することができます。<br />
+                    引数から複数のデータを渡したい場合、カンマ , で区切ります。<br />
+                    引数に指定するデータは、関数ごとに仕様が異なります。<br />
+                </pre>
+                <h4>MathValueAdd という名前の関数を宣言し、実行する･････</h4>
             </div>
-            <!--/ #cssElements-->
+            <!--/ #scriptElements-->
             
             <div id="ad2">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -49,11 +89,26 @@
             </div>
             
             <h4>使用例</h4>
-            <h5>外部ファイル（sample.js）</h5>
-            <div id="cssUseExsample">
-                <pre id="styleOutput"></pre>
-                <script id="styleInput">
-                </script>
+            <h5>外部ファイル（MathValueAdd.js）</h5>
+            <div id="scriptUseExsample">
+                <pre id="scriptOutput"></pre>
+                <script id="scriptInput">
+                    // ------------------------------------------------------------
+                    function MathValueAdd ( value_1 , value_2 ) {
+                        // 第01引数と第02引数で渡された数値を合計し、結果を返す
+                        return value_1 + value_2;
+                    }
+                
+                // ------------------------------------------------------------
+                // MathValueAdd という関数を実行
+                //（ 第01引数に 3、第02引数に 12 を指定 )
+                // ------------------------------------------------------------
+                var total = MathValueAdd( 3 , 12 );
+                
+                // 出力テスト
+                console.log(total); // 15
+                document.write(total); // 15
+                    </script>
             </div>
             <!--/ #cssUseExsample-->
             <h4>HTML</h4>
@@ -67,9 +122,7 @@
             <div id="htmlUseExsample">
                 <h4>ブラウザ上の表示</h4>
                 <div id="htmlInput">
-                    <link rel="stylesheet" href="sample.css" type="text/css" />
-                    
-                    (sample.html)ここに書き込み
+                    <script type="text/javascript" src="./js/MathValueAdd.js"></script>
                 </div>
             </div>
             <div id="ad3">
@@ -114,9 +167,9 @@
                         htmlList.innerHTML += html;
                     }
                 }
-            var styleOutput = document.getElementById("styleOutput");
-            var styleInput = document.getElementById("styleInput");
-            styleOutput.innerHTML = styleInput.innerHTML;
+            var scriptOutput = document.getElementById("scriptOutput");
+            var scriptInput = document.getElementById("scriptInput");
+            scriptOutput.innerHTML = scriptInput.innerHTML;
             var htmlOutput = document.getElementById("htmlOutput");
             var htmlInput = document.getElementById("htmlInput");
             var input = htmlInput.innerHTML;

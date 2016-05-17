@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>JavaScript スタイルシートリファレンス</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="You Ohshima" />
+        <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
+        <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <link rel="stylesheet" href="./css/tableList.css" type="text/css" />
+        <script type="text/javascript" src="./js/cssdata.js"></script>
+        <script type="text/javascript" src="./js/tableList.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>JavaScript - 関数を作成する</h1>
+            <h2>スタイルシートリファレンス</h2>
+            <div id="ad1">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（大） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:280px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="5900513788"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <div id="scriptProperties">
+            </div>
+            <!--/ #scriptProperties-->
+            <br />
+            <h4>関数を作成する</h4>
+            <div id="scriptElements">
+                
+                <h3>function 演算子を使用して、関数を宣言する･････</h3>
+                <h4>関数を宣言する</h4>
+                <pre>
+                    関数を宣言するには、function 演算子を使用します。
+                    　
+                    記述例です。
+                </pre>
+                <h5><a href="#MyFunction1">関数を宣言する</a>･････</h5>
+                <h4>関数オブジェクトにアクセスする</h4>
+                <pre>
+                    宣言した関数の名前を使用すると、Function オブジェクトにアクセスする事ができます。
+                    
+                </pre>
+                <h5><a href="#MyFunction2">関数を宣言する</a>･････</h5>
+                <h4>グローバルな関数宣言について</h4>
+                <pre>
+                    グローバルな環境（すべてのスコープの外側）で関数を宣言した場合、グローバルな関数宣言となります。
+                </pre>
+                <pre>
+                    グローバルな関数宣言は、静的な関数として機能します。
+                </pre>
+                <h4>ローカルな関数宣言について</h4>
+                <pre>
+                    関数宣言は、任意の関数の中にも記述する事ができます。
+                    　
+                    ローカルな環境（任意の関数内）で関数を宣言した場合、ローカルな関数宣言となります。<br />
+                </pre>
+                <pre>
+                    ローカルな関数宣言は、動的な関数として機能します。（静的な関数ではありません）
+                </pre>
+                
+                <h4>関数宣言の評価タイミングについて</h4>
+                <pre>
+                    関数宣言は、プログラムが順番に実行されるよりも先に評価されます。
+                    　
+                    よって関数宣言は、スコープ内の好きな場所に記述する事ができます。<br />
+                </pre>
+                <h4>グローバルな関数宣言の評価タイミングについて</h4>
+                <pre>
+                    グローバルな関数宣言の場合、プログラムの実行が開始される前に、関数宣言が評価されます。
+                    　
+                    プログラムの何処からでも、グローバルな関数オブジェクトにアクセスする事ができます。<br />
+                </pre>
+                <h5><a href="#MyFunction3">グローバルな関数宣言は、関数宣言をプログラムの後方に記述しても動作する</a>･････</h5>
+                <h4>ローカルな関数宣言の評価タイミングについて</h4>
+                <pre>
+                    ローカルな関数宣言の場合、任意の関数スコープに入った瞬間に、スコープ内の関数宣言が評価されます。
+                    　
+                    関数スコープに入るたびに、新しい関数オブジェクトが生成されます。<br />
+                </pre>
+                <pre>
+                    クロージャについては、<a href="http://hakuhin.jp/js/function.html#FUNCTION_04">こちら</a>で解説しています。<br />
+                </pre>
+                <h5><a href="#MyFunction4">ローカルな関数宣言を行った場合、ローカル関数は動的に生成される</a>･････</h5>
+                <h3>function 演算子を使用して、関数を動的に作成する･････</h3>
+                <h4>関数を動的に生成する</h4>
+                <pre>
+                    
+                    関数を動的に生成するには、function 演算子を使用します。
+                    　
+                    この書式を、<span class="color-red">関数リテラル</span>といいます。<br />
+                    
+                </pre>
+                <h5>関数リテラルの構文</h5>
+                <pre>
+                    var 変数 = function ( 引数 ) {
+                    
+                      命令文;
+                      命令文;
+                      命令文;
+                    
+                      return 戻り値;
+                    };
+                </pre>
+                <pre>
+                    関数名は省略可能です。
+                    　
+                    関数オブジェクトを直接得ることができる為、関数名を記述する必要がありません。<br />
+                </pre>
+                <pre>
+                    よって関数リテラルは、匿名関数、無名関数とも呼ばれます。<br />
+                </pre>
+                
+                <pre>
+                    使用例<br />
+                </pre>
+                <h5><a href="#MyFunction5">関数オブジェクトを動的に生成する</a>･････</h5>
+                <h4>関数リテラルに関数名を記述する</h4>
+                <pre>
+                    <span class="color-red">関数リテラル内から、自身の関数オブジェクトを取得したい場合</span>に利用します。
+                    　
+                    この関数名は、関数リテラル内でのみ利用可能です。
+                </pre>
+                <pre>
+                    <a href="http://hakuhin.jp/js/function.html#ARGUMENTS_GET_CALLEE">arguments.callee</a>プロパティから取得することもできます。
+                </pre>
+                <pre>
+                    Internet Explorer 8 以前では仕様が異なります。自身の関数は取得できません。
+                </pre>
+                <h5><a href="#MyFunction6">関数リテラルに関数名を指定する</a>･････</h5>
+                
+                <h4>関数リテラルの評価タイミングについて</h4>
+                <pre>
+                    関数宣言と違って、<span class="color-red">関数リテラルが、先に評価される事はありません</span>。
+                </pre>
+                <pre>
+                    プログラムが上から順番に実行され、<span class="color-red">関数リテラルまで到達した時点で、初めて関数オブジェクトが生成されます</span>。
+                </pre>
+                <pre>
+                    すべての関数リテラルは、<span class="color-red">動的な関数</span>として機能します。
+                </pre>
+                
+                <h4>匿名関数を即時実行する</h4>
+                <pre>
+                    匿名関数は、<span class="color-red">即時実行</span>する事ができます。
+                    　
+                    匿名関数の即時実行は、<span class="color-red">スコープ</span>として機能するため重要です。
+                </pre>
+                <pre>
+                    クロージャについては、<a href="http://hakuhin.jp/js/function.html#FUNCTION_04">こちら</a>で解説しています。<br />
+                </pre>
+                <h5><a href="#MyFunction7">匿名関数を即時実行する</a>･････</h5>
+                <h3>Function コンストラクタを使用する･････</h3>
+                <h4>動的に関数を作成する</h4>
+                <pre>
+                    <span class="color-red">Function</span> コンストラクタを使って、関数オブジェクトを作成することができます。
+                </pre>
+                <pre>
+                    これはマイナーな生成方法です。
+                    　
+                    かわりに、<span class="color-red">function</span> 演算子を使用した方がいいでしょう。
+                </pre>
+                <script>
+                    var table = {
+                        "title":"new Function ( ... , \"関数内の文\" ) :Function",
+                        "list":[
+                                {
+                                "title":"可変引数(略可)",
+                                "type":"String",
+                                "description":"引数で使用する変数名を、必要な数だけ順番に指定",
+                                },
+                                {
+                                "title":"最終引数(略可)",
+                                "type":"String",
+                                "description":"関数内の式や文（ステートメント）を、文字列で指定",
+                                },
+                                {
+                                "title":"戻り値",
+                                "type":"Function",
+                                "description":"Function オブジェクト",
+                                },
+                                ],
+                    };
+                tableList(table);
+
+                </script>
+                
+                
+                <h5><a href="#MyFunction8">Function コンストラクタを使って、関数オブジェクトを作成</a>･････</h5>
+            </div>
+            <!--/ #scriptElements-->
+            
+            <div id="ad2">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット（小　モバイル用） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:50px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="9019374983"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <h4>使用例</h4>
+            <h5>外部ファイル（CreateFunction.js）</h5>
+            <div id="scriptUseExsample">
+                <pre id="scriptOutput"></pre>
+                <script id="scriptInput">
+                    
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction1">MyFunction(1)</a>');
+                    document.writeln ('<hr />');
+
+                    // ------------------------------------------------------------
+                    // MyFunction1 という名前の関数を宣言する
+                    // ------------------------------------------------------------
+                    function MyFunction1 (argument1 , argument2) {
+                        var v = argument1 + argument2;
+                        return v;
+                    }
+                    // ------------------------------------------------------------
+                    // MyFunction1 という関数を実行して、結果を得る
+                    // ------------------------------------------------------------
+                    var result = MyFunction1(1,2);
+                    
+                    document.write ('result : ' + result);
+
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction2">MyFunction(2)</a>');
+                    document.writeln ('<hr />');
+
+                    // ------------------------------------------------------------
+                    // MyFunction2 という名前の関数を宣言する
+                    // ------------------------------------------------------------
+                    function MyFunction2 (argument1 , argument2) {
+                        var v = argument1 + argument2;
+                        return v;
+                    }
+                
+                    // ------------------------------------------------------------
+                    // 関数オブジェクトを取得する
+                    // ------------------------------------------------------------
+                    var function_object2 = MyFunction2;
+                
+                    // 出力テスト
+                    console.log(function_object2);
+                    document.write ('function_object2 : ' + function_object2);
+                    
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction3">MyFunction(3)</a>');
+                    document.writeln ('<hr />');
+                    
+                    // ------------------------------------------------------------
+                    // 各関数を実行して、結果を得る（グローバルな関数宣言は、関数宣言をプログラムの後方に記述しても動作する）
+                    // ------------------------------------------------------------
+                    var a = MyFunction_A(1,2);
+                    var b = MyFunction_B(6,5);
+                    var c = MyFunction_C(3,4);
+
+                    // 出力テスト
+                    console.log(a); // 3
+                    console.log(b); // 1
+                    console.log(c); // 12
+                    
+                    document.write ('a : ' + a + 'b : ' + b + 'c : ' + c );
+                    
+                    // ------------------------------------------------------------
+                    // MyFunction_A という名前の関数を宣言する
+                    // ------------------------------------------------------------
+                    function MyFunction_A (argument1 , argument2) {
+                        var v = argument1 + argument2;
+                        return v;
+                    }
+                
+                    // ------------------------------------------------------------
+                    // MyFunction_B という名前の関数を宣言する
+                    // ------------------------------------------------------------
+                    function MyFunction_B (argument1 , argument2) {
+                        var v = argument1 - argument2;
+                        return v;
+                    }
+                
+                    // ------------------------------------------------------------
+                    // MyFunction_C という名前の関数を宣言する
+                    // ------------------------------------------------------------
+                    function MyFunction_C (argument1 , argument2) {
+                        var v = argument1 * argument2;
+                        return v;
+                    }
+                
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction4">MyFunction(4)</a>');
+                    document.writeln ('<hr />');
+
+                    // ------------------------------------------------------------
+                    // MyFunction_G という名前の関数を宣言する（グローバルな関数宣言）
+                    // ------------------------------------------------------------
+                    function MyFunction_G (argument) {
+    
+                        // ------------------------------------------------------------
+                        // ローカル変数
+                        // ------------------------------------------------------------
+                        var _variable_ = argument;
+    
+                        // ------------------------------------------------------------
+                        // MyFunction_L という名前の関数を宣言する（ローカルな関数宣言）
+                        // ------------------------------------------------------------
+                        function MyFunction_L () {
+                            return _variable_;
+                        }
+    
+                        // ------------------------------------------------------------
+                        // ローカルな関数オブジェクトを返す
+                        // ------------------------------------------------------------
+                        return MyFunction_L;
+                    }
+                
+                    // ------------------------------------------------------------
+                    // グローバルな関数を実行して、ローカルな関数オブジェクトを取得する
+                    // ------------------------------------------------------------
+                    var function_object0 = MyFunction_G("テスト１");
+                    var function_object1 = MyFunction_G("テスト２");
+                
+                    // ------------------------------------------------------------
+                    // ローカルな関数オブジェクトを実行する
+                    // ------------------------------------------------------------
+                    console.log(function_object0()); // "テスト１"
+                    console.log(function_object1()); // "テスト２"
+                
+                    // ------------------------------------------------------------
+                    // ローカルな関数オブジェクト同士を比較しても一致しない（新しく関数オブジェクトが生成されているため）
+                    // ------------------------------------------------------------
+                    console.log(function_object0 == function_object1); // false
+
+                    document.write ('function_object0 : ' + function_object0());
+                    document.write ('function_object1 : ' + function_object1());
+                    document.write ('(function_object0 == function_object1) : ' + (function_object0 == function_object1));
+                    
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction5">MyFunction(5)</a>');
+                    document.writeln ('<hr />');
+
+                    // ------------------------------------------------------------
+                    // 関数オブジェクトを動的に生成して、変数に格納する
+                    // ------------------------------------------------------------
+                    var function5_object = function (argument1 , argument2){
+                        
+                        var v = argument1 + argument2;
+                        
+                        return v;
+                    }
+                
+                
+                    // ------------------------------------------------------------
+                    // 関数オブジェクトを実行して、結果を得る
+                    // ------------------------------------------------------------
+                    var result = function5_object(3,5);
+
+                    document.write ('result : ', function5_object(3,5));
+                    
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction6">MyFunction(6)</a>');
+                    document.writeln ('<hr />');
+                    
+                    // ------------------------------------------------------------
+                    // 関数リテラルを使って、関数オブジェクトを作成する（関数名も記述）
+                    // ------------------------------------------------------------
+                    var function6_object = function MyFunction6() {
+                        // ------------------------------------------------------------
+                        // 自身の関数オブジェクトを取得する（関数名を使用）
+                        // ------------------------------------------------------------
+                        console.log(MyFunction6);
+                        
+                        //document.write ('MyFunction6 : ' + '<pre>' + MyFunction6 + '</pre>');
+                        
+                        // 比較テスト
+                        console.log(function6_object === MyFunction6); // true
+                        
+                        document.writeln ('<hr />');
+                        document.write ('(function6_object === MyFunction6) : ' + (function6_object === MyFunction6));
+                        document.writeln ('<hr />');
+                        // ------------------------------------------------------------
+                        // 自身の関数オブジェクトを取得する
+                        // ------------------------------------------------------------
+                        console.log(arguments.callee);
+                        
+                        //document.write ('(arguments.callee)' + '<pre>' + arguments.callee + '</pre>');
+                        // 比較テスト
+                        console.log(function6_object === arguments.callee); // true
+                        
+                        document.writeln ('<hr />');
+                        document.write ('(function6_object === arguments.callee) : ' + (function6_object === arguments.callee));
+    
+                    };
+                
+                    // ------------------------------------------------------------
+                    // 関数オブジェクトを実行する
+                    // ------------------------------------------------------------
+                    function6_object();
+                    
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction7">MyFunction(7)</a>');
+                    document.writeln ('<hr />');
+                    
+                    // ------------------------------------------------------------
+                    // 匿名関数を即時実行する（スコープとして機能する）
+                    // ------------------------------------------------------------
+                    (function () {
+                        // ローカル変数を用意する
+                        var local_a = 123;
+                        var local_b = "あいうえお";
+                     
+                        // 出力テスト
+                        console.log(local_a);
+                        console.log(local_b);
+                        document.write ('local_a : ' + local_a);
+                        document.write ('local_b : ' + local_b);
+                     
+                    })();
+                    // ------------------------------------------------------------
+                    // アクセステスト
+                    // ------------------------------------------------------------
+                    try {
+                         // ×関数スコープの外からローカル変数にアクセスできない
+                         console.log(local_a);
+                         document.write ('local_a : ' + local_a);
+                    } catch (e) {
+                         console.log(e);
+                         document.write ('e : ' + e);
+                    }
+                    try {
+                        // ×関数スコープの外からローカル変数にアクセスできない
+                        console.log(local_b);
+                        document.write ('local_b : ' + local_b);
+                    } catch (e) {
+                        console.log(e);
+                        document.write ('e : ' + e);
+                    }
+                
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction8">MyFunction(8)</a>');
+                    document.writeln ('<hr />');
+                    // ------------------------------------------------------------
+                    // Function コンストラクタを使って、関数オブジェクトを作成
+                    // ------------------------------------------------------------
+                    var function8_object = new Function("argument1","argument2","var v = argument1 + argument2;return v;");
+                
+                
+                    // ------------------------------------------------------------
+                    // 関数オブジェクトを実行して、結果を得る
+                    // ------------------------------------------------------------
+                    var result8 = function8_object(1,2);
+                    console.log(result8);
+                    document.write ('result8 : ' + result8);
+
+                    </script>
+            </div>
+            <!--/ #cssUseExsample-->
+            <h4>HTML</h4>
+            <h5>外部ファイル（sample.html）</h5>
+            <div id="htmlSourceCode">
+                <pre id="htmlOutput">
+                </pre>
+            </div>
+            <!--/ #htmlSourceCode-->
+            <br />
+            <div id="htmlUseExsample">
+                <h4>ブラウザ上の表示</h4>
+                <div id="htmlInput">
+                    <script type="text/javascript" src="./js/CreateFunction.js"></script>
+                </div>
+            </div>
+            <div id="ad3">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（中） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:300px;height:250px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="1714745781"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <!--/ #htmlUseExsample-->
+            <h4>関連</h4>
+            <div id="htmlList">
+            </div>
+            <!--/ #htmlList-->
+            <script>
+                var page = "";
+                var htmlList = document.getElementById("htmlList");
+                for(var l = 0; l < htmlData.links.length;l++){
+                    var html = "";
+                    var title = htmlData.links[l].title;
+                    if(page == ""){
+                        html += "<br />";
+                        html += "<h5>" + title + "</h5>";
+                        var items = htmlData.links[l].items;
+                        for(var i = 0;i < items.length;i++){
+                            html += items[i].title.link(items[i].url) + "<br />";
+                        }
+                        htmlList.innerHTML += html;
+                    } else if(page != title && page != ""){
+                        
+                    } else {
+                        var items = htmlData.links[l].items;
+                        html += "<br />";
+                        for(var i = 0;i < items.length;i++){
+                            html += items[i].title.link(items[i].url) + "<br />";
+                        }
+                        htmlList.innerHTML += html;
+                    }
+                }
+            var scriptOutput = document.getElementById("scriptOutput");
+            var scriptInput = document.getElementById("scriptInput");
+            scriptOutput.innerHTML = scriptInput.innerHTML;
+            var htmlOutput = document.getElementById("htmlOutput");
+            var htmlInput = document.getElementById("htmlInput");
+            var input = htmlInput.innerHTML;
+            var re = /</gi;
+            input = input.replace(re, "&#60;");
+            re = />/gi;
+            input = input.replace(re, "&#62;");
+            htmlOutput.innerHTML = input;
+                </script>
+            <div id="ad4">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット縦長(特大) -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:200px;height:90px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="2120848581"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <footer>
+                <address>
+                    &copy; <a href="http://sunstripe.main.jp/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/javascript/">JavaScript リファレンス</a>
+                </address>
+            </footer>
+        </div>
+        <!--/ #wrapper-->
+    </body>
+</html>
