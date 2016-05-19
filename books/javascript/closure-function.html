@@ -7,12 +7,14 @@
         <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
         <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
         <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <link rel="stylesheet" href="./css/displayTableList.css" type="text/css" />
         <script type="text/javascript" src="./js/cssdata.js"></script>
+        <script type="text/javascript" src="./js/displayTableList.js"></script>
     </head>
     <body>
         <div id="wrapper">
-            <h1>JavaScript - コンストラクタ関数について</h1>
-            <h2>スタイルシートリファレンス</h2>
+            <h1>JavaScript - Function クロージャについて</h1>
+            <h2>JavaScriptリファレンス</h2>
             <div id="ad1">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- レクタングル（大） -->
@@ -29,142 +31,172 @@
             </div>
             <!--/ #scriptProperties-->
             <br />
-            <h4>コンストラクタ関数について</h4>
+            <h4>クロージャについて</h4>
             <div id="scriptElements">
                 
-                <h3>動的に関数を作成する･････</h3>
-                <h4>関数を宣言する</h4>
+                <!-- start //-->
+                
+                <!-- MyFunction1 //-->
+                
+                <h3 id="closure">クロージャについて･････</h3>
+                
+                <h4>スコープとは？</h4>
                 <pre>
-                    関数を宣言するには、function 演算子を使用します。
+                    スコープとは、<span class="color-red">宣言した変数や関数などに対する、アクセス可能な範囲</span> の事です。
+                </pre>
+                <pre>
+                    任意のスコープ内で、変数や関数を宣言した場合、スコープの内側から自由にアクセスできます。
                     　
-                    記述例です。
-                </pre>
-                <h5><a href="#MyFunction1">関数を宣言する</a>･････</h5>
-                <h4>関数オブジェクトにアクセスする</h4>
-                <pre>
-                    宣言した関数の名前を使用すると、Function オブジェクトにアクセスする事ができます。
-                    
-                </pre>
-                <h5><a href="#MyFunction2">関数を宣言する</a>･････</h5>
-                <h4>グローバルな関数宣言について</h4>
-                <pre>
-                    グローバルな環境（すべてのスコープの外側）で関数を宣言した場合、グローバルな関数宣言となります。
-                </pre>
-                <pre>
-                    グローバルな関数宣言は、静的な関数として機能します。
-                </pre>
-                <h4>ローカルな関数宣言について</h4>
-                <pre>
-                    関数宣言は、任意の関数の中にも記述する事ができます。
-                    　
-                    ローカルな環境（任意の関数内）で関数を宣言した場合、ローカルな関数宣言となります。<br />
-                </pre>
-                <pre>
-                    ローカルな関数宣言は、動的な関数として機能します。（静的な関数ではありません）
+                    しかし、スコープの外側からアクセスする事はできません。
                 </pre>
                 
-                <h4>関数宣言の評価タイミングについて</h4>
+                <h4>スコープを利用するためには？</h4>
                 <pre>
-                    関数宣言は、プログラムが順番に実行されるよりも先に評価されます。
-                    　
-                    よって関数宣言は、スコープ内の好きな場所に記述する事ができます。<br />
-                </pre>
-                <h4>グローバルな関数宣言の評価タイミングについて</h4>
-                <pre>
-                    グローバルな関数宣言の場合、プログラムの実行が開始される前に、関数宣言が評価されます。
-                    　
-                    プログラムの何処からでも、グローバルな関数オブジェクトにアクセスする事ができます。<br />
-                </pre>
-                <h5><a href="#MyFunction3">グローバルな関数宣言は、関数宣言をプログラムの後方に記述しても動作する</a>･････</h5>
-                <h4>ローカルな関数宣言の評価タイミングについて</h4>
-                <pre>
-                    ローカルな関数宣言の場合、任意の関数スコープに入った瞬間に、スコープ内の関数宣言が評価されます。
-                    　
-                    関数スコープに入るたびに、新しい関数オブジェクトが生成されます。<br />
-                </pre>
-                <pre>
-                    クロージャについては、<a href="http://hakuhin.jp/js/function.html#FUNCTION_04">こちら</a>で解説しています。<br />
-                </pre>
-                <h5><a href="#MyFunction4">ローカルな関数宣言を行った場合、ローカル関数は動的に生成される</a>･････</h5>
-                <h3>function 演算子を使用して、関数を動的に作成する･････</h3>
-                <h4>関数を動的に生成する</h4>
-                <pre>
-                    
-                    関数を動的に生成するには、function 演算子を使用します。
-                    　
-                    この書式を、<span class="color-red">関数リテラル</span>といいます。<br />
-                    
-                </pre>
-                <h5>関数リテラルの構文</h5>
-                <pre>
-                    var 変数 = function ( 引数 ) {
-                    
-                    命令文;
-                    命令文;
-                    命令文;
-                    
-                    return 戻り値;
-                    };
-                </pre>
-                <pre>
-                    関数名は省略可能です。
-                    　
-                    関数オブジェクトを直接得ることができる為、関数名を記述する必要がありません。<br />
-                </pre>
-                <pre>
-                    よって関数リテラルは、匿名関数、無名関数とも呼ばれます。<br />
+                    ECMAScript では、<span class="color-red">中括弧 { }</span> を記述しただけでは、スコープとして機能しません。
                 </pre>
                 
                 <pre>
-                    使用例<br />
-                </pre>
-                <h5><a href="#MyFunction5">関数オブジェクトを動的に生成する</a>･････</h5>
-                <h4>関数リテラルに関数名を記述する</h4>
-                <pre>
-                    <span class="color-red">関数リテラル内から、自身の関数オブジェクトを取得したい場合</span>に利用します。
+                    例えば、以下のソースは、スコープとして機能しません。
                     　
-                    この関数名は、関数リテラル内でのみ利用可能です。
-                </pre>
-                <pre>
-                    <a href="http://hakuhin.jp/js/function.html#ARGUMENTS_GET_CALLEE">arguments.callee</a>プロパティから取得することもできます。
-                </pre>
-                <pre>
-                    Internet Explorer 8 以前では仕様が異なります。自身の関数は取得できません。
-                </pre>
-                <h5><a href="#MyFunction6">関数リテラルに関数名を指定する</a>･････</h5>
-                
-                <h4>関数リテラルの評価タイミングについて</h4>
-                <pre>
-                    関数宣言と違って、<span class="color-red">関数リテラルが、先に評価される事はありません</span>。
-                </pre>
-                <pre>
-                    プログラムが上から順番に実行され、<span class="color-red">関数リテラルまで到達した時点で、初めて関数オブジェクトが生成されます</span>。
-                </pre>
-                <pre>
-                    すべての関数リテラルは、<span class="color-red">動的な関数</span>として機能します。
+                    <span class="color-red">中括弧 { }</span> を記述していない時と、同じ動作をします。
                 </pre>
                 
-                <h4>匿名関数を即時実行する</h4>
+                <h5><a href="#MyFunction1">中括弧 { } を記述しただけでは、スコープとして機能しない</a>･････</h5>
+                
+                <!-- MyFunction2 //-->
+                
+                <h4>関数は スコープとして機能する</h4>
                 <pre>
-                    匿名関数は、<span class="color-red">即時実行</span>する事ができます。
+                    <span class="color-red">ECMAScript では、関数を利用すると、スコープとして機能します。</span>
+                </pre>
+                
+                <h5><a href="#MyFunction2">関数は、スコープとして機能する</a>･････</h5>
+                
+                <!-- MyFunction3 //-->
+                
+                <h4>ローカル変数について</h4>
+                
+                <pre>
+                    関数内で変数を宣言すると、<span class="color-red">ローカル変数</span>を作成することができます。
                     　
-                    匿名関数の即時実行は、<span class="color-red">スコープ</span>として機能するため重要です。
+                    通常であれば、ローカル変数は、<span class="color-red">スコープの外に出ると消滅</span>します。
                 </pre>
+                
+                <h5><a href="#MyFunction3">関数の中で変数を宣言すると、ローカル変数となる</a>･････</h5>
+                
+                <!-- MyFunction4 //-->
+                
+                <h4>ローカル関数について</h4>
+                
                 <pre>
-                    クロージャについては、<a href="http://hakuhin.jp/js/function.html#FUNCTION_04">こちら</a>で解説しています。<br />
-                </pre>
-                <h5><a href="#MyFunction7">匿名関数を即時実行する</a>･････</h5>
-                <h3>Function コンストラクタを使用する･････</h3>
-                <h4>動的に関数を作成する</h4>
-                <pre>
-                    <span class="color-red">Function</span> コンストラクタを使って、関数オブジェクトを作成することができます。
-                </pre>
-                <pre>
-                    これはマイナーな生成方法です。
+                    任意の関数の中では、<span class="color-red">関数を宣言</span>したり、<span class="color-red">動的に関数を作成</span>することができます。
                     　
-                    かわりに、<span class="color-red">function</span> 演算子を使用した方がいいでしょう。
+                    任意のスコープ内で作られた関数を、<span class="color-red">ローカル関数</span>と言います。
                 </pre>
-                <h5><a href="#MyFunction8">Function コンストラクタを使って、関数オブジェクトを作成</a>･････</h5>
+                　
+                <pre>
+                    ローカル関数の中からは、<span class="color-red">同じスコープ内</span>と<span class="color-red">スコープの外側に存在する環境</span>にアクセスする事ができます。
+                </pre>
+                
+                <h5><a href="#MyFunction4">関数の中からは、同じスコープ内と、スコープの外側に存在する環境にアクセスできる</a>･････</h5>
+                
+                <!-- MyFunction5 //-->
+                
+                <h4>ローカル関数をスコープの外側に持ち出した場合</h4>
+                
+                <pre>
+                    ローカル関数は、オブジェクトの一種なので、<span class="color-red">スコープの外に持ち出す</span>ことができます。
+                    　
+                    スコープの内側で作成した関数オブジェクトを、スコープの外側から実行します。
+                </pre>
+                　
+                <pre>
+                    この場合、スコープ内の環境は消滅していません。
+                    　
+                    <span class="color-red">関数オブジェクトが消滅しない限り、スコープ内の環境も生存し続けます</span>。
+                </pre>
+                
+                <h5><a href="#MyFunction5">スコープの中で作成した関数オブジェクトを、スコープの外から実行する</a>･････</h5>
+                
+                <!-- MyFunction6 //-->
+                
+                <h4>クロージャとは？</h4>
+                
+                <pre>
+                    任意の関数が生存していれば、その関数内からアクセスできるすべての環境も生存し続けます。
+                    　
+                    この仕様を、<span class="color-red">クロージャ</span>といいます。
+                </pre>
+                
+                <pre>
+                    <span class="color-red">引数の変数</span>も、ローカル変数として扱われるため、生存し続けます。
+                </pre>
+                　
+                <h5><a href="#MyFunction5">引数の変数もローカル変数なので、生存し続ける</a>･････</h5>
+                
+                <!-- MyFunction7 //-->
+                
+                <!-- >
+                 // h3 見出し
+                 <h3>見出し</h4>
+                 
+                 // h4 小見出し
+                 <h4>小見出し</h4>
+                 
+                 // pre 説明文
+                 <pre>
+                 説明文
+                 　
+                 <span class="color-red">強調文字</span> 説明文
+                 </pre>
+                 
+                 // h5 javascript a-link
+                 <h5><a href="#MyFunction1">中括弧 { } を記述しただけでは、スコープとして機能しない</a>･････</h5>
+                 </ //-->
+                <!--script>
+                 // method
+                 var function_method = {
+                 //"title":"◯◯◯◯◯ クラスには、以下のメソッドがあります。(一部抜粋)",
+                 "list":[
+                 {
+                 "method":"<a href='#'>method()</a>",
+                 "description":"メソッド説明",
+                 },
+                 ],
+                 };
+                 displayTableList(function_method);
+                 
+                 </script // -->
+                
+                <!-- script>
+                 
+                 // function
+                 var function_method_tablelist = {
+                 "title":"Function.method ( this , [ 引数 ] ) :*",
+                 "list":[
+                 {
+                 "title":"第01引数(略可)",
+                 "type":"Object",
+                 "description":"説明文",
+                 },
+                 {
+                 "title":"第02引数(略可)",
+                 "type":"Object",
+                 "description":"説明文",
+                 },
+                 {
+                 "title":"戻り値",
+                 "type":"*",
+                 "description":"戻り値説明文",
+                 },
+                 ],
+                 };
+                 displayTableList(function_method_tablelist);
+                 
+                 </script // -->
+                
+                <!-- end //-->
+                
             </div>
             <!--/ #scriptElements-->
             
@@ -186,251 +218,272 @@
                 <pre id="scriptOutput"></pre>
                 <script id="scriptInput">
                     
+                    // ------------------------------------------------------------
+                    // MyFunction1
+                    // ------------------------------------------------------------
+                    
                     document.writeln ('<hr />');
-                    document.write ('<a name="MyFunction1">MyFunction(1)</a>');
+                    document.write ('<a name="MyFunction1">中括弧 { } を記述しただけでは、スコープとして機能しない</a>');
                     document.writeln ('<hr />');
                     
-                    // ------------------------------------------------------------
-                    // MyFunction1 という名前の関数を宣言する
-                    // ------------------------------------------------------------
-                    function MyFunction1 (argument1 , argument2) {
-                        var v = argument1 + argument2;
-                        return v;
+                    {
+                        // 変数を宣言
+                        var aaa = 1;
+                        var bbb = 2;
+                        var ccc = 3;
                     }
-                // ------------------------------------------------------------
-                // MyFunction1 という関数を実行して、結果を得る
-                // ------------------------------------------------------------
-                var result = MyFunction1(1,2);
                 
-                document.write ('result : ' + result);
+                // 出力テスト（外側からアクセスできるのでスコープではない）
+                console.log ('aaa : ' + aaa); // 1
+                console.log ('bbb : ' + bbb); // 2
+                console.log ('ccc : ' + ccc); // 3
+                document.write ('aaa : ' + aaa);
+                document.write ('bbb : ' + bbb);
+                document.write ('ccc : ' + ccc);
+                
+                
+                // ------------------------------------------------------------
+                // MyFunction2
+                // ------------------------------------------------------------
                 
                 document.writeln ('<hr />');
-                document.write ('<a name="MyFunction2">MyFunction(2)</a>');
+                document.write ('<a name="MyFunction2">関数は、スコープとして機能する</a>');
                 document.writeln ('<hr />');
                 
                 // ------------------------------------------------------------
-                // MyFunction2 という名前の関数を宣言する
+                // MyFunc という名前の関数を宣言する
                 // ------------------------------------------------------------
-                function MyFunction2 (argument1 , argument2) {
-                    var v = argument1 + argument2;
-                    return v;
+                function MyFunction2 () {
+                    // 関数内で変数を宣言
+                    var ddd = 1;
+                    var eee = 2;
+                    var fff = 3;
+                    
+                    // 出力テスト（○ アクセス可能）
+                    console.log(ddd); // 1
+                    console.log(eee); // 2
+                    console.log(fff); // 3
+                    document.write ('ddd : ' + ddd);
+                    document.write ('eee : ' + eee);
+                    document.write ('fff : ' + fff);
+                    document.writeln ('<br />');
                 }
                 
                 // ------------------------------------------------------------
-                // 関数オブジェクトを取得する
+                // MyFunction2 関数を実行する
                 // ------------------------------------------------------------
-                var function_object2 = MyFunction2;
-                
-                // 出力テスト
-                console.log(function_object2);
-                document.write ('function_object2 : ' + function_object2);
-                
-                document.writeln ('<hr />');
-                document.write ('<a name="MyFunction3">MyFunction(3)</a>');
-                document.writeln ('<hr />');
+                MyFunction2();
                 
                 // ------------------------------------------------------------
-                // 各関数を実行して、結果を得る（グローバルな関数宣言は、関数宣言をプログラムの後方に記述しても動作する）
+                // アクセステスト（× 関数スコープの外側からアクセスできない）
                 // ------------------------------------------------------------
-                var a = MyFunction_A(1,2);
-                var b = MyFunction_B(6,5);
-                var c = MyFunction_C(3,4);
-                
-                // 出力テスト
-                console.log(a); // 3
-                console.log(b); // 1
-                console.log(c); // 12
-                
-                document.write ('a : ' + a + 'b : ' + b + 'c : ' + c );
-                
-                // ------------------------------------------------------------
-                // MyFunction_A という名前の関数を宣言する
-                // ------------------------------------------------------------
-                function MyFunction_A (argument1 , argument2) {
-                    var v = argument1 + argument2;
-                    return v;
-                }
-                
-                // ------------------------------------------------------------
-                // MyFunction_B という名前の関数を宣言する
-                // ------------------------------------------------------------
-                function MyFunction_B (argument1 , argument2) {
-                    var v = argument1 - argument2;
-                    return v;
-                }
-                
-                // ------------------------------------------------------------
-                // MyFunction_C という名前の関数を宣言する
-                // ------------------------------------------------------------
-                function MyFunction_C (argument1 , argument2) {
-                    var v = argument1 * argument2;
-                    return v;
-                }
-                
-                document.writeln ('<hr />');
-                document.write ('<a name="MyFunction4">MyFunction(4)</a>');
-                document.writeln ('<hr />');
-                
-                // ------------------------------------------------------------
-                // MyFunction_G という名前の関数を宣言する（グローバルな関数宣言）
-                // ------------------------------------------------------------
-                function MyFunction_G (argument) {
-                    
-                    // ------------------------------------------------------------
-                    // ローカル変数
-                    // ------------------------------------------------------------
-                    var _variable_ = argument;
-                    
-                    // ------------------------------------------------------------
-                    // MyFunction_L という名前の関数を宣言する（ローカルな関数宣言）
-                    // ------------------------------------------------------------
-                    function MyFunction_L () {
-                        return _variable_;
-                    }
-                    
-                    // ------------------------------------------------------------
-                    // ローカルな関数オブジェクトを返す
-                    // ------------------------------------------------------------
-                    return MyFunction_L;
-                }
-                
-                // ------------------------------------------------------------
-                // グローバルな関数を実行して、ローカルな関数オブジェクトを取得する
-                // ------------------------------------------------------------
-                var function_object0 = MyFunction_G("テスト１");
-                var function_object1 = MyFunction_G("テスト２");
-                
-                // ------------------------------------------------------------
-                // ローカルな関数オブジェクトを実行する
-                // ------------------------------------------------------------
-                console.log(function_object0()); // "テスト１"
-                console.log(function_object1()); // "テスト２"
-                
-                // ------------------------------------------------------------
-                // ローカルな関数オブジェクト同士を比較しても一致しない（新しく関数オブジェクトが生成されているため）
-                // ------------------------------------------------------------
-                console.log(function_object0 == function_object1); // false
-                
-                document.write ('function_object0 : ' + function_object0());
-                document.write ('function_object1 : ' + function_object1());
-                document.write ('(function_object0 == function_object1) : ' + (function_object0 == function_object1));
-                
-                document.writeln ('<hr />');
-                document.write ('<a name="MyFunction5">MyFunction(5)</a>');
-                document.writeln ('<hr />');
-                
-                // ------------------------------------------------------------
-                // 関数オブジェクトを動的に生成して、変数に格納する
-                // ------------------------------------------------------------
-                var function5_object = function (argument1 , argument2){
-                    
-                    var v = argument1 + argument2;
-                    
-                    return v;
-                }
-                
-                
-                // ------------------------------------------------------------
-                // 関数オブジェクトを実行して、結果を得る
-                // ------------------------------------------------------------
-                var result = function5_object(3,5);
-                
-                document.write ('result : ', function5_object(3,5));
-                
-                document.writeln ('<hr />');
-                document.write ('<a name="MyFunction6">MyFunction(6)</a>');
-                document.writeln ('<hr />');
-                
-                // ------------------------------------------------------------
-                // 関数リテラルを使って、関数オブジェクトを作成する（関数名も記述）
-                // ------------------------------------------------------------
-                var function6_object = function MyFunction6() {
-                    // ------------------------------------------------------------
-                    // 自身の関数オブジェクトを取得する（関数名を使用）
-                    // ------------------------------------------------------------
-                    console.log(MyFunction6);
-                    
-                    //document.write ('MyFunction6 : ' + '<pre>' + MyFunction6 + '</pre>');
-                    
-                    // 比較テスト
-                    console.log(function6_object === MyFunction6); // true
-                    
-                    document.writeln ('<hr />');
-                    document.write ('(function6_object === MyFunction6) : ' + (function6_object === MyFunction6));
-                    document.writeln ('<hr />');
-                    // ------------------------------------------------------------
-                    // 自身の関数オブジェクトを取得する
-                    // ------------------------------------------------------------
-                    console.log(arguments.callee);
-                    
-                    //document.write ('(arguments.callee)' + '<pre>' + arguments.callee + '</pre>');
-                    // 比較テスト
-                    console.log(function6_object === arguments.callee); // true
-                    
-                    document.writeln ('<hr />');
-                    document.write ('(function6_object === arguments.callee) : ' + (function6_object === arguments.callee));
-                    
-                };
-                
-                // ------------------------------------------------------------
-                // 関数オブジェクトを実行する
-                // ------------------------------------------------------------
-                function6_object();
-                
-                document.writeln ('<hr />');
-                document.write ('<a name="MyFunction7">MyFunction(7)</a>');
-                document.writeln ('<hr />');
-                
-                // ------------------------------------------------------------
-                // 匿名関数を即時実行する（スコープとして機能する）
-                // ------------------------------------------------------------
-                (function () {
-                 // ローカル変数を用意する
-                 var local_a = 123;
-                 var local_b = "あいうえお";
-                 
-                 // 出力テスト
-                 console.log(local_a);
-                 console.log(local_b);
-                 document.write ('local_a : ' + local_a);
-                 document.write ('local_b : ' + local_b);
-                 
-                 })();
-                 // ------------------------------------------------------------
-                 // アクセステスト
-                 // ------------------------------------------------------------
-                 try {
-                     // ×関数スコープの外からローカル変数にアクセスできない
-                     console.log(local_a);
-                     document.write ('local_a : ' + local_a);
-                 } catch (e) {
-                     console.log(e);
-                     document.write ('e : ' + e);
-                 }
                 try {
-                    // ×関数スコープの外からローカル変数にアクセスできない
-                    console.log(local_b);
-                    document.write ('local_b : ' + local_b);
-                } catch (e) {
-                    console.log(e);
-                    document.write ('e : ' + e);
+                    
+                    console.log(ddd);
+                    console.log(eee);
+                    console.log(fff);
+                    document.write ('ddd : ' + ddd);
+                    document.write ('eee : ' + eee);
+                    document.write ('fff : ' + fff);
+                    document.writeln ('<br />');
+                    
+                    
+                } catch (error) {
+                    
+                    console.log('error : ' + error);
+                    document.write ('error : ' + error);
+                    
+                }
+                // ------------------------------------------------------------
+                // MyFunction3
+                // ------------------------------------------------------------
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction3">関数の中で変数を宣言すると、ローカル変数となる</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction3 という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction3() {
+                    
+                    // ローカル変数を宣言 (関数内で変数を宣言しているのでローカル変数となる)
+                    var local_val;
+                    var local_str;
+                    
+                    local_val = 123;
+                    local_str = "あいうえお";
+                    console.log ('local_val : ',local_val);
+                    console.log ('local_str : ',local_str);
+                    document.write ('local_val : ',local_val);
+                    document.write ('local_str : ',local_str);
                 }
                 
-                document.writeln ('<hr />');
-                document.write ('<a name="MyFunction8">MyFunction(8)</a>');
-                document.writeln ('<hr />');
-                // ------------------------------------------------------------
-                // Function コンストラクタを使って、関数オブジェクトを作成
-                // ------------------------------------------------------------
-                var function8_object = new Function("argument1","argument2","var v = argument1 + argument2;return v;");
-                
+                MyFunction3 ();
                 
                 // ------------------------------------------------------------
-                // 関数オブジェクトを実行して、結果を得る
+                // MyFunction4
                 // ------------------------------------------------------------
-                var result8 = function8_object(1,2);
-                console.log(result8);
-                document.write ('result8 : ' + result8);
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction4">関数の中からは、同じスコープ内と、スコープの外側に存在する環境にアクセスできる</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // グローバル変数を宣言
+                // ------------------------------------------------------------
+                var global_a = "aaa";
+                var global_b = "bbb";
+                
+                // ------------------------------------------------------------
+                // MyFunction4_Global という名前の関数を宣言する（グローバルな関数）
+                // ------------------------------------------------------------
+                function MyFunction4_Global() {
+                    
+                    // ------------------------------------------------------------
+                    // ローカル変数を宣言
+                    // ------------------------------------------------------------
+                    var local_a0 = "ccc";
+                    var local_a1 = "ddd";
+                    
+                    // ------------------------------------------------------------
+                    // MyFunc_L という名前の関数を宣言する（関数の中で、さらに関数を宣言しているのでローカル関数となる）
+                    // ------------------------------------------------------------
+                    function MyFunction4_Local() {
+                        
+                        // ------------------------------------------------------------
+                        // ローカル変数を宣言
+                        // ------------------------------------------------------------
+                        var local_b0 = "eee";
+                        var local_b1 = "fff";
+                        
+                        // ------------------------------------------------------------
+                        // アクセステスト
+                        // ------------------------------------------------------------
+                        // スコープの外側に存在する環境にアクセスできる
+                        console.log(global_a); // "aaa"
+                        console.log(global_b); // "bbb"
+                        console.log(local_a0); // "ccc"
+                        console.log(local_a1); // "ddd"
+                        document.write ('global_a : ',global_a);
+                        document.write ('global_b : ',global_b);
+                        document.write ('local_a0 : ',local_a0);
+                        document.write ('local_a1 : ',local_a1);
+                        
+                        // 同じスコープ内の環境にアクセスできる
+                        console.log(local_b0); // "eee"
+                        console.log(local_b1); // "fff"
+                        document.write ('local_b0 : ',local_b0);
+                        document.write ('local_b1 : ',local_b1);
+                    }
+                    
+                    // ------------------------------------------------------------
+                    // MyFunction4_Local 関数を実行する
+                    // ------------------------------------------------------------
+                    MyFunction4_Local();
+                }
+                
+                // ------------------------------------------------------------
+                // MyFunction4_Global 関数を実行する
+                // ------------------------------------------------------------
+                MyFunction4_Global();
+                
+                // ------------------------------------------------------------
+                // MyFunction5
+                // ------------------------------------------------------------
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction5">スコープの中で作成した関数オブジェクトを、スコープの外から実行する</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction5_Global という名前の関数を宣言する（グローバルな関数）
+                // ------------------------------------------------------------
+                function MyFunction5_Global() {
+                    
+                    // ------------------------------------------------------------
+                    // ローカル変数を宣言
+                    // ------------------------------------------------------------
+                    var local_a = "aaa";
+                    var local_b = "bbb";
+                    
+                    // ------------------------------------------------------------
+                    // MyFunction5_Local という名前の関数を宣言する（ローカル関数）
+                    // ------------------------------------------------------------
+                    function MyFunction5_Local() {
+                        
+                        // アクセステスト
+                        console.log(local_a); // "aaa"
+                        console.log(local_b); // "bbb"
+                        document.write ('local_a : ',local_a);
+                        document.write ('local_b : ',local_b);
+                    }
+                    
+                    // ------------------------------------------------------------
+                    // MyFunction5_Local 関数オブジェクトを返す
+                    // ------------------------------------------------------------
+                    return MyFunction5_Local;
+                }
+                
+                // ------------------------------------------------------------
+                // MyFunction5_Global 関数を実行して、新しい関数オブジェクトを取得する
+                // ------------------------------------------------------------
+                var function5_object = MyFunction5_Global();
+                
+                // ------------------------------------------------------------
+                // 関数オブジェクトを実行する（MyFunction5_Global 関数のスコープ内の環境は、生存し続けている）
+                // ------------------------------------------------------------
+                function5_object();
+                
+                // ------------------------------------------------------------
+                // MyFunction6
+                // ------------------------------------------------------------
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction6">引数の変数もローカル変数なので、生存し続ける</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction6 という名前の関数を宣言する（グローバルな関数）
+                // ------------------------------------------------------------
+                function MyFunction6 (name) {
+                    
+                    // ------------------------------------------------------------
+                    // ローカル変数を宣言
+                    // ------------------------------------------------------------
+                    var count = 0;
+                    
+                    // ------------------------------------------------------------
+                    // 関数オブジェクトを動的に作成して返す
+                    // ------------------------------------------------------------
+                    return function () {
+                        // 出力テスト
+                        console.log('name : ' + name + ' count : ' + count);
+                        document.write ('name : ' + name + ' count : ' + count);
+                        document.writeln ('<br />');
+                        // カウント
+                        count++;
+                    };
+                }
+                
+                // ------------------------------------------------------------
+                // MyFunction6 関数を実行して、新しく関数を生成する
+                // ------------------------------------------------------------
+                var function6_object0 = MyFunction6('テスト１');
+                var function6_object1 = MyFunction6('テスト２');
+                var function6_object2 = MyFunction6('テスト３');
+                
+                // ------------------------------------------------------------
+                // 実行テスト
+                // ------------------------------------------------------------
+                function6_object0(); // name:"テスト１" count:0
+                function6_object1(); // name:"テスト２" count:0
+                function6_object2(); // name:"テスト３" count:0
+                function6_object2(); // name:"テスト３" count:1
+                function6_object2(); // name:"テスト３" count:2
+                function6_object2(); // name:"テスト３" count:3
+                function6_object1(); // name:"テスト２" count:1
+                function6_object2(); // name:"テスト３" count:4
                 
                     </script>
             </div>

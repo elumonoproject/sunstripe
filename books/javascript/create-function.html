@@ -7,14 +7,14 @@
         <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
         <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
         <link rel="stylesheet" href="./css/styles.css" type="text/css" />
-        <link rel="stylesheet" href="./css/tableList.css" type="text/css" />
+        <link rel="stylesheet" href="./css/displayTableList.css" type="text/css" />
         <script type="text/javascript" src="./js/cssdata.js"></script>
-        <script type="text/javascript" src="./js/tableList.js"></script>
+        <script type="text/javascript" src="./js/displayTableList.js"></script>
     </head>
     <body>
         <div id="wrapper">
             <h1>JavaScript - 関数を作成する</h1>
-            <h2>スタイルシートリファレンス</h2>
+            <h2>JavaScriptリファレンス</h2>
             <div id="ad1">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- レクタングル（大） -->
@@ -85,7 +85,7 @@
                     関数スコープに入るたびに、新しい関数オブジェクトが生成されます。<br />
                 </pre>
                 <pre>
-                    クロージャについては、<a href="http://hakuhin.jp/js/function.html#FUNCTION_04">こちら</a>で解説しています。<br />
+                    クロージャについては、<a href="./closure-function.html#closure">こちら</a>で解説しています。<br />
                 </pre>
                 <h5><a href="#MyFunction4">ローカルな関数宣言を行った場合、ローカル関数は動的に生成される</a>･････</h5>
                 <h3>function 演算子を使用して、関数を動的に作成する･････</h3>
@@ -128,7 +128,7 @@
                     この関数名は、関数リテラル内でのみ利用可能です。
                 </pre>
                 <pre>
-                    <a href="http://hakuhin.jp/js/function.html#ARGUMENTS_GET_CALLEE">arguments.callee</a>プロパティから取得することもできます。
+                    <a href="#ARGUMENTS_GET_CALLEE">arguments.callee</a>プロパティから取得することもできます。
                 </pre>
                 <pre>
                     Internet Explorer 8 以前では仕様が異なります。自身の関数は取得できません。
@@ -153,7 +153,7 @@
                     匿名関数の即時実行は、<span class="color-red">スコープ</span>として機能するため重要です。
                 </pre>
                 <pre>
-                    クロージャについては、<a href="http://hakuhin.jp/js/function.html#FUNCTION_04">こちら</a>で解説しています。<br />
+                    クロージャについては、<a href="./closure-function.html#closure">こちら</a>で解説しています。<br />
                 </pre>
                 <h5><a href="#MyFunction7">匿名関数を即時実行する</a>･････</h5>
                 <h3>Function コンストラクタを使用する･････</h3>
@@ -187,7 +187,7 @@
                                 },
                                 ],
                     };
-                tableList(table);
+                displayTableList(table);
 
                 </script>
                 
@@ -215,7 +215,7 @@
                 <script id="scriptInput">
                     
                     document.writeln ('<hr />');
-                    document.write ('<a name="MyFunction1">MyFunction(1)</a>');
+                    document.write ('<a name="MyFunction1">関数を宣言する</a>');
                     document.writeln ('<hr />');
 
                     // ------------------------------------------------------------
@@ -233,7 +233,7 @@
                     document.write ('result : ' + result);
 
                     document.writeln ('<hr />');
-                    document.write ('<a name="MyFunction2">MyFunction(2)</a>');
+                    document.write ('<a name="MyFunction2">関数を宣言する</a>');
                     document.writeln ('<hr />');
 
                     // ------------------------------------------------------------
@@ -254,7 +254,7 @@
                     document.write ('function_object2 : ' + function_object2);
                     
                     document.writeln ('<hr />');
-                    document.write ('<a name="MyFunction3">MyFunction(3)</a>');
+                    document.write ('<a name="MyFunction3">グローバルな関数宣言は、関数宣言をプログラムの後方に記述しても動作する</a>');
                     document.writeln ('<hr />');
                     
                     // ------------------------------------------------------------
@@ -296,7 +296,7 @@
                     }
                 
                     document.writeln ('<hr />');
-                    document.write ('<a name="MyFunction4">MyFunction(4)</a>');
+                    document.write ('<a name="MyFunction4">ローカルな関数宣言を行った場合、ローカル関数は動的に生成される</a>');
                     document.writeln ('<hr />');
 
                     // ------------------------------------------------------------
@@ -344,7 +344,7 @@
                     document.write ('(function_object0 == function_object1) : ' + (function_object0 == function_object1));
                     
                     document.writeln ('<hr />');
-                    document.write ('<a name="MyFunction5">MyFunction(5)</a>');
+                    document.write ('<a name="MyFunction5">関数オブジェクトを動的に生成する</a>');
                     document.writeln ('<hr />');
 
                     // ------------------------------------------------------------
@@ -366,7 +366,7 @@
                     document.write ('result : ', function5_object(3,5));
                     
                     document.writeln ('<hr />');
-                    document.write ('<a name="MyFunction6">MyFunction(6)</a>');
+                    document.write ('<a name="MyFunction6">関数リテラルに関数名を指定する</a>');
                     document.writeln ('<hr />');
                     
                     // ------------------------------------------------------------
@@ -406,7 +406,7 @@
                     function6_object();
                     
                     document.writeln ('<hr />');
-                    document.write ('<a name="MyFunction7">MyFunction(7)</a>');
+                    document.write ('<a name="MyFunction7">匿名関数を即時実行する</a>');
                     document.writeln ('<hr />');
                     
                     // ------------------------------------------------------------
@@ -434,7 +434,10 @@
                     } catch (e) {
                          console.log(e);
                          document.write ('e : ' + e);
+                    } finally {
+                        
                     }
+                
                     try {
                         // ×関数スコープの外からローカル変数にアクセスできない
                         console.log(local_b);
@@ -442,10 +445,13 @@
                     } catch (e) {
                         console.log(e);
                         document.write ('e : ' + e);
+                    } finally {
+                        
                     }
+
                 
                     document.writeln ('<hr />');
-                    document.write ('<a name="MyFunction8">MyFunction(8)</a>');
+                    document.write ('<a name="MyFunction8">Function コンストラクタを使って、関数オブジェクトを作成</a>');
                     document.writeln ('<hr />');
                     // ------------------------------------------------------------
                     // Function コンストラクタを使って、関数オブジェクトを作成

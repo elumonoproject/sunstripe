@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>JavaScript スタイルシートリファレンス</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="You Ohshima" />
+        <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
+        <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <link rel="stylesheet" href="./css/displayTableList.css" type="text/css" />
+        <script type="text/javascript" src="./js/cssdata.js"></script>
+        <script type="text/javascript" src="./js/displayTableList.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>JavaScript - Function クラスのメソッドについて</h1>
+            <h2>JavaScriptリファレンス</h2>
+            <div id="ad1">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（大） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:280px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="5900513788"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <div id="scriptProperties">
+            </div>
+            <!--/ #scriptProperties-->
+            <br />
+            <h4>クラスのメソッドについて</h4>
+            <div id="scriptElements">
+                
+                <!-- start //-->
+                
+                <!-- MyFunction1 //-->
+                
+                <h3>Function クラスのメソッド一覧･････</h3>
+                <pre>
+                    Function クラスには、以下のメソッドがあります。(一部抜粋)
+                </pre>
+                <script>
+                    var function_method = {
+                        //"title":"Function クラスには、以下のメソッドがあります。(一部抜粋)",
+                        "list":[
+                                {
+                                "method":"<a href='#tostring-method'>toString()</a>",
+                                "description":"関数のソースコードを文字列として取得",
+                                },
+                                {
+                                "method":"<a href='#apply-method'>apply()</a>",
+                                "description":"関数を実行(引数データは配列で指定)",
+                                },
+                                {
+                                "method":"<a href='#call-method'>call()</a>",
+                                "description":"関数を実行(引数データは可変引数で指定)",
+                                },
+                                {
+                                "method":"<a href='#bind-method'>bind()</a>",
+                                "description":"束縛効果のある、新しい関数オブジェクトを生成",
+                                },
+                                {
+                                "method":"<a href='#isgenerator-method'>isGenerator()</a>",
+                                "description":"関数がジェネレータであるか調べる。",
+                                },
+                                ],
+                    };
+                displayTableList(function_method);
+                
+                    </script>
+                
+                <h4 id="tostring-method">toString() メソッド</h4>
+                <pre>
+                    関数のソースコードを、文字列として取得するには、<span class="color-red">toString()</span> メソッドを使用します。
+                </pre>
+                <pre>
+                    ネイティブ実装された、組み込み関数などのソースコードを取得する事はできません。
+                </pre>
+                
+                <h5><a href="#MyFunction1">関数のソースコードを文字列として取得する</a>･････</h5>
+                
+                <!-- MyFunction2 //-->
+                
+                <h4 id="apply-method">apply() メソッド</h4>
+                <pre>
+                    関数を実行するには、<span class="color-red">apply()</span> メソッドを使用します。
+                    
+                    関数内で this 演算子に該当するオブジェクトを、外部から指定することができます。
+                </pre>
+                <pre>
+                    関数に渡す引数は、<span class="color-red">配列</span>を使って指定します。
+                </pre>
+                
+                <script>
+                    var function_applay_method_tablelist = {
+                        "title":"Function.apply ( this , [ 引数 ] ) :*",
+                        "list":[
+                                {
+                                "title":"第01引数(略可)",
+                                "type":"Object",
+                                "description":"関数内で this 演算子に該当するオブジェクトを指定。null を指定した場合デフォルトの動作となる。",
+                                },
+                                {
+                                "title":"第02引数(略可)",
+                                "type":"Array",
+                                "description":"引数から渡すデータを配列に格納して指定する。",
+                                },
+                                {
+                                "title":"戻り値",
+                                "type":"*",
+                                "description":"実行した関数の戻り値が得られる。",
+                                },
+                                ],
+                    };
+                displayTableList(function_applay_method_tablelist);
+                
+                    </script>
+                
+                <h5><a href="#MyFunction2">apply() メソッドを使って、関数を実行する</a>･････</h5>
+                
+                <!-- MyFunction3 //-->
+                
+                <h4 id="call-method">call() メソッド</h4>
+                
+                <pre>
+                    関数を実行するには、<span class="color-red">call()</span> メソッドを使用します。
+                    　
+                    関数内で <span class="color-red">this</span> 演算子に該当するオブジェクトを、外部から指定することができます。
+                </pre>
+                
+                <pre>
+                    関数に渡す引数は、<span class="color-red">可変引数</span>を使って指定します。
+                </pre>
+                
+                <script>
+                    var function_call_method_tablelist = {
+                        "title":"Function.call ( this , ... ) :*",
+                        "list":[
+                                {
+                                "title":"第01引数(略可)",
+                                "type":"Object",
+                                "description":"関数内で this 演算子に該当するオブジェクトを指定。null を指定した場合デフォルトの動作となる。",
+                                },
+                                {
+                                "title":"可変引数(略可)",
+                                "type":"*",
+                                "description":"引数から渡すデータを順番に指定する。",
+                                },
+                                {
+                                "title":"戻り値",
+                                "type":"*",
+                                "description":"実行した関数の戻り値が得られる。",
+                                },
+                                ],
+                    };
+                displayTableList(function_call_method_tablelist);
+                
+                    </script>
+                
+                <h5><a href="#MyFunction3">関数内で、Arguments オブジェクトを取得する</a>･････</h5>
+                
+                <!-- MyFunction4 //-->
+                
+                <h4 id="bind-method">bind() メソッド</h4>
+                <pre>
+                    束縛効果のある、新しい関数オブジェクトを生成するには、<span class="color-red">bind()</span> メソッドを使用します。
+                </pre>
+                
+                <pre>
+                    InternetExplorer 8 以下では動作しません。
+                </pre>
+                
+                <script>
+                    var function_bind_method_tablelist = {
+                        "title":"Function.bind ( this , ... ) :Function",
+                        "list":[
+                                {
+                                "title":"第01引数(略可)",
+                                "type":"Object",
+                                "description":"関数内で this 演算子に該当するオブジェクトを、別のオブジェクトで強制したい場合に指定。null を指定した場合デフォルトの動作となる。",
+                                },
+                                {
+                                "title":"可変引数(略可)",
+                                "type":"*",
+                                "description":"引数配列に対して、0 番地から定数を挿入したい場合に指定する。（引数の上書きではない）",
+                                },
+                                {
+                                "title":"戻り値",
+                                "type":"Function",
+                                "description":"束縛効果のある、新しい関数を生成する。",
+                                },
+                                ],
+                    };
+                displayTableList(function_bind_method_tablelist);
+                
+                    </script>
+                
+                <h5><a href="#MyFunction4">束縛効果のある、新しい関数を生成する</a>･････</h5>
+                
+                <!-- MyFunction5 //-->
+                
+                <h4 id="isgenerator-method">isGenerator() メソッド</h4>
+                
+                <pre>
+                    関数がジェネレータであるか調べるには、<span class="color-red">isGenerator()</span> メソッドを使用します。
+                    　
+                    関数内で <span class="color-red">yield</span> 文が使用されている場合、true が得られます。
+                </pre>
+                
+                <pre>
+                    一部のブラウザでのみ動作します。
+                </pre>
+                
+                <h5><a href="#MyFunction5">関数がジェネレータであるか調べる</a>･････</h5>
+                
+                <!-- end //-->
+                
+            </div>
+            <!--/ #scriptElements-->
+            
+            <div id="ad2">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット（小　モバイル用） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:320px;height:50px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="9019374983"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <h4>使用例</h4>
+            <h5>外部ファイル（CreateFunction.js）</h5>
+            <div id="scriptUseExsample">
+                <pre id="scriptOutput"></pre>
+                <script id="scriptInput">
+                    
+                    // ------------------------------------------------------------
+                    // MyFunction1
+                    // ------------------------------------------------------------
+                    
+                    document.writeln ('<hr />');
+                    document.write ('<a name="MyFunction1">関数のソースコードを文字列として取得する</a>');
+                    document.writeln ('<hr />');
+                    
+                    // ------------------------------------------------------------
+                    // MyFunction1 という名前の関数を宣言する
+                    // ------------------------------------------------------------
+                    function MyFunction1 (argument1,argument2) {
+                        var v = argument1 + argument2;
+                        return  v;
+                    }
+                
+                // ------------------------------------------------------------
+                // 関数のソースコードを文字列として取得する
+                // ------------------------------------------------------------
+                console.log('toString() : ' + MyFunction1.toString());
+                document.write('toString() : ' + MyFunction1.toString());
+                
+                
+                // ------------------------------------------------------------
+                // MyFunction2
+                // ------------------------------------------------------------
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction2">Arguments オブジェクトを使って、引数から渡されたすべてのデータを順番に取得する</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction2 という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction2 (argument1,argument2,argument3) {
+                    
+                    // 出力テスト
+                    console.log('this : ' + this);
+                    document.write('this : ' + this);
+                    
+                    return argument1 + argument2 + argument3;
+                }
+                // ------------------------------------------------------------
+                // 関数オブジェクトを取得する
+                // ------------------------------------------------------------
+                var function2_object = MyFunction2;
+                
+                // ------------------------------------------------------------
+                // 関数呼び出し演算子を使って、関数を実行する
+                // ------------------------------------------------------------
+                var result = function2_object(7,8,9);
+                
+                // ------------------------------------------------------------
+                // apply() メソッドを使って、関数を実行する
+                // ------------------------------------------------------------
+                var object2 = new Object();
+                var result = function2_object.apply(object2,[7,8,9]);
+                
+                // ------------------------------------------------------------
+                // MyFunction3
+                // ------------------------------------------------------------
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction3">call() メソッドを使って、関数を実行する</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction3 という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction3 (argument1,argument2,argument3) {
+                    
+                    // 出力テスト
+                    console.log('this : ' + this);
+                    document.write('this : ' + this);
+                    
+                    return argument1 + argument2 + argument3;
+                }
+                
+                // ------------------------------------------------------------
+                // 関数オブジェクトを取得する
+                // ------------------------------------------------------------
+                var function3_object = MyFunction3;
+                
+                // ------------------------------------------------------------
+                // 関数呼び出し演算子を使って、関数を実行する
+                // ------------------------------------------------------------
+                var result3 = function3_object(7,8,9);
+                
+                // ------------------------------------------------------------
+                // call() メソッドを使って、関数を実行する
+                // ------------------------------------------------------------
+                var object3 = new Object();
+                result3 = function3_object.call(object3,7,8,9);
+                
+                // ------------------------------------------------------------
+                // MyFunction4
+                // ------------------------------------------------------------
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction4">束縛効果のある、新しい関数を生成する</a>');
+                document.writeln ('<hr />');
+                
+                // ------------------------------------------------------------
+                // MyFunction4 という名前の関数を宣言する
+                // ------------------------------------------------------------
+                function MyFunction4 () {
+                    
+                    // 出力テスト
+                    console.log(this);
+                    document.write('this : ' + this);
+                    
+                    // 引数から渡されたデータを順番に出力する
+                    var i;
+                    var num = arguments.length;
+                    for (i = 0;i < num;i++) {
+                        var data = arguments[i];
+                        console.log('id : ' + i + ', data : ' + data);
+                        document.write ('id : ' + i + ', data : ' + data);
+                        document.writeln ('<br />');
+                    }
+                }
+                
+                try {
+                    
+                    // ------------------------------------------------------------
+                    // 束縛効果のある新しい関数を生成する
+                    // ------------------------------------------------------------
+                    var function4_object = MyFunction4.bind({a:0},"a","b","c");
+                    
+                    // ------------------------------------------------------------
+                    // 関数呼び出し演算子を使って、関数を実行する
+                    // ------------------------------------------------------------
+                    var result = function4_object(); // 引数:["a","b","c"]
+                    
+                    // ------------------------------------------------------------
+                    // call() メソッドを使って、関数を実行する
+                    // ------------------------------------------------------------
+                    var object4 = { b : 1 };
+                    var result = function4_object.call(object4,1,2,3); // 引数:["a","b","c",1,2,3]
+                    
+                } catch (e) {
+                    
+                    console.log('e : ' + e);
+                    document.write ('e : ' + e);
+                    
+                } finally {
+                    
+                }
+                
+                // ------------------------------------------------------------
+                // MyFunction5
+                // ------------------------------------------------------------
+                
+                document.writeln ('<hr />');
+                document.write ('<a name="MyFunction5">関数がジェネレータであるか調べる</a>');
+                document.writeln ('<hr />');
+                
+                try {
+                    
+                    // ------------------------------------------------------------
+                    // MyGenerator という名前の関数を宣言する
+                    // ------------------------------------------------------------
+                    function MyGenerator () {
+                        var yield = "aaa";
+                        //yield "bbb";
+                        //yield "ccc";
+                    }
+                    // ------------------------------------------------------------
+                    // ジェネレータであるか調べる
+                    // ------------------------------------------------------------
+                    var result = MyGenerator.isGenerator();
+                    
+                    // 出力テスト
+                    console.log('result : ' + result); // true
+                    document.write ('result : ' + result);
+                    
+                    // ------------------------------------------------------------
+                    // ジェネレータを実行する
+                    // ------------------------------------------------------------
+                    //var g = MyGenerator();
+                    //console.log(g.next()); // "aaa"
+                    //console.log(g.next()); // "bbb"
+                    //console.log(g.next()); // "ccc"
+                    //document.write ('g.next() : ' + g.next());
+                    //document.write ('g.next() : ' + g.next());
+                    //document.write ('g.next() : ' + g.next());
+                    
+                } catch (e) {
+                    
+                    console.log('e : ' + e);
+                    document.write ('e : ' + e);
+                    
+                } finally {
+                    
+                }
+                    </script>
+            </div>
+            <!--/ #cssUseExsample-->
+            <h4>HTML</h4>
+            <h5>外部ファイル（sample.html）</h5>
+            <div id="htmlSourceCode">
+                <pre id="htmlOutput">
+                </pre>
+            </div>
+            <!--/ #htmlSourceCode-->
+            <br />
+            <div id="htmlUseExsample">
+                <h4>ブラウザ上の表示</h4>
+                <div id="htmlInput">
+                    <script type="text/javascript" src="./js/CreateFunction.js"></script>
+                </div>
+            </div>
+            <div id="ad3">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- レクタングル（中） -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:300px;height:250px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="1714745781"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <!--/ #htmlUseExsample-->
+            <h4>関連</h4>
+            <div id="htmlList">
+            </div>
+            <!--/ #htmlList-->
+            <script>
+                var page = "";
+                var htmlList = document.getElementById("htmlList");
+                for(var l = 0; l < htmlData.links.length;l++){
+                    var html = "";
+                    var title = htmlData.links[l].title;
+                    if(page == ""){
+                        html += "<br />";
+                        html += "<h5>" + title + "</h5>";
+                        var items = htmlData.links[l].items;
+                        for(var i = 0;i < items.length;i++){
+                            html += items[i].title.link(items[i].url) + "<br />";
+                        }
+                        htmlList.innerHTML += html;
+                    } else if(page != title && page != ""){
+                        
+                    } else {
+                        var items = htmlData.links[l].items;
+                        html += "<br />";
+                        for(var i = 0;i < items.length;i++){
+                            html += items[i].title.link(items[i].url) + "<br />";
+                        }
+                        htmlList.innerHTML += html;
+                    }
+                }
+            var scriptOutput = document.getElementById("scriptOutput");
+            var scriptInput = document.getElementById("scriptInput");
+            scriptOutput.innerHTML = scriptInput.innerHTML;
+            var htmlOutput = document.getElementById("htmlOutput");
+            var htmlInput = document.getElementById("htmlInput");
+            var input = htmlInput.innerHTML;
+            var re = /</gi;
+            input = input.replace(re, "&#60;");
+            re = />/gi;
+            input = input.replace(re, "&#62;");
+            htmlOutput.innerHTML = input;
+                </script>
+            <div id="ad4">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- リンクユニット縦長(特大) -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:200px;height:90px"
+                    data-ad-client="ca-pub-1616619771436459"
+                    data-ad-slot="2120848581"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+            </div>
+            
+            <footer>
+                <address>
+                    &copy; <a href="http://sunstripe.main.jp/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/javascript/">JavaScript リファレンス</a>
+                </address>
+            </footer>
+        </div>
+        <!--/ #wrapper-->
+    </body>
+</html>

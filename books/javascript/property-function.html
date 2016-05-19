@@ -7,14 +7,14 @@
         <meta name="keywords" content="セミナー,クリエーター,紹介,制作,仲間" />
         <meta name="description" content="才能をやりたいように表現するサンストライプ-オフィシャルサイト。" />
         <link rel="stylesheet" href="./css/styles.css" type="text/css" />
-        <link rel="stylesheet" href="./css/tableList.css" type="text/css" />
+        <link rel="stylesheet" href="./css/displayTableList.css" type="text/css" />
         <script type="text/javascript" src="./js/cssdata.js"></script>
-        <script type="text/javascript" src="./js/tableList.js"></script>
+        <script type="text/javascript" src="./js/displayTableList.js"></script>
     </head>
     <body>
         <div id="wrapper">
             <h1>JavaScript - Function クラスのプロパティについて</h1>
-            <h2>スタイルシートリファレンス</h2>
+            <h2>JavaScriptリファレンス</h2>
             <div id="ad1">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- レクタングル（大） -->
@@ -69,7 +69,7 @@
                                 },
                                 ],
                     };
-                    tableList(table1);
+                    displayTableList(table1);
                 
                     </script>
                 <h4>Arguments オブジェクトから、引数から渡されたデータを取得する</h4>
@@ -123,7 +123,7 @@
                                 },
                                 ],
                     };
-                tableList(table3);
+                displayTableList(table3);
                 
                     </script>
                 <pre>
@@ -146,7 +146,8 @@
                                 },
                                 ],
                     };
-                tableList(table4);
+                displayTableList
+                (table4);
                 
                     </script>
                 <h4>name プロパティ</h4>
@@ -210,7 +211,7 @@
                     匿名関数の即時実行は、<span class="color-red">スコープ</span>として機能するため重要です。
                 </pre>
                 <pre>
-                    クロージャについては、<a href="http://hakuhin.jp/js/function.html#FUNCTION_04">こちら</a>で解説しています。<br />
+                    クロージャについては、<a href="./closure-function.html#closure">こちら</a>で解説しています。<br />
                 </pre>
                 <h5><a href="#MyFunction7">匿名関数を即時実行する</a>･････</h5>
                 <h3>Function コンストラクタを使用する･････</h3>
@@ -321,7 +322,7 @@
                 MyFunction3();
                 
                 document.writeln ('<hr />');
-                document.write ('<a name="MyFunction4">MyFunction(4)</a>');
+                document.write ('<a name="MyFunction4">自身の関数オブジェクトを取得する（関数リテラル内）</a>');
                 document.writeln ('<hr />');
                 
                 // ------------------------------------------------------------
