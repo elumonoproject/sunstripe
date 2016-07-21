@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <title>テーブルリスト　練習（sandbox）作業用</title>
+        <meta name="keywords" content="sandbox,制作" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+            <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://sunstripe.main.jp/rss.xml" />
+        <link rel="alternate" media="handheld" href="http://sunstripe.main.jp/" />
+        <style>
+            
+            th {
+                background-color:rgba(255,244,244,1);
+            }
+        tr:hover {
+            background-color:rgba(255,255,0,0.3);
+        }
+        .key-color {
+            color:rgba(200,200,255,1);
+        }
+        .color_1 {
+            background-color:rgba(255,255,0,1);
+        }
+        .color_2 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_3 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_4 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_5 {
+            background-color:rgba(0,150,200,1);
+        }
+        .color_6 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_7 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_8 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_9 {
+            background-color:rgba(100,150,0,1);
+        }
+        .color_10 {
+            background-color:rgba(0,150,100,1);
+        }
+        /*status ステータス*/
+        .status_0 { /* 未対応 */
+            text-align:center;
+            background-color:rgba(100,100,100,0.5);
+        }
+        .status_1 { /* 処理中 */
+            text-align:center;
+            background-color:rgba(100,100,200,0.8);
+        }
+        .status_2 { /* 処理中断 */
+            text-align:center;
+            background-color:rgba(200,100,100,0.8);
+        }
+        .status_3 { /* 処理済み */
+            text-align:center;
+            background-color:rgba(100,200,100,0.8);
+        }
+        .status_4 { /* 完了 */
+            text-align:center;
+            background-color:rgba(100,200,200,1.0);
+        }
+        .status_5 { /* その他 */
+            text-align:center;
+            background-color:rgba(100,100,200,0.8);
+        }
+        /*priority 優先度*/
+        .priority_0 {
+            text-align:center;
+            color:rgba(100,100,100,0.5);
+        }
+        .priority_1 {
+            text-align:center;
+            color:rgba(100,100,100,1.0);
+        }
+        .priority_2 {
+            text-align:center;
+            color:rgba(0,100,0,1);
+        }
+        .priority_3 {
+            text-align:center;
+            color:rgba(0,0,255,1);
+        }
+        .priority_4 {
+            text-align:center;
+            color:rgba(255,0,0,1);
+        }
+        </style>
+    </head>
+    <script>
+        var listTitles = [
+                          {
+                          "":"",
+                          "識別":"要望",
+                          "キー":"STORE_APP-000",
+                          "件名":"リリース申請20140203",
+                          "優先度":"2",
+                          "登録日":"2014/02/03",
+                          "開始日":"2014/02/03",
+                          "期限日":"2014/02/03",
+                          "予定時間":"",
+                          "実績時間":"",
+                          "更新日":"2014/02/03",
+                          "登録者":"大島",
+                          "担当者":"大島",
+                          "状態":"1",
+                          "添付":"file",
+                          "共有":""
+                          }
+                          ];
+        var data = [
+                    {
+                    "":"",
+                    "識別":"要望",
+                    "キー":"STORE_APP-000",
+                    "件名":"要望20140203",
+                    "優先度":"3",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"0",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"リリース要請",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"0",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"1",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"タスク",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"1",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"2",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"タスク",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"2",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"3",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"タスク",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"4",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"4",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"タスク",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"4",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"状態テスト",
+                    "添付":"file",
+                    "共有":""
+                    }
+
+
+                    ];
+                    
+                    function setKind(kindData) //識別
+                    {
+                        if (kindData == "要望") {
+                            document.write('<td class="color_1">' + kindData + '</td>');
+                        }
+                        else if (kindData == "リリース要請") {
+                            document.write('<td class="color_5">' + kindData + '</td>');
+                        }
+                        else if (kindData == "タスク") {
+                            document.write('<td class="color_9">' + kindData + '</td>');
+                        }
+                        else {
+                            document.write('<td class="arrow_box">' + kindData + '</td>');
+                        }
+                    }
+                    function setKey(keyData) //キー
+                    {
+                            document.write('<td class="key-color">' + '<a href="./STORE_APP/' + keyData + '.html">' + keyData + '</a>' +  '</td>');
+                    }
+                    function setPriority(priorityData) //優先度
+                    {
+                        if (priorityData == "0") {
+                            document.write('<td class="priority_0">' + '⬇️' + '</td>');
+                        }
+                        else if (priorityData == "1") {
+                            document.write('<td class="priority_1">' + '⬇️' + '</td>');
+                        }
+                        else if (priorityData == "2") {
+                            document.write('<td class="priority_2">' + '⬇️' + '</td>');
+                        }
+                        else if (priorityData == "3") {
+                            document.write('<td class="priority_3">' + '➡️' + '</td>');
+                        }
+                        else if (priorityData == "4") {
+                            document.write('<td class="priority_4">' + '⬆️' + '</td>');
+                        }
+                        else if (priorityData == "5") {
+                            document.write('<td class="priority_5">' + '⬆️' + '</td>');
+                        }
+                        else {
+                            document.write('<td class="arrow_box">' + '⬆️' + '</td>');
+                        }
+                    }
+    /*
+     /status ステータス/
+     / 未対応 /
+     / 処理中 /
+     / 処理中断 /
+     / 処理済み /
+     / 完了 /
+     */
+                    function setStatus(statusData) //status ステータス
+                    {
+                        if (statusData == "0") {
+                            document.write('<td class="status_0">' + "未対応" + '</td>');
+                        }
+                        else if (statusData == "1") {
+                            document.write('<td class="status_1">' + "処理中" + '</td>');
+                        }
+                        else if (statusData == "2") {
+                            document.write('<td class="status_2">' + "処理中断" + '</td>');
+                        }
+                        else if (statusData == "3") {
+                            document.write('<td class="status_3">' + "処理済み" + '</td>');
+                        }
+                        else if (statusData == "4") {
+                            document.write('<td class="status_4">' + "完了" + '</td>');
+                        }
+                        else {
+                            document.write('<td class="status_5">' + statusData + '</td>');
+                        }
+                    }
+    </script>
+    <body>
+        <div>
+            <h2>テーブルリスト　練習（sandbox）作業用 - Sun Stripe</h2>
+            <p>Team.Sun Stripeチーム内での練習用</p>
+        </div>
+        <div>
+            <table class="tablelist">
+                <tbody>
+                    <tr>
+                        <script>
+                            for (var d in listTitles) {
+                                for (var key in listTitles[d]) {
+                                    document.write('<th class="arrow_box">' + key + '</th>');
+                                }
+                            }
+                        </script>
+                    </tr>
+                    <tr>
+                        <script>
+                            for (var d in data) {
+                                for (var key in data[d]) {
+                                    if (key == "識別") {
+                                        setKind(data[d][key]);
+                                    }
+                                    else if (key == "キー") {
+                                        setKey(data[d][key]);
+                                    }
+                                    else if (key == "優先度") {
+                                        setPriority(data[d][key]);
+                                    }
+                                    else if (key == "状態") {
+                                        setStatus(data[d][key]);
+                                    }
+                                    else {
+                                        document.write('<td class="arrow_box">' + data[d][key] + '</td>');
+                                    }
+                                }
+                                document.write('</tr><tr>')
+                            }
+                        </script>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="footlink"><div id="headertext">クリエーターの可能性を引き出すサンストライプ-オフィシャルサイト。
+            Team sunsripe, Share your dreams and thoughts with me.</div></div>
+        <div id="footer">Copyright (C) 2015 <a href="../">制作チーム - Team. Sun Stripe</a> All Rights Reserved.</div>
+    </body>
+</html>

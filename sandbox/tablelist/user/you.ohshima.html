@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+        <title>you.ohshima</title>
+        <meta name="keywords" content="sandbox,制作" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+            <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+        
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://sunstripe.main.jp/rss.xml" />
+        <link rel="alternate" media="handheld" href="http://sunstripe.main.jp/" />
+        <style>
+            
+            th {
+                background-color:rgba(255,244,244,1);
+            }
+        tr:hover {
+            background-color:rgba(255,255,0,0.3);
+        }
+        .key-color {
+            color:rgba(200,200,255,1);
+        }
+        .color_1 {
+            background-color:rgba(255,255,0,1);
+        }
+        .color_2 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_3 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_4 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_5 {
+            background-color:rgba(0,150,200,1);
+        }
+        .color_6 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_7 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_8 {
+            background-color:rgba(0,150,100,1);
+        }
+        .color_9 {
+            background-color:rgba(100,150,0,1);
+        }
+        .color_10 {
+            background-color:rgba(0,150,100,1);
+        }
+        /*status ステータス*/
+        .status_0 { /* 未対応 */
+            text-align:center;
+            background-color:rgba(100,100,100,0.5);
+        }
+        .status_1 { /* 処理中 */
+            text-align:center;
+            background-color:rgba(100,100,200,0.8);
+        }
+        .status_2 { /* 処理中断 */
+            text-align:center;
+            background-color:rgba(200,100,100,0.8);
+        }
+        .status_3 { /* 処理済み */
+            text-align:center;
+            background-color:rgba(100,200,100,0.8);
+        }
+        .status_4 { /* 完了 */
+            text-align:center;
+            background-color:rgba(100,200,200,1.0);
+        }
+        .status_5 { /* その他 */
+            text-align:center;
+            background-color:rgba(100,100,200,0.8);
+        }
+        /*priority 優先度*/
+        .priority_0 {
+            text-align:center;
+            color:rgba(100,100,100,0.5);
+        }
+        .priority_1 {
+            text-align:center;
+            color:rgba(100,100,100,1.0);
+        }
+        .priority_2 {
+            text-align:center;
+            color:rgba(0,100,0,1);
+        }
+        .priority_3 {
+            text-align:center;
+            color:rgba(0,0,255,1);
+        }
+        .priority_4 {
+            text-align:center;
+            color:rgba(255,0,0,1);
+        }
+        
+        .user-message {
+            background-color:rgba(200,100,100,0.8);
+        }
+        
+        .left-30 {
+            width:20%;
+            float:left;
+        }
+        .right-70 {
+            width:70%;
+            float:left;
+        }
+        .clear-both {
+            clear:both;
+        }
+        #activity-list {
+            height:250px;
+            overflow-y:scroll;
+        }
+        #activity-list h5 {
+            background-color:rgba(200,200,0,0.8);
+        }
+        </style>
+    </head>
+    <script>
+        
+        var profile = {
+            "user_id":"you.ohshima",
+            "user_image":"https://assets.backlog.jp/R20160624/icons/100/44_humorous_salaried_man.gif",
+            "user_message":"",
+            "user_sex":"man",
+            "user_place":"tokyo",
+            "user_link":"http://twitter.com/karaage1112",
+            "activity":[
+                        {
+                        "kind":"ファイル",
+                        "update_date":"2014/02/03",
+                        "update_time":"15:00",
+                        }
+                        ,
+                        {
+                        "kind":"ファイル",
+                        "update_date":"2014/02/01",
+                        "update_time":"18:00",
+                        }
+                        ,
+                        {
+                        "kind":"ファイル",
+                        "update_date":"2014/02/01",
+                        "update_time":"10:00",
+                        }
+                        ,
+                        {
+                        "kind":"ファイル",
+                        "update_date":"2014/01/30",
+                        "update_time":"18:30",
+                        }
+                        ,
+            ],
+        };
+
+        var listTitles = [
+                          {
+                          "":"",
+                          "識別":"要望",
+                          "キー":"STORE_APP-000",
+                          "件名":"リリース申請20140203",
+                          "優先度":"2",
+                          "登録日":"2014/02/03",
+                          "開始日":"2014/02/03",
+                          "期限日":"2014/02/03",
+                          "予定時間":"",
+                          "実績時間":"",
+                          "更新日":"2014/02/03",
+                          "登録者":"大島",
+                          "担当者":"大島",
+                          "状態":"1",
+                          "添付":"file",
+                          "共有":""
+                          }
+                          ];
+        var data = [
+                    {
+                    "":"",
+                    "識別":"要望",
+                    "キー":"STORE_APP-000",
+                    "件名":"要望20140203",
+                    "優先度":"3",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"0",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"リリース要請",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"0",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"1",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"タスク",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"1",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"2",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"タスク",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"2",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"3",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"タスク",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"4",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"4",
+                    "添付":"file",
+                    "共有":""
+                    }
+                    ,
+                    {
+                    "":"",
+                    "識別":"タスク",
+                    "キー":"STORE_APP-000",
+                    "件名":"リリース申請20140203",
+                    "優先度":"4",
+                    "登録日":"2014/02/03",
+                    "開始日":"2014/02/03",
+                    "期限日":"2014/02/03",
+                    "予定時間":"",
+                    "実績時間":"",
+                    "更新日":"2014/02/03",
+                    "登録者":"大島",
+                    "担当者":"大島",
+                    "状態":"状態テスト",
+                    "添付":"file",
+                    "共有":""
+                    }
+
+
+                    ];
+                    
+                    function setKind(kindData) //識別
+                    {
+                        if (kindData == "要望") {
+                            document.write('<td class="color_1">' + kindData + '</td>');
+                        }
+                        else if (kindData == "リリース要請") {
+                            document.write('<td class="color_5">' + kindData + '</td>');
+                        }
+                        else if (kindData == "タスク") {
+                            document.write('<td class="color_9">' + kindData + '</td>');
+                        }
+                        else {
+                            document.write('<td class="arrow_box">' + kindData + '</td>');
+                        }
+                    }
+                    function setKey(keyData) //キー
+                    {
+                            document.write('<td class="key-color">' + '<a href="./STORE_APP/' + keyData + '.html">' + keyData + '</a>' +  '</td>');
+                    }
+                    function setPriority(priorityData) //優先度
+                    {
+                        if (priorityData == "0") {
+                            document.write('<td class="priority_0">' + '⬇️' + '</td>');
+                        }
+                        else if (priorityData == "1") {
+                            document.write('<td class="priority_1">' + '⬇️' + '</td>');
+                        }
+                        else if (priorityData == "2") {
+                            document.write('<td class="priority_2">' + '⬇️' + '</td>');
+                        }
+                        else if (priorityData == "3") {
+                            document.write('<td class="priority_3">' + '➡️' + '</td>');
+                        }
+                        else if (priorityData == "4") {
+                            document.write('<td class="priority_4">' + '⬆️' + '</td>');
+                        }
+                        else if (priorityData == "5") {
+                            document.write('<td class="priority_5">' + '⬆️' + '</td>');
+                        }
+                        else {
+                            document.write('<td class="priority_0">' + priorityData + '</td>');
+                        }
+                    }
+    /*
+     /status ステータス/
+     / 未対応 /
+     / 処理中 /
+     / 処理中断 /
+     / 処理済み /
+     / 完了 /
+     */
+                    function setStatus(statusData) //status ステータス
+                    {
+                        if (statusData == "0") {
+                            document.write('<td class="status_0">' + "未対応" + '</td>');
+                        }
+                        else if (statusData == "1") {
+                            document.write('<td class="status_1">' + "処理中" + '</td>');
+                        }
+                        else if (statusData == "2") {
+                            document.write('<td class="status_2">' + "処理中断" + '</td>');
+                        }
+                        else if (statusData == "3") {
+                            document.write('<td class="status_3">' + "処理済み" + '</td>');
+                        }
+                        else if (statusData == "4") {
+                            document.write('<td class="status_4">' + "完了" + '</td>');
+                        }
+                        else {
+                            document.write('<td class="status_5">' + statusData + '</td>');
+                        }
+                    }
+    
+    </script>
+    <body>
+        <div id="header-title">
+            <script> document.write ('<h2>' + profile.user_id +' - Sun Stripe</h2>' + '<p>Team.Sun Stripe メンバー</p>'); </script>
+        </div>
+        <script> document.write ('<h3>プロフィール</h3>'); </script>
+        <div id="main-profile" class="left-30">
+            <script> document.write ('<p><img src=' + profile.user_image +' /></p>'); </script>
+            <script> document.write ('<p>' + profile.user_id +'</p>'); </script>
+            <script>
+                var message = profile.user_message;
+                if (!message || message == "") {
+                    message = "-";
+                }
+                document.write ('<p class="user-message">' + message +'</p>');
+                </script>
+            
+            <script> document.write ('<h4>プロフィール</h4>'); </script>
+            <script>
+                var sex = profile.user_sex;
+                if (!sex || sex == "") {
+                    sex = "-";
+                }
+            else if (sex == "man"){
+                sex = "男性";
+            }
+            else if (sex == "wiman"){
+                sex = "女性";
+            }
+            document.write ('<p class="user-sex"><label>性別 : </label>' + sex +'</p>');
+                </script>
+            <script>
+                var place = profile.user_place;
+                if (!place || place == "") {
+                    place = "-";
+                }
+            else if (place == "tokyo"){
+                place = "東京";
+            }
+            else if (place == "kyoto"){
+                place = "京都";
+            }
+            else {
+                place = "その他";
+            }
+            document.write ('<p class="user-place"><label>現在地 : </label>' + place +'</p>');
+                </script>
+            <script> document.write ('<h4>WEB</h4>'); </script>
+            <script>
+                var link = profile.user_link;
+                if (!link || link == "") {
+                    link = "-";
+                } else {
+                link = '<a href=' + link + '> link </a>';
+            }
+            document.write ('<p class="user-link">' + link +'</p>');
+                </script>
+
+<!--            var profile = {-->
+<!--            "user_id":"you.ohshima",-->
+<!--            "user_image":"https://assets.backlog.jp/R20160624/icons/100/44_humorous_salaried_man.gif",-->
+<!--            "user_message":"",-->
+<!--            "user_sex":"man",-->
+<!--            "user_place":"tokyo",-->
+<!--            "user_link":"http://twitter.com/karaage1112",-->
+<!--            "activity":[-->
+<!--            ],-->
+
+        </div>
+        <div id="activity" class = "right-70">
+            <script> document.write ('<h4>最近の活動</h4>'); </script>
+            <div id="activity-list">
+            <script>
+                for (var activity in profile.activity) {
+                    document.write ('<h5>' + profile.activity[activity].update_date + '</h5>');
+                    document.write ('<p>' + profile.activity[activity].kind + '<img src=' + profile.user_image +' width="50" />' + profile.activity[activity].update_time + '</p>');
+                    
+                }
+                </script>
+            </div>
+
+        </div>
+        
+        <div class="clear-both"></div>
+        <div id="footlink"><div id="headertext">クリエーターの可能性を引き出すサンストライプ-オフィシャルサイト。
+            Team sunsripe, Share your dreams and thoughts with me.</div></div>
+        <div id="footer">Copyright (C) 2015 <a href="../">制作チーム - Team. Sun Stripe</a> All Rights Reserved.</div>
+    </body>
+</html>
