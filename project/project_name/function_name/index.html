@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <title>ProjectName - function_name</title>
+        <meta name="keywords" content="プロジェクト名前" />
+        <meta name="description" content="プロジェクトの説明" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://sunstripe.main.jp/rss.xml" />
+        <link rel="alternate" media="handheld" href="http://sunstripe.main.jp/" />
+        
+    </head>
+    
+    <style>
+        
+        .iconsize {
+            position:absolute;
+        display: block;
+        border-radius: 15%;
+        /*color: #fff;*/
+        box-shadow: 0 3px 6px rgba(0,0,0,0.4), 5px 5px 10px rgba(255,255,255,0.3) inset, -5px -5px 10px rgba(255,255,255,0.3) inset;
+        width: 88px;
+        height: 88px;
+        font: 12px/16px serif;
+        text-align: center;
+        text-decoration: none;
+        }
+        .iconsize2 {
+            position:absolute;
+            width:88px;
+            height:88px;
+            border-radius: 6px;
+            margin:0px 0px;
+            display:block;
+            font-size:0.8em;
+            text-align:center;
+            
+            display: block;
+            /*height: 89px;*/
+            /*width: 89px;*/
+            
+            /*background: transparent url('1.png') no-repeat;*/
+            
+            -webkit-border-radius: 10px; /* Safari, Chrome */
+            -moz-border-radius: 10px; /* Firefox */
+            border-radius: 10px; /* CSS3 */
+            
+            -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+            -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+        }
+    .gray_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(155,155,155,1.0), rgba(155,155,155,1.0) 50%, rgba(100,100,100,1.0));
+    }
+    .orange_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(#ffc877, #f90 50%, #ffd000);
+    }
+    .red_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(255,100,100,1.0), rgba(255,0,0,1.0) 50%, rgba(255,55,55,1.0));
+    }
+    .green_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(100,155,100,1.0), rgba(0,155,0,1.0) 50%, rgba(55,155,55,1.0));
+    }
+    .blue_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(100,100,255,1.0), rgba(0,0,255,1.0) 50%, rgba(55,55,255,1.0));
+    }
+    .Bitbucket_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(        28, 79, 130,1.0), rgba(        28, 79, 130,1.0) 50%, rgba(        28, 79, 130,1.0));
+    }
+    .Bitbucket_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(        28, 79, 130,1.0), rgba(        28, 79, 130,1.0) 50%, rgba(        28, 79, 130,1.0));
+    }
+    .Qiita_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(85, 189, 0,1.0), rgba(85, 189, 0,1.0) 50%, rgba(85, 189, 0,1.0));
+    }
+    a.display-block {
+        float:left;
+        width:90px;
+        height:90px;
+        margin:10px 10px;
+        display:block;
+    }
+    .popup {
+        border-top-width : 10px;
+        border-top-color : orange;
+        width:300px;
+        height:100px;
+        background-color:rgba(100,100,100,0.3);
+        padding:20px;
+    }
+    .popupWidth {
+        width:300px;
+    }
+    .widthMax
+    {
+        width:100%;
+    }
+    .nav {
+        padding: 0 20px;
+        margin: 0 auto 60px;
+        width: 760px;
+    }
+    .fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    
+    
+    
+    /* Separated from document_view.css to enable use in downloadable
+     export files. #cutAndCopyBucket is included for every rule because
+     we wwant cut/copied items to be formatted the same way as they
+     would be when exported. */
+    
+    .formattedExport,
+    #cutAndCopyBucket {
+        font-family: 'Helvetica Neue', Arial, Sans-serif;
+        color: #333;
+        font-size: 13px;
+        line-height: 17px;
+        /* used to set white-space: pre-wrap here, but that messes up GMail's
+         formatting of the export output, so moving that to the name and
+         notes separately. */
+    }
+    
+    .formattedExport .name, .formattedExport .note,
+    #cutAndCopyBucket .name, #cutAndCopyBucket .note {
+        white-space: pre-wrap;
+        background-color:rgba(255,244,244,0.8);
+    }
+    
+    .formattedExport ul,
+    #cutAndCopyBucket ul{
+        list-style: disc;
+        
+        /* Needed to reset browser defaults. */
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .formattedExport li,
+    #cutAndCopyBucket li {
+        margin: 4px 0 4px 20px;
+        /* Needed to reset browser defaults. */
+        padding: 0;
+        list-style-type:none;
+    }
+    
+    .formattedExport > .name,
+    #cutAndCopyBucket > .name {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    
+    .formattedExport > .note,
+    #cutAndCopyBucket > .note {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    
+    .formattedExport > ul,
+    #cutAndCopyBucket > ul {
+        margin-top: 15px;
+    }
+    
+    .formattedExport .name.done,
+    #cutAndCopyBucket .name.done {
+        text-decoration:line-through;
+        color:#999;
+    }
+    
+    .formattedExport .note,
+    #cutAndCopyBucket .note {
+        font-size: 12px;
+        color:#666;
+    }
+    .formattedExport span {
+        font-size:20px;
+        margin:10px;
+    }
+    input[type=radio], input[type=checkbox] {
+        display: none;
+    }
+    
+    .radio, .checkbox {
+        box-sizing: border-box;
+        -webkit-transition: background-color 0.2s linear;
+        transition: background-color 0.2s linear;
+        position: relative;
+        display: inline-block;
+        margin: 0 20px 8px 0;
+        padding: 12px 12px 12px 42px;
+        border-radius: 8px;
+        background-color: #f6f7f8;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .radio:hover, .checkbox:hover {
+        background-color: #e2edd7;
+    }
+    .radio:hover:after, .checkbox:hover:after {
+        border-color: #53b300;
+    }
+    .radio:after, .checkbox:after {
+        -webkit-transition: border-color 0.2s linear;
+        transition: border-color 0.2s linear;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        display: block;
+        margin-top: -10px;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #bbb;
+        border-radius: 6px;
+        content: '';
+    }
+    
+    .radio:before {
+        -webkit-transition: opacity 0.2s linear;
+        transition: opacity 0.2s linear;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        display: block;
+        margin-top: -5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #53b300;
+        content: '';
+        opacity: 0;
+    }
+    input[type=radio]:checked + .radio:before {
+        opacity: 1;
+    }
+    
+    .checkbox:before {
+        -webkit-transition: opacity 0.2s linear;
+        transition: opacity 0.2s linear;
+        position: absolute;
+        top: 50%;
+        left: 21px;
+        display: block;
+        margin-top: -7px;
+        width: 5px;
+        height: 9px;
+        border-right: 3px solid #53b300;
+        border-bottom: 3px solid #53b300;
+        content: '';
+        opacity: 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    input[type=checkbox]:checked + .checkbox:before {
+        opacity: 1;
+    }
+    
+    
+    </style>
+    <script>
+        var listData = [
+                        {
+                        "name":"詳細要件",
+                        "check":false,
+                        "category" : [
+                                      {
+                                      "title":"フロアマップ（閲覧）画面",
+                                      "check":true,
+                                      "category":[
+                                                  {
+                                                  "title":"フロア",
+                                                  "check":true,
+                                                  "category":[
+                                                              {
+                                                              "title":"フロアの拡縮表示",
+                                                              "check":true,
+                                                              },
+                                                              ],
+
+                                                  },
+                                                  ],
+                                      },
+                                      {
+                                      "title":"フロアマップ（設定）画面",
+                                      "check":true,
+                                      "category":[
+                                                  {
+                                                  "title":"フロア",
+                                                  "check":true,
+                                                  "category":[
+                                                              {
+                                                              "title":"フロアの拡縮表示",
+                                                              "check":true,
+                                                              },
+                                                              ],
+                                                  
+                                                  },
+                                                  ],
+                                      },
+                                       ],
+                        },
+                        ];
+
+        window.onload = function () {
+            var popupView = document.getElementById("popup");
+            //popupView.style.width = "300px";
+            var projectListView = document.getElementById("project_list");
+            projectListView.innerHTML = "";
+            
+            for (var i = 0;i < listData.length;i++) {
+                var check = listData[i].check;
+                if (check) {
+                    projectListView.innerHTML += "<input type='checkbox' name='hoge' value='' checked id='checkbox" + i + "' />";
+                }
+                else {
+                    projectListView.innerHTML += "<input type='checkbox' name='hoge' value='' id='checkbox" + i + "' />";
+                }
+                projectListView.innerHTML += "<span class='name'>" + listData[i].name + "</span>";
+                projectListView.innerHTML += "<ul>";
+                
+                for (var c = 0;c < listData[i].category.length;c++) {
+                    var check = listData[i].category[c].check;
+                    projectListView.innerHTML += "<li>";
+                    if (check) {
+                        projectListView.innerHTML += "<input type='checkbox' name='hoge' value='' checked id='checkbox' />";
+                    }
+                    else {
+                        projectListView.innerHTML += "<input type='checkbox' name='hoge' value='' id='checkbox' />";
+                    }
+                    projectListView.innerHTML += "<span class='name'>" + listData[i].category[c].title + "</span>";
+                    projectListView.innerHTML += "<ul>";
+                    for (var cc = 0;cc < listData[i].category[c].category.length;cc++) {
+                        
+                        var check = listData[i].category[c].category[cc].check;
+                        projectListView.innerHTML += "<li>";
+                        if (check) {
+                            projectListView.innerHTML += "<input type='checkbox' name='hoge' value='' checked id='checkbox' />";
+                        }
+                        else {
+                            projectListView.innerHTML += "<input type='checkbox' name='hoge' value='' id='checkbox' />";
+                        }
+                        projectListView.innerHTML += "<span class='name'>" + listData[i].category[c].category[cc].title + "</span>";
+                        projectListView.innerHTML += "<ul>";
+                        
+                        for (var ccc = 0;ccc < listData[i].category[c].category[cc].category.length;ccc++) {
+                            var check = listData[i].category[c].category[cc].category[ccc].check;
+                            projectListView.innerHTML += "<li>";
+                            if (check) {
+                                projectListView.innerHTML += "<input type='checkbox' name='hoge' value='' checked id='checkbox' />";
+                            }
+                            else {
+                                projectListView.innerHTML += "<input type='checkbox' name='hoge' value='' id='checkbox' />";
+                            }
+                            projectListView.innerHTML += "<span class='name'>" + listData[i].category[c].category[cc].category[ccc].title + "</span>";
+                            projectListView.innerHTML += "</li>";
+                            
+                        }
+                        
+                        projectListView.innerHTML += "</ul>";
+                        projectListView.innerHTML += "</li>";
+                
+                    }
+                    projectListView.innerHTML += "</ul>";
+                    projectListView.innerHTML += "</li>";
+                }
+                projectListView.innerHTML += "</ul>";
+                
+            }
+            
+            
+            //popupView.style.width = "300px";
+        }
+    </script>
+    <body class="formattedExport">
+        <div id="project_list"></div>
+    </body>
+</html>
