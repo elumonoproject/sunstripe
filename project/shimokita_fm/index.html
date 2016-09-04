@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <title>下北沢FM　〜FMラジオ局を作ろう〜　</title>
+        <meta name="keywords" content="　〜FMラジオ局を作ろう〜　" />
+        <meta name="description" content=" - http://sunstripe.main.jp/ - 　〜FMラジオ局を作ろう〜　" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://sunstripe.main.jp/rss.xml" />
+        <link rel="alternate" media="handheld" href="http://sunstripe.main.jp/" />
+        
+    </head>
+    <style>
+        
+        .iconsize {
+            position:absolute;
+        display: block;
+        border-radius: 15%;
+        /*color: #fff;*/
+        box-shadow: 0 3px 6px rgba(0,0,0,0.4), 5px 5px 10px rgba(255,255,255,0.3) inset, -5px -5px 10px rgba(255,255,255,0.3) inset;
+        width: 88px;
+        height: 88px;
+        font: 12px/16px serif;
+        text-align: center;
+        text-decoration: none;
+        }
+        .iconsize2 {
+            position:absolute;
+            width:88px;
+            height:88px;
+            border-radius: 6px;
+            margin:0px 0px;
+            display:block;
+            font-size:0.8em;
+            text-align:center;
+            
+            display: block;
+            /*height: 89px;*/
+            /*width: 89px;*/
+            
+            /*background: transparent url('1.png') no-repeat;*/
+            
+            -webkit-border-radius: 10px; /* Safari, Chrome */
+            -moz-border-radius: 10px; /* Firefox */
+            border-radius: 10px; /* CSS3 */
+            
+            -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+            -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+        }
+    .gray_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(155,155,155,1.0), rgba(155,155,155,1.0) 50%, rgba(100,100,100,1.0));
+    }
+    .orange_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(#ffc877, #f90 50%, #ffd000);
+    }
+    .red_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(255,100,100,1.0), rgba(255,0,0,1.0) 50%, rgba(255,55,55,1.0));
+    }
+    .green_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(100,155,100,1.0), rgba(0,155,0,1.0) 50%, rgba(55,155,55,1.0));
+    }
+    .blue_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(100,100,255,1.0), rgba(0,0,255,1.0) 50%, rgba(55,55,255,1.0));
+    }
+    .Bitbucket_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(        28, 79, 130,1.0), rgba(        28, 79, 130,1.0) 50%, rgba(        28, 79, 130,1.0));
+    }
+    .Bitbucket_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(        28, 79, 130,1.0), rgba(        28, 79, 130,1.0) 50%, rgba(        28, 79, 130,1.0));
+    }
+    .Qiita_icon_button {
+        background: -webkit-radial-gradient(center -20%, circle, rgba(255,255,255,0.8), rgba(255,255,255,0.3) 58%, rgba(255,255,255,0) 60%), -webkit-linear-gradient(rgba(85, 189, 0,1.0), rgba(85, 189, 0,1.0) 50%, rgba(85, 189, 0,1.0));
+    }
+    a.display-block {
+        float:left;
+        width:90px;
+        height:90px;
+        margin:10px 10px;
+        display:block;
+    }
+    .popup {
+        border-top-width : 10px;
+        border-top-color : orange;
+        width:300px;
+        height:100px;
+        background-color:rgba(100,100,100,0.3);
+        padding:20px;
+    }
+    .popupWidth {
+        width:300px;
+    }
+    .widthMax
+    {
+        width:100%;
+    }
+    .nav {
+        padding: 0 20px;
+        margin: 0 auto 60px;
+        width: 760px;
+    }
+    .fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    </style>
+    <script>
+        window.onload = function () {
+            var popupView = document.getElementById("popup");
+            //popupView.style.width = "300px";
+        }
+    </script>
+    <body>
+        <a href="./images/logo.png"><img src="./images/logo.png" /></a>
+        <div>  </div>
+        
+        <h3>レベル</h3>
+        <h4>8/17 18:00 - 8/31 23:59</h4>
+        <h1>
+        『FM AKIHABARA』あなたの冠番組大放送!!＆記念オフ会同時開催権争奪戦</h1>
+        <p>
+        この夏、秋葉原に開局したミニFMラジオ局『FM AKIHABARA』にて、あなたが企画した冠番組を放送できる権利をかけたイベントが開催決定！　なおかつスタジオに併設されたカフェ『SEVENTH HEAVEN』で、ファンを集めてオフ会も同時開催できちゃいます！　応援してくれるファンの皆様とともに公開放送を楽しんだ後は、トーク＆ライブでさらにファンとの絆を深めちゃいましょう！！！
+        </p>
+        <div >
+        <a href="#">応援方法はこちら</a>
+        </div>
+        
+        <div >
+            <a href="#">イベント参加者募集中！応募はこちら</a>
+        </div>
+        
+        <h3>イベント詳細</h3>
+        
+        <h4>下北沢FMとは</h4>
+        <p>今夏、秋葉原電気街に開局したミニFMラジオ局です。77.7MHzの電波で、放送は秋葉原電気街全域で聞くことができます。ガラス張りのサテライトスタジオでの放送のため、街ゆく人々の目に留まることは必至です！　また、番組のもようは、インターネットテレビ局『FRESH! By AbemaTV』、『SHOWROOM』でも同時配信されますので、秋葉原に来られない方でも番組を視聴することができます。
+        </p>
+        
+        <h4>Sun Stripeとは</h4>
+        
+        <p>
+        都内を拠点として、活動している制作ユニットです。
+        ウェブサイトの作成、オリジナルなiOSアプリをはじめ、イベンター、デザイナーと様々な作るを表現するために集まっているチームです。
+        都内の飲食店さんや演劇やドラマなどで活躍された方などを集めて企画してメディアにアプローチをかけていく活動を行っています。
+        </p>
+        
+        <p>http://sunstripe.main.jp/</p>
+        <address>
+            <p>
+        住所
+        東京都
+        
+        TEL.090-8234-4259　MAIL: sunstripe2011@gmail.com
+        </p>
+        </address>
+        <p>
+        ★SHIMOKITA FM & SUNSTRIPE ではこんなオフ会ができる！★
+        ・冠番組を運営サポートをいたします
+        ・某アイドルグループの放送枠の近所ということもあり閲覧者も多い
+        </p>
+        <h4>イベント期間</h4>
+        <p>
+        2016年8月17日(水)18:00～8月31日(水)23:59
+        </p>
+        <h4>応募条件</h4>
+        <p>
+        ・自分を思いっきりアピールしたい方
+        ・ちょっと変わったオフ会を開催したい方
+        ・ファンを大切にされている方
+        ※番組の構成に不安がある方はお気軽にご相談ください。
+        ※収録の際の交通費は自己負担となりますのでご了承ください。
+        </p>
+    </body>
+</html>
