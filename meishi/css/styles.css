@@ -8,6 +8,7 @@
 
 html {
     background-color: rgba(200,200,200,0.8);
+
 }
 
 body {
@@ -48,6 +49,7 @@ h1,h2,h3,h4{
     background-image: url("../images/bottom_sora.png");
     height:58px;
     width:11cm;
+    font: bold "ＭＳ Ｐゴシック";
 }
 
 .top_sora {
@@ -55,6 +57,7 @@ h1,h2,h3,h4{
     top:0;
     height:58px;
     width:11cm;
+    font: bold "ＭＳ Ｐゴシック";
 }
 
 .top_name_bace {
@@ -72,6 +75,8 @@ h1,h2,h3,h4{
     padding-top:1mm;
     padding-right:5mm;
     color:rgba(0,100,155,1.0);
+    font: bold large/150% "ＭＳ Ｐゴシック";
+    text-decoration: none;
 }
 
 .bottom_address_bace {
@@ -83,10 +88,17 @@ h1,h2,h3,h4{
 }
 
 .bottom_address {
-    background-color:rgba(255,255,255,0.5);
     position: absolute;
     left: 50%;
+    text-decoration: none;
+    font: bold "ＭＳ Ｐゴシック";
 }
+
+a {
+    font: bold "ＭＳ Ｐゴシック";
+    text-decoration: none;
+}
+
 
 /*
  static

@@ -4,9 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta http-equiv="Content-Style-Type" content="text/css" />
         <link rel="stylesheet" href="./css/styles.css" type="text/css" />
-        <title>フライヤー - Sun Stripe</title>
-        <meta name="keywords" content="情報雑誌" />
-        <meta name="description" content="情報雑誌 - http://sunstripe.main.jp/ - " />
+        <title>名刺 - Sun Stripe</title>
+        <meta name="keywords" content="名刺" />
+        <meta name="description" content="名刺 - http://sunstripe.main.jp/ - " />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -113,58 +113,6 @@
     <script>
         window.onload = function () {
             var popupView = document.getElementById("popup");
-            
-            //popupView.style.width = "300px";
-            var bodyView = document.getElementById("body");
-            bodyView.addEventListener( "click", function( e ) {
-                                      
-                                      
-                                      //alert("touchX : " + e.clientX + "offsetX : " + e.offsetX
-                                      //      + "touchY : " + e.clientY + "offsetY : " + e.offsetY);
-                                      
-                                      touchMinX = document.body.clientWidth * (10 / 100.0);
-                                      touchMaxX = document.body.clientWidth * (90 / 100.0);
-                                      
-                                      if (e.offsetX < touchMinX) {
-                                        //alert (document.body.clientWidth * (10 / 100.0));
-                                      }
-                                      else if (touchMaxX < e.offsetX) {
-                                        //alert (document.body.clientWidth * (90 / 100.0));
-                                        location.href = "./page1.html";
-                                      }
-
-                                      else {
-                                      
-                                      }
-                                      
-                                      }
-                                      ) ;
-            
-            bodyView.addEventListener( "touchstart", function( e ) {
-                                      // タッチの情報を含むオブジェクト
-                                      var touchObj = e.changedTouches[0] ;
-                                      
-                                      // タッチ位置を取得する
-                                      var touchX = touchObj.pageX ;	// X座標
-                                      var touchY = touchObj.pageY ;	// Y座標
-                                      
-                                      touchMinX = document.body.clientWidth * (10 / 100.0);
-                                      touchMaxX = document.body.clientWidth * (90 / 100.0);
-                                      
-                                      if (touchX < touchMinX) {
-                                      //alert (document.body.clientWidth * (10 / 100.0));
-                                      }
-                                      else if (touchMaxX < touchX) {
-                                      //alert (document.body.clientWidth * (90 / 100.0));
-                                      location.href = "./page1.html";
-                                      }
-                                      
-                                      else {
-                                      
-                                      }
-                                      
-                                      }
-                                      ) ;
         }
     </script>
     <body id="body">
@@ -173,13 +121,21 @@
                 <h2 class="top_name"><a href="https://twitter.com/sunstripe2011">大島 曜</a></h2>
             </div>
             <div class="bottom_address_bace">
-                <address  class="bottom_address"><a href="mailto:sunstripe2011@gmail.com">sunstripe@gmail.com</a></address>
+                <address  class="bottom_address"><a href="mailto:info@sunstripe.main.jp">info@sunstripe.main.jp</a></address>
             </div>
             
 <!--            <div class="static">static</div>-->
 <!--            <div class="relative">relative</div>-->
 <!--            <div class="fixed">fixed</div>-->
 <!--            <div class="absolute">absolute</div>-->
+
+<!--font size="1" color="#0000ff">フォントサイズ1、カラー青（16進数で指定）</font><br>
+<font size="2" color="blue">フォントサイズ2、カラー青（色名で指定）</font><br>
+<font size="3">フォントサイズ3、これがデフォルトサイズ</font><br>
+<font size="+1">デフォルト+1で、フォントサイズ4</font><br>
+<font size="+2">デフォルト+2で、フォントサイズ5</font><br>
+<font size="6" face="ＭＳ ゴシック">フォントサイズ6、ゴシック体</font><br>
+<font size="7" face="ＭＳ 明朝,平成明朝">フォントサイズ7、明朝体</font//-->
 
         </div-->
     </body>
